@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "prettier --check ."
   },
   "dependencies": {
     "classnames": "2.2.6",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
     "tailwindcss": "^1.4.0"
   }
 }

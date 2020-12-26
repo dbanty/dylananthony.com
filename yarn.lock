@@ -886,23 +886,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"blog-starter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "blog-starter@workspace:."
-  dependencies:
-    classnames: 2.2.6
-    date-fns: 2.10.0
-    gray-matter: 4.0.2
-    next: latest
-    postcss-preset-env: ^6.7.0
-    react: ^16.13.0
-    react-dom: ^16.13.0
-    remark: 11.0.2
-    remark-html: 10.0.0
-    tailwindcss: ^1.4.0
-  languageName: unknown
-  linkType: soft
-
 "bluebird@npm:^3.5.5":
   version: 3.7.2
   resolution: "bluebird@npm:3.7.2"
@@ -2066,6 +2049,24 @@ __metadata:
   checksum: 9581cdb8f6304fdaacb8bbe2b8b393a8da3ece3086dd24070601b70f08ca417305b4f3a94699b984c4981dceb6eebb4c132abfe0445baacfd04f2b66a0524cda
   languageName: node
   linkType: hard
+
+"dylan-anthony-com@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "dylan-anthony-com@workspace:."
+  dependencies:
+    classnames: 2.2.6
+    date-fns: 2.10.0
+    gray-matter: 4.0.2
+    next: latest
+    postcss-preset-env: ^6.7.0
+    prettier: ^2.2.1
+    react: ^16.13.0
+    react-dom: ^16.13.0
+    remark: 11.0.2
+    remark-html: 10.0.0
+    tailwindcss: ^1.4.0
+  languageName: unknown
+  linkType: soft
 
 "ecc-jsbn@npm:~0.1.1":
   version: 0.1.2
@@ -5103,6 +5104,15 @@ next@latest:
   bin:
     prebuild-install: bin.js
   checksum: 81ff157668dc26349e1f8076fce0ba990f45481e39a64645efad60c9ae2d61e73e3c420d56f5f38fbe6dc3275e8e27067d2613d941c778f41658a6110e544130
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "prettier@npm:2.2.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 92c6c9f4b87eba1f28466edee57dd18c80d00b858edda77d46d1950d20e6e302b68ee255fc91133ba931e63c4577b5ae30da194d9626a8f3c0177778b91bf056
   languageName: node
   linkType: hard
 
