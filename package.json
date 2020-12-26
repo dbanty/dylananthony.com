@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier --check ."
+    "lint": "prettier --write ."
   },
   "dependencies": {
     "classnames": "2.2.6",
