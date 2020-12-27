@@ -5,16 +5,15 @@ import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "../lib/constants";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout>
+      <Layout preview={true}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Dylan Anthony</title>
         </Head>
         <Container>
           <Intro />
@@ -22,6 +21,7 @@ export default function Index({ allPosts }) {
             <HeroPost
               title={heroPost.title}
               coverImage={heroPost.coverImage}
+              coverImageAlt={heroPost.coverImageAlt}
               date={heroPost.date}
               author={heroPost.author}
               slug={heroPost.slug}
@@ -42,6 +42,7 @@ export async function getStaticProps() {
     "slug",
     "author",
     "coverImage",
+    "coverImageAlt",
     "excerpt",
   ]);
 
