@@ -1,6 +1,8 @@
 @tailwind base;
 
-/* Write your own custom base styles here */
+ol {
+    @apply list-decimal;
+}
 
 /* Start purging... */
 @tailwind components;
