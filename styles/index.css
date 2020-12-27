@@ -1,8 +1,5 @@
 @tailwind base;
 
-ol {
-  @apply list-decimal;
-}
 
 /* Start purging... */
 @tailwind components;

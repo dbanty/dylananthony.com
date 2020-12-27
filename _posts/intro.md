@@ -122,7 +122,7 @@ so I am pretty confident in my claim that what Vercel offers is truly amazing.
 That's the sort of content you can expect from me in future blog posts! I'm going to try to accomplish some goal using
 software then tell you how it went and _hopefully_ provide some useful takeaways. I'll do my best to point out my
 confidence in or experience with different tech, so I won't lead you astray. I'm also always open to suggestions,
-comments, or corrections which you can leave [in the repo for this website]. I will likely post most blog posts on
+comments, or corrections which you can leave [in the repo for this website][repo]. I will likely post most blog posts on
 [Dev.to] and/or [Medium], but will always post **all** content on my website first.
 
 [dev.to]: https://dev.to

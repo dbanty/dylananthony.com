@@ -9,7 +9,7 @@ export default function Alert() {
           The source code for this blog is{" "}
           <a
             href={REPO_URL}
-            className="underline hover:text-success duration-200 transition-colors"
+            className="duration-200 underline text-indigo-600 transition-colors"
           >
             available on GitHub
           </a>
