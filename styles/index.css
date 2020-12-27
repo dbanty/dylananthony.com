@@ -1,7 +1,7 @@
 @tailwind base;
 
 ol {
-    @apply list-decimal;
+  @apply list-decimal;
 }
 
 /* Start purging... */
