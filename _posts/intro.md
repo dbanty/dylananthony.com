@@ -7,6 +7,4 @@ date: "2020-12-26"
 author:
   name: Dylan Anthony
   picture: "/assets/blog/initials.png"
-ogImage:
-  url: "/assets/blog/intro/cover.png"
 ---
