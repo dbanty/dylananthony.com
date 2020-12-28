@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   title: string;
@@ -9,11 +10,15 @@ interface Props {
 
 export default function CoverImage({ title, src, slug, alt }: Props) {
   const image = (
-    <img
-      src={src}
-      alt={alt}
-      className="shadow-small hover:shadow-medium transition-shadow duration-200"
-    />
+    <div className="shadow-small hover:shadow-medium transition-shadow duration-200">
+      <Image
+        src={src}
+        alt={alt}
+        width={2000}
+        height={1000}
+        layout="intrinsic"
+      />
+    </div>
   );
   return (
     <div className="sm:mx-0">
