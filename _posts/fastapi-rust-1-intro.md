@@ -13,7 +13,7 @@ author:
 
 ## What is this Series?
 
-I am going to produce a series of blog posts attempting to create a method for replacing FastAPI applications with Rust for my particular usecase. I don't know what this will lead to just yet, it may end up being a tutorial, it may end up being a development log as I create the pieces of the ecosystem that are missing, it may end up being only one more post if I find something that magically solves all my issues.
+I am going to produce a series of blog posts attempting to create a method for replacing FastAPI applications with Rust for my particular use case. I don't know what this will lead to just yet; it may end up being a tutorial, it may end up being a development log as I create the pieces of the ecosystem that are missing, it may end up being only one more post if I find something that magically solves all my issues.
 
 Check out the requirements section below for _exactly_ what I'm trying to achieve!
 
@@ -22,28 +22,27 @@ Check out the requirements section below for _exactly_ what I'm trying to achiev
 I have been using FastAPI as my go-to back end framework for a little over a year now and it's _almost_ perfect. In my opinion, FastAPI is the **best** way to create an API **in any language**. I regularly look around the ecosystem for
 competitors worth trying and haven't found anything compelling enough to try... yet.
 
-For those of you not acquainted, FastAPI is a Python web framework for creating OpenAPI documented REST APIs. You can do a lot more with it too, but that's my primary usecase, and the one that matters to this blog series. The key
-features (to me) are:
+For those of you not acquainted, [FastAPI] is a Python web framework for creating OpenAPI documented REST APIs. You can do a lot more with it too, but that's my primary use case, and the one that matters to this blog series. The key features (to me) are:
 
-1. Automatic documentation via OpenAPI, allowing for things like [generating python code][openapi-python-client] which knows how to talk to your API.
+1. Automatic documentation via OpenAPI, which lets you do things like [generate Python code][openapi-python-client] that knows how to talk to your API.
 2. [A documentation UI][swagger ui] allowing users to easily understand and interact with the API directly.
 3. Input validation via [Pydantic], the same tool used to generate the schemas in documentation. Basically you just annotate your endpoint with inputs/outputs and they are documented _and_ validated.
 4. Easy to test using something like pytest due to some fantastic included tools and the flexibility of dependency injection.
 5. [Fantastic documentation][fastapi] of FastAPI itself, some of the best I've ever read, without which it might as well not have all of these amazing features.
-6. Easy to host on AWS Lambda using [Mangum]
+6. Easy to host on AWS Lambda using [Mangum].
 
-FastAPI does much _much_ more and has far more features than I can reasonably list out here with one of the most amazing open source communities I've ever encountered. So why am I looking to replace it? FastAPI has one fundamental drawback that it will never overcome: Python.
+FastAPI does much, _much_ more and has one of the most amazing open source communities I've ever encountered. So why am I looking to replace it? FastAPI has one fundamental drawback that it will never overcome: Python.
 
 Don't get me wrong, I love Python, it's my second favorite language, but it has some serious limitations that I would love to move beyond.
 
 ## Why Rust?
 
-Okay, I know, Rust users never shut up about how great the language is, so I'll try to keep this brief and on topic, but [Let me know in GitHub][ideas] if you want a blog post going in depth on any of these points.
+I know, I know, Rust users never shut up about how great the language is, so I'll try to keep this brief and on topic. [Let me know in GitHub][ideas] if you want a blog post going in depth on any of these points:
 
 1. Python's static typing story is a sad one. It might get better, but it's not good enough right now, and will never be as good as Rust's.
 2. Rust is way faster than Python which matters when you're billed by execution time (like on AWS Lambda).
 3. Rust error handling is _undeniably better_ than exception-based errors (like in Python) when stability matters.
-4. Algebraic data types in Rust allow you to encode business **and security** logic in a way that your code **will not compile** if you get it wrong. This is far better than forcing internal server errors when the security is wrong like I do in FastAPI.
+4. Algebraic data types in Rust allow you to encode business **and security** logic in a way that your code **will not compile** if you get it wrong. This is far better than forcing internal server errors when when someone forgets to secure an endpoint like I do in FastAPI.
 
 ## Requirements
 
@@ -58,7 +57,7 @@ The end result of my investigation should be a method to produce an API which:
 5. MUST interact with a relational database (MySQL or Postgres).
 6. MUST have a _simple_ way to test endpoints, comparable to pytest with FastAPI. If a lot of work has to go into testing, people just won't test things.
 7. MUST have great documentation.
-8. SHOULD have automatically hosted documentation which allows direct interaction with the API. (This could be achieved by hosting the documentation externally).
+8. SHOULD have automatically hosted documentation which allows direct interaction with the API. If not, this could be achieved by hosting the documentation externally.
 
 ## Conclusion
 
