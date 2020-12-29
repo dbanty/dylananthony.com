@@ -1,6 +1,6 @@
 ---
 title: "An intro to this blog using... this blog"
-excerpt: ""
+excerpt: "If you want to have your own website to host blogs on, Next.js on Vercel seems like a great choice."
 coverImage: "/assets/blog/intro/cover.png"
 coverImageAlt: "A diagram showing the flow of Markdown in Next.js to GitHub Actions vis git push where Prettier is run, and finally to Vercel via autodeploy."
 date: "2020-12-27"
