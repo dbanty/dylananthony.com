@@ -18,7 +18,7 @@ export default function PostHeader({
   coverImageAlt,
   date,
   author,
-}: Props) {
+}: Props): JSX.Element {
   return (
     <>
       <PostTitle>{title}</PostTitle>

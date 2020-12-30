@@ -1,5 +1,4 @@
 import remark from "remark";
-// @ts-ignore
 import html from "remark-html";
 
 export default async function markdownToHtml(

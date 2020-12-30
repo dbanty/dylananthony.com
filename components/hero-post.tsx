@@ -22,7 +22,7 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
-}: Props) {
+}: Props): JSX.Element {
   return (
     <section>
       <div className="mb-8 md:mb-16">

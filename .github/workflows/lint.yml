@@ -11,5 +11,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
 
+      - name: Install Dependencies
+        run: "yarn install"
+
       - name: Prettier
-        run: "npx prettier . --check"
+        run: "yarn run prettier . --check"
+
+      - name: ESLint
+        run: "yarn run eslint ."

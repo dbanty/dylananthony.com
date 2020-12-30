@@ -10,15 +10,13 @@ import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostData from "../../lib/post";
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 interface Props {
   post: PostData;
-  morePosts: PostData[];
-  preview: string;
 }
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post }: Props): JSX.Element {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -70,7 +68,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts();
 
   return {
@@ -83,4 +81,4 @@ export async function getStaticPaths() {
     }),
     fallback: false,
   };
-}
+};

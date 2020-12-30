@@ -1,7 +1,7 @@
 import Container from "./container";
 import { REPO_URL } from "../lib/constants";
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
       <Container>

@@ -5,7 +5,7 @@ interface Props {
   picture: string;
 }
 
-export default function Avatar({ name, picture }: Props) {
+export default function Avatar({ name, picture }: Props): JSX.Element {
   return (
     <div className="flex items-center">
       <div className="w-12 h-12 mr-4 relative">

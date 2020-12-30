@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import Post from "../lib/post";
+import { GetStaticProps } from "next";
 
 interface Props {
   allPosts: Post[];
@@ -40,10 +41,10 @@ export default function Index(props: Props): JSX.Element {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPosts = getAllPosts();
 
   return {
     props: { allPosts },
   };
-}
+};

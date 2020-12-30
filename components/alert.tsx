@@ -1,7 +1,7 @@
 import Container from "./container";
 import { REPO_URL } from "../lib/constants";
 
-export default function Alert() {
+export default function Alert(): JSX.Element {
   return (
     <div className="border-b bg-accent-1 border-accent-2">
       <Container>

@@ -6,7 +6,7 @@ interface Props {
   children: (JSX.Element | undefined)[] | JSX.Element;
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children }: Props): JSX.Element {
   return (
     <>
       <Meta />

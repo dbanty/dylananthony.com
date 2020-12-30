@@ -8,7 +8,12 @@ interface Props {
   alt: string;
 }
 
-export default function CoverImage({ title, src, slug, alt }: Props) {
+export default function CoverImage({
+  title,
+  src,
+  slug,
+  alt,
+}: Props): JSX.Element {
   const image = (
     <div className="shadow-small hover:shadow-medium transition-shadow duration-200">
       <Image
