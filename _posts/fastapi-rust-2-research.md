@@ -58,13 +58,13 @@ Let's look back at the requirements from [part 1][previous post]:
 7. _"MUST have great documentation."_ Nope.
 8. _"SHOULD have automatically hosted documentation which allows direct interaction with the API."_ Also no.
 
-That means it meets 5 out of 7 "MUST" requirements, leaving me to figure out running on AWS Lambda and writing a complete users guide. There is, however, an 8th "MUST" requirement that has surfaced from my research: "MUST have stable, active maintenance." I'm looking to replace some production workloads with whatever my choice is, which means I need to be confident that an update to the library won't break everything unexpectedly and that security vulnerabilities, if found, will be fixed quickly. Based on what I've seen, [rweb] does not meet this requirement.
+That means it meets 5 out of 7 "MUST" requirements, leaving me to figure out running on AWS Lambda and writing a complete user's guide. There is, however, an 8th "MUST" requirement that has surfaced from my research: "MUST have stable, active maintenance." I'm looking to replace some production workloads with whatever my choice is, which means I need to be confident that an update to the library won't break everything unexpectedly and that security vulnerabilities, if found, will be fixed quickly. Based on what I've seen, [rweb] does not meet this requirement.
 
 All of that is to say [rweb] is a possible solution, but not a likely one. The product seems great, and if the code functions as well as the brief examples indicate, this is the best option from a code perspective (oops, spoilers!). Given my concerns about the community, I would have to be comfortable forking and maintaining my own version of this framework in the event that I need changes and can't wait months for a PR to be reviewed. Even if that's not the case, I'll certainly have to write much more complete documentation for my teammates to be able to use this project effectively. I'm not mortally opposed to any of that, but I'd rather avoid it if I can.
 
 ## [Rocket]: The Lib I Want to Like
 
-Oh [Rocket], you playful muse. I've watched you ascend from my early Rust days; yet each time I reach for you my heart sinks more. This research project of mine lead me to [okapi], an extension OpenAPI documentation. And yet, I have to pass once again. While most of the Rust ecosystem blazes toward async, you inch toward it too slowly. Perhaps next time I search for a web framework our paths will align, but until then, I must follow a different orbit.
+Oh [Rocket], you playful muse. I've watched you ascend from my early Rust days; yet each time I reach for you my heart sinks more. This research project of mine led me to [okapi], an extension for OpenAPI documentation. And yet, I have to pass once again. While most of the Rust ecosystem blazes toward async, you inch toward it too slowly. Perhaps next time I search for a web framework our paths will align, but until then, I must follow a different orbit.
 
 ## [Paperclip]: The Sensible Option
 
@@ -115,7 +115,7 @@ Let's check the scoreboard again:
 4. _"MUST perform at least as fast as an equivalent FastAPI application for common CRUD tasks."_ Yes! [actix-web] is usually one of the top few entries [tech empower] benchmarks. Assuming [Paperclip] doesn't add a massive amount of overhead, it should be significantly faster than FastAPI.
 5. _"MUST interact with a relational database (MySQL or Postgres)."_. Yes again! There are, in fact, several documented examples of using [sqlx] with [actix-web] which I've seen around the internet.
 6. _"MUST have a simple way to test endpoints, comparable to pytest with FastAPI."_. Yup!
-7. _"MUST have great documentation."_ Yes! Both [actix-web] and [Paperclip] have quite good documentation. I would even but [actix-web] in the "great" category.
+7. _"MUST have great documentation."_ Yes! Both [actix-web] and [Paperclip] have quite good documentation. I would even put [actix-web] in the "great" category.
 8. _"MUST have stable, active maintenance."_ It sure seems like it!
 9. _"SHOULD have automatically hosted documentation which allows direct interaction with the API."_ Not yet, but work is actually in progress on this.
 
