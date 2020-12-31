@@ -33,11 +33,11 @@ fn search(_product: Query<SearchOption>) -> Json<Vec<Product>> {
 }
 ```
 
-Easy peasy, you declare your path, method, input type/location, output type/location and you're off to the races. This method and its associated types will get documented in an OpenAPI v3 format! Your doc comments for your function will even automatically become the description of the path operation.
+Easy peasy, you declare your path, method, input type/location, output type/location and you're off to the races. This method and its associated types will get documented in an OpenAPI v3 format _and_ automatically validated! Your doc comments for your function will even become the description of the path operation. Very FastAPI-esque.
 
 ### Where it Falls Short
 
-Aside from a few missing OpenAPI types (e.g. cookies), [rweb] seems like a relatively completely solution. The biggest flaw, in my opinion, just from reading a bit, is around project maintenance. Recent releases are not documented in GitHub and indeed there seems to be no changelog at all. There are also out of date milestones and issues which have gone several months with no reply from the maintainer.
+Aside from a few missing OpenAPI types (e.g. cookies), [rweb] seems like a relatively complete solution. The biggest flaw, in my opinion, just from reading a bit, is around project maintenance. Recent releases are not documented in GitHub and indeed there seems to be no changelog at all. There are also out of date milestones and issues which have gone several months with no reply from the maintainer.
 
 To their credit, the maintainer did accept a pull request from me to fix a slight typo in the README within the same day, so they're definitely paying attention. However, if I want to replace a framework like FastAPI for production workloads, I want to have confidence that the community will address any major issues if they come up.
 
@@ -59,13 +59,38 @@ Oh [Rocket], you playful muse. I've watched you ascend from the first time I lea
 
 ### Pros
 
-[actix-web] is easily to most well known and well documented web framework for Rust, so that's a pretty good start. What's more, it is a very active project, already making progress toward Tokio 1.0 (while at last check Rocket was still pursuing Tokio 0.2 integration).
+[actix-web] is easily to most well known and well documented web framework for Rust, so that's a pretty good start. What's more, it is a very active project, already making progress toward Tokio 1.0 (while at last check Rocket was still pursuing Tokio 0.2 integration). It also comes with built in support for input validation and output serialization via Rust's go-to library [serde]. That means all [Paperclip] has to do is document those same functions and structures, which it does!
 
-[Paperclip] seems to be a quite active project seeking to build OpenAPI functionality on top of [actix-web] by using the plugin system the latter provides. The project is well documented, and even has its own Discord server for chatting about development.
+[Paperclip] seems to be quite an active project seeking to build OpenAPI functionality on top of [actix-web] by using the plugin system the latter provides. The project is well documented, and even has its own Discord server for chatting about development.
 
 ### Cons
 
 The biggest issue with [Paperclip] is that it only currently supports OpenAPI v2. There is work in progress to add v3 support, but it's just that: in progress. This means that if I really want to supplant FastAPI with this actix-web w/ Paperclip combo, I'm going to have to write my own v3 implementation. There is a [GitHub Issue](https://github.com/wafflespeanut/paperclip/issues/177) which talks about the intended strategy for achieving this being somehow based on converting a v2 spec to v3. I'm not sure how possible this will be considering there are some important features missing from v2. It makes more sense to me for this to be a different feature via cargo flag (or at least a different module).
+
+Subjectively, the code required to use this project is also uglier than [rweb]. Here's the example from their website (minus some comments):
+
+```rust
+#[api_v2_operation]
+async fn echo_pet(body: Json<Pet>) -> Result<Json<Pet>, ()> {
+    Ok(body)
+}
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    HttpServer::new(|| App::new()
+        .wrap_api()
+        .service(
+            web::resource("/pets")
+                .route(web::post().to(echo_pet))
+        )
+        .with_json_spec_at("/api/spec")
+        .build()
+    ).bind("127.0.0.1:8080")?
+    .run().await
+}
+```
+
+The main difference here is that you have to use a macro to get the endpoint documented which is _separate from_ the binding of the endpoint to the application. Then the assigning of a path and method happens elsewhere, not where the function is declared. There can certainly be arguments made for this more explicit, non-macro style... but it's definitely different than what a Python developer would be used to with FastAPI.
 
 ### Is This the One?
 
@@ -97,3 +122,4 @@ _Want to be notified when the next part of this series is released? Watch releas
 [paperclip plugin]: https://paperclip.waffles.space/actix-plugin.html
 [actix-web]: https://github.com/actix/actix-web
 [openapi-python-client]: https://github.com/triaxtec/openapi-python-client
+[serde]: https://serde.rs
