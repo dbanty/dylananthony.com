@@ -67,7 +67,9 @@ So I'm going on an adventure to replace what I believe to be the best API framew
 
 _Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
 
-_Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo]._
+_This post is part of a series and the [next part] is already available!_
+
+_Want to be notified of future blog posts? Watch releases in [the GitHub repo]._
 
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
@@ -80,3 +82,4 @@ _Want to be notified when the next part of this series is released? Watch releas
 [mangum]: https://mangum.io
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
+[next part]: https://dylananthony.com/posts/fastapi-rust-2-research
