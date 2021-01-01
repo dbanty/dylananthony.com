@@ -3,7 +3,7 @@ title: "Replacing FastAPI with Rust: Part 2 - Research"
 excerpt: "Explore a few of the existing options in the Rust ecosystem to see how close we can get to our FastAPI replacement"
 coverImage: "/assets/blog/fastapi-rust-2-research/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
-date: "2020-12-31"
+date: "2021-01-01"
 author:
   name: Dylan Anthony
   picture: "/assets/blog/initials.png"
@@ -53,8 +53,8 @@ Let's look back at the requirements from [part 1][previous post]:
 2. _"MUST automatically produce an OpenAPI v3 document from the Rust code and comments."_ Also check!
 3. _"MUST be easily deployable on AWS Lambda using some infrastructure as code tool (SAM, Serverless, etc.)."_ I couldn't find any examples or documentation for deploying an [rweb] app this way, so it's not going to be _easy_. I did find one comment on a GitHub issue for [warp] that may be useful, but it'll take some work.
 4. _"MUST perform at least as fast as an equivalent FastAPI application for common CRUD tasks."_ Yes? The [tech empower] benchmarks (same ones FastAPI lists on its website) actually show warp performing _worse_ than FastAPI at multiple queries on "physical hardware", but still better on the Cloud. So that feels like a yes from what we can tell.
-5. _"MUST interact with a relational database (MySQL or Postgres)."_. Yes, [warp] uses Tokio (so presumably [rweb] does too) which is the most popular Rust async runtime, and one I can use with my preferred SQL library [sqlx].
-6. _"MUST have a simple way to test endpoints, comparable to pytest with FastAPI."_. I haven't tried it, but [warp] includes a testing module, so this should be fine.
+5. _"MUST interact with a relational database (MySQL or Postgres)."_ Yes, [warp] uses Tokio (so presumably [rweb] does too) which is the most popular Rust async runtime, and one I can use with my preferred SQL library [sqlx].
+6. _"MUST have a simple way to test endpoints, comparable to pytest with FastAPI."_ I haven't tried it, but [warp] includes a testing module, so this should be fine.
 7. _"MUST have great documentation."_ Nope.
 8. _"SHOULD have automatically hosted documentation which allows direct interaction with the API."_ Also no.
 
@@ -113,8 +113,8 @@ Let's check the scoreboard again:
 2. _"MUST automatically produce an OpenAPI v3 document from the Rust code and comments."_ Sadly, no. We'll get v2 for free but have to write our own v3 variant.
 3. _"MUST be easily deployable on AWS Lambda using some infrastructure as code tool (SAM, Serverless, etc.)."_ I _was_ able to find some examples and sample projects deploying actix-web to Lambda. It will still require some tinkering but I have a pretty solid foundation. So tentatively yes.
 4. _"MUST perform at least as fast as an equivalent FastAPI application for common CRUD tasks."_ Yes! [actix-web] is usually one of the top few entries [tech empower] benchmarks. Assuming [Paperclip] doesn't add a massive amount of overhead, it should be significantly faster than FastAPI.
-5. _"MUST interact with a relational database (MySQL or Postgres)."_. Yes again! There are, in fact, several documented examples of using [sqlx] with [actix-web] which I've seen around the internet.
-6. _"MUST have a simple way to test endpoints, comparable to pytest with FastAPI."_. Yup!
+5. _"MUST interact with a relational database (MySQL or Postgres)."_ Yes again! There are, in fact, several documented examples of using [sqlx] with [actix-web] which I've seen around the internet.
+6. _"MUST have a simple way to test endpoints, comparable to pytest with FastAPI."_ Yup!
 7. _"MUST have great documentation."_ Yes! Both [actix-web] and [Paperclip] have quite good documentation. I would even put [actix-web] in the "great" category.
 8. _"MUST have stable, active maintenance."_ It sure seems like it!
 9. _"SHOULD have automatically hosted documentation which allows direct interaction with the API."_ Not yet, but work is actually in progress on this.
