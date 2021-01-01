@@ -48,6 +48,16 @@ export default function Post({ post }: Props): JSX.Element {
                   key="ogimage"
                 />
                 <meta
+                  key="og:image:width"
+                  property="og:image:width"
+                  content="2000"
+                />
+                <meta
+                  key="og:image:height"
+                  property="og:image:height"
+                  content="1000"
+                />
+                <meta
                   property="og:site_name"
                   content="dylananthony.com"
                   key="ogsitename"
