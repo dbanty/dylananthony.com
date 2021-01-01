@@ -31,8 +31,44 @@ export default function Post({ post }: Props): JSX.Element {
           <>
             <article className="mb-32">
               <Head>
-                <title>{post.title} | Next.js Blog Example with Markdown</title>
-                <meta property="og:image" content={post.coverImage} />
+                <title>{post.title} | Dylan Anthony</title>
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary" key="twcard" />
+                <meta
+                  name="twitter:creator"
+                  content="@tbdylan"
+                  key="twhandle"
+                />
+
+                {/* Open Graph */}
+                <meta
+                  property="og:image"
+                  content={`https://dylananthony.com${post.coverImage}`}
+                  key="ogimage"
+                />
+                <meta property="og:url" content={router.asPath} />
+                <meta
+                  key="og:image:width"
+                  property="og:image:width"
+                  content="2000"
+                />
+                <meta
+                  key="og:image:height"
+                  property="og:image:height"
+                  content="1000"
+                />
+                <meta
+                  property="og:site_name"
+                  content="dylananthony.com"
+                  key="ogsitename"
+                />
+                <meta property="og:title" content={post.title} key="ogtitle" />
+                <meta
+                  property="og:description"
+                  content={post.excerpt}
+                  key="ogdesc"
+                />
               </Head>
               <PostHeader
                 title={post.title}
