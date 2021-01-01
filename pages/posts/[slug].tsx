@@ -44,9 +44,10 @@ export default function Post({ post }: Props): JSX.Element {
                 {/* Open Graph */}
                 <meta
                   property="og:image"
-                  content={post.coverImage}
+                  content={`https://dylananthony.com${post.coverImage}`}
                   key="ogimage"
                 />
+                <meta property="og:url" content={router.asPath} />
                 <meta
                   key="og:image:width"
                   property="og:image:width"
