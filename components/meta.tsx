@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { HOME_OG_IMAGE_URL } from "../lib/constants";
 
 export default function Meta(): JSX.Element {
   return (
@@ -32,11 +31,7 @@ export default function Meta(): JSX.Element {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content={`A statically generated blog example using Next.js and Markdown.`}
-      />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta name="description" content="Dylan Anthony's Blog." />
     </Head>
   );
 }
