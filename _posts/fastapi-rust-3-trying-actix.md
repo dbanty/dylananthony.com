@@ -56,8 +56,8 @@ let service = App::new()
   .new_service(AppConfig::default())
   .await?;
 
-# Note that I don't actually have a request here, for initial testing
-# these params were hard-coded
+// Note that I don't actually have a request here,
+// for initial testing these params were hard-coded
 let req = TestRequest::with_uri(&request.uri().to_string())
     .method(request.method().clone())
     .set_json(request.body())
