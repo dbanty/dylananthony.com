@@ -129,14 +129,13 @@ In the next blog post in this series, I'm going to take [actix-web] and [Papercl
 
 _Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
 
-_Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo]._
+_This post is part of a series and the [next part] is already available!_
 
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
 [discussions]: https://github.com/dbanty/dylananthony.com/discussions/11
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
-[the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-1-intro
 [teaser comment]: https://dev.to/patarapolw/comment/19m15
 [rweb]: https://github.com/kdy1/rweb
@@ -151,3 +150,4 @@ _Want to be notified when the next part of this series is released? Watch releas
 [serde]: https://serde.rs
 [tech empower]: https://www.techempower.com/benchmarks/#section=data-r19&hw=cl&test=query&f=zik0zj-zik0zj-zik0zj-zik0zj-zik0zj-zik0zj-yyku7z-ziimf3-zik0zj-zik0zj-71
 [sqlx]: https://github.com/launchbadge/sqlx
+[next part]: https://dylananthony.com/posts/fastapi-rust-3-trying-actix
