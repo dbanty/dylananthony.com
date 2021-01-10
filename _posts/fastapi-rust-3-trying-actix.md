@@ -40,6 +40,7 @@ So scratch one requirement for [actix-web], it **does not** have a simple way to
 Not to be deterred by the lack of testing (figuring I'd find a way eventually), I moved on to what I thought would be the most difficult task. The [docs for actix-web][actix-web docs] did not provide a way to do this, they only show running an actual web server. So it was time to put my finely honed search-engine skills to work!
 
 In the end I found two methods for achieving this:
+
 1. Run the webserver and forward requests from the lambda handler back to localhost. This felt yucky and like there would be a fair amount of overhead so I dropped that idea quickly.
 2. [This GitHub issue][actix-web lambda issue] suggested using some of the testing tools included with [actix-web] to achieve what I was looking for. This is the route I decided to take, though it was probably more effort than it was worth.
 
@@ -54,14 +55,14 @@ let service = App::new()
   .into_factory()
   .new_service(AppConfig::default())
   .await?;
- 
-# Note that I don't actually have a request here, for initial testing 
+
+# Note that I don't actually have a request here, for initial testing
 # these params were hard-coded
 let req = TestRequest::with_uri(&request.uri().to_string())
     .method(request.method().clone())
     .set_json(request.body())
     .to_request();
-    
+
 let actix_response: ServiceResponse = service.call(req).await?;
 ```
 
@@ -121,11 +122,11 @@ _Want to be notified when the next part of this series is released? Watch releas
 [sam blog]: https://dev.to/netguru/commentable-rs-building-a-serverless-comment-system-in-rust-5egb
 [netlify_lambda_http]: https://docs.rs/netlify_lambda_http/0.2.0/netlify_lambda_http/
 [actix-web lambda issue]: https://github.com/actix/actix-web/issues/768
-[AWS SAM]: https://aws.amazon.com/serverless/sam/
+[aws sam]: https://aws.amazon.com/serverless/sam/
 [actix-web docs]: https://actix.rs/docs/
 [paperclip macro issue]: https://github.com/wafflespeanut/paperclip/issues/63
 [paperclip]: https://github.com/wafflespeanut/paperclip
-["Zero To Production In Rust"]: https://www.zero2prod.com
+["zero to production in rust"]: https://www.zero2prod.com
 [warp_lambda]: https://github.com/aslamplr/warp_lambda
 [warp]: https://github.com/seanmonstar/warp
 [experiments repo]: https://github.com/dbanty/rust-fastapi-experiments
