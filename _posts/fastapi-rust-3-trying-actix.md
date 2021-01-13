@@ -3,7 +3,7 @@ title: "Replacing FastAPI with Rust: Part 3 - Trying Actix"
 excerpt: "Development was time consuming, troubleshooting was frustrating, and the end result was fragile and ugly."
 coverImage: "/assets/blog/fastapi-rust-3-trying-actix/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
-date: "2021-01-09"
+date: "2021-01-12"
 author:
   name: Dylan Anthony
   picture: "/assets/blog/initials.png"
@@ -66,23 +66,23 @@ let req = TestRequest::with_uri(&request.uri().to_string())
 let actix_response: ServiceResponse = service.call(req).await?;
 ```
 
-Not the most elegant of solutions, but it worked. Now seems like a good time, by the way, to take away a point for "MUST have great documentation". While the docs for using [actix-web] as intended were good, I'm far off the beaten path at this point and will only go further. I didn't find any docs at all to help me with this nor later code, I spent a lot of time digging through source code and deciphering cryptic compiler errors.
+Not the most elegant of solutions, but it worked. Now seems like a good time, by the way, to take away a point for "MUST have great documentation". While the docs for using [actix-web] as intended were good, I'm far off the beaten path at this point and will only go further. I didn't find any docs at all to help me with this nor later code, and instead spent a lot of time digging through source code and deciphering cryptic compiler errors.
 
 ## Using AWS SAM
 
 This _would_ have been the easiest part of the whole experiment if I had found [this blog post][sam blog] right away. I made the mistake of starting with the official docs which, even though they provided a Rust example, really didn't help at all. I then found another blog which got me 99% of the way there, but that last missing 1% meant my code would not compile. Anyway, once I found the good post, adapting it to use [Netlify's Lambda Runtime][netlify_lambda_http] was easy.
 
-Why Netlify's fork and not the official AWS runtime? Basically because it seems like AWS has abandoned their project, at least for now. Netlify has taken up maintenance in the meantime.
+Why Netlify's fork and not the official AWS runtime? Basically because it seems like AWS has abandoned their project for now. Netlify has graciously taken up maintenance in the meantime.
 
 ## Combining the Lambda Runtime with actix
 
-Getting [actix-web] to run using [netlify_lambda_http] was **very hard**. I am really not that experienced with Rust. I've been working with it part time for around a year, and most of that code is fairly simple. The way to set up a lambda handler is to provide either an async function or a struct that implements the `Handler` trait. Easy enough right? I already had an async function that would take some request data and spit out the `ServiceResponse` from that test service.
+Getting [actix-web] to run using [netlify_lambda_http] was **very hard** and probably the most frustrating thing I've done in Rust so far. The way to set up a lambda handler is to provide either an async function or a struct that implements the `Handler` trait. Easy enough right? I already had an async function that would take some request data and spit out the `ServiceResponse` so I _should_ just need to convert to and from the proper structures.
 
 As it turns out, the `Future` returned from the async function has to be `Send` (the lambda runtime must do something with threads to manage requests). The outputs of the futures provided by all the test methods I was using were not `Send`. As a result, the compiler spit out hundreds of lines about the nested types that were not `Send`, preventing me from using my async function.
 
 There is probably some standard way to get around this sort of stuff, but I couldn't figure it out, certainly not with messages as cryptic as the ones I was getting. So I turned to a crate I found called [warp_lambda]. That's right, I found a crate that allows you to run [warp] on AWS Lambda. As a reminder, [rweb], the most promising option from a functional standpoint, is based on [warp].
 
-This crate has an implementation for the `Handler` trait which I used to model my own `Handler` trait for an actix-web `Service`. Using my own struct which implemented that trait suddenly made the "this is not `Send`" error messages simple enough to decipher. I was able to get the thing to actually compile, but it required using a few `unwraps` on errors which were not `Send`. I could probably go back and figure out how to wrap or map those errors to something simpler to make my implementation less fragile, but I was already annoyed enough at this implementation that I was headed toward [rweb] anyway.
+This crate has an implementation for the `Handler` trait which I used to model my own `Handler` trait for an actix-web `Service`. Using my own struct which implemented that trait suddenly made the "this is not `Send`" error messages simple enough to decipher. I was able to get the thing to actually compile, but it required using a few `unwrap()`s on errors which were not `Send`. I could probably go back and figure out how to wrap or map those errors to something simpler to make my implementation less fragile, but I was already annoyed enough at this implementation that I was headed toward [rweb] anyway.
 
 At this point I encountered yet another problem. While I was able to create and run a `Service` in my `Handler`, I had to create it for every single request. Try as I might to decipher the opaque types involved with the _many_ generics used with an actix `App`, I could not satisfy the compiler enough to store this thing in my struct. I didn't run any benchmarks here, but there's no way that re-initializing an entire `App` for each and every request is fast. It would take a ton of testing to make sure it didn't fall over for large applications, which means I couldn't confidently check off the "perform at least as fast as FastAPI" requirement.
 
@@ -92,15 +92,24 @@ On to yet another challenge! As I said, I was already convinced that this actix-
 
 I'm not going to go into a ton of detail here, but basically I had to spend a lot of time reading actix-web source code in order to figure out how to translate body types, headers, etc. and I only managed to get the bare minimum for my JSON test-endpoints working.
 
-I really have come to appreciate WSGI/ASGI in the Python world. While I've not directly interfaced with it, I know that it sets some standards for how web requests work that means a lot of this manual conversion nonsense is unnecessary. It also means that web frameworks are almost always completely independent from web servers, so most of this hunting around for a way to directly invoke requests would not have been necessary.
+I really have come to appreciate WSGI/ASGI in the Python world. While I've not directly interfaced with it, I know that it sets some standards for how web requests work which means a lot of this manual conversion nonsense is unnecessary. It also means that web frameworks are almost always completely independent of web servers, so most of this hunting around for a way to directly invoke requests would not have been necessary.
 
 ## Conclusion
 
 The code works... but barely. If you want to see the end result, I have put it up in a [GitHub Repository][experiments repo] where I also intend to add future experiments in other frameworks. If you haven't gathered as much from all of the text above, this code is fragile, slow, and **in no way recommended for production**. But if you're more experienced (or dedicated) than I am and want to try your hand at making it better, go for it!
 
+Closing the loop on the [previous post], my experience has indicated that none of these requirements are actually met by actix-web + Paperclip for my serverless usecase:
+
+1. _"MUST be easily deployable on AWS Lambda using some infrastructure as code tool (SAM, Serverless, etc.)."_
+2. _"MUST perform at least as fast as an equivalent FastAPI application for common CRUD tasks."_
+3. _"MUST have a simple way to test endpoints, comparable to pytest with FastAPI."_
+4. _"MUST have great documentation."_
+
+Updating the score, this solution only meets 3/8 "MUST" requirements for my FastAPI replacement (potentially 4/8 if the performance hit isn't as bad as I think it will be). This actually puts it below [rweb] which was my runner up in the initial research phase.
+
 ## What's Next?
 
-I'm going to dive in and try [rweb]. My biggest near-term concern was the lack of documentation, but no amount of documentation actually helped me with [actix-web] so... why not? Hopefully it will go much better and I won't have to write my own lambda handler code _or_ OpenAPI 3 structures. Also, hopefully I can utilize [warp_lambda] to make my life much easier.
+I'm going to dive in and try [rweb]. My biggest near-term concern was the lack of documentation, but no amount of documentation actually helped me with [actix-web] so... why not? Hopefully it will go much better, and I won't have to write my own lambda handler code _or_ OpenAPI 3 structures. Plus now I get to enjoy the (subjectively) nicer syntax of rweb!
 
 ---
 
@@ -108,10 +117,12 @@ _Have a question or comment about this post? Leave it in the [discussions] threa
 
 _Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo]._
 
+_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
+
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/11
+[discussions]: https://github.com/dbanty/dylananthony.com/discussions/18
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-2-research
