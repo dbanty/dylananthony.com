@@ -30,7 +30,6 @@ export default function Meta(): JSX.Element {
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content="Dylan Anthony's Blog." />
     </Head>
   );
