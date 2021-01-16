@@ -11,6 +11,7 @@ import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostData from "../../lib/post";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useEffect } from "react";
 
 interface Props {
   post: PostData;
@@ -21,6 +22,24 @@ export default function Post({ post }: Props): JSX.Element {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  useEffect(() => {
+    if (
+      !sessionStorage.getItem("_swa") &&
+      document.referrer.indexOf(location.protocol + "//" + location.host) !== 0
+    ) {
+      fetch(
+        "https://counter.dev/track?" +
+          new URLSearchParams({
+            referrer: document.referrer,
+            screen: screen.width + "x" + screen.height,
+            user: "dbanty",
+            utcoffset: "-7",
+          })
+      ).then(() => {
+        sessionStorage.setItem("_swa", "1");
+      });
+    }
+  }, []);
   return (
     <Layout>
       <Container>
