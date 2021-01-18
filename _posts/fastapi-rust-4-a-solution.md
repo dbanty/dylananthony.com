@@ -1,7 +1,7 @@
 ---
 title: "Replacing FastAPI with Rust: Part 4 - A Solution"
 excerpt: "I've finally decided on a framework to use."
-coverImage: "/assets/blog/fastapi-rust-4-trying-actix/cover.png"
+coverImage: "/assets/blog/fastapi-rust-4-a-solution/cover.png"
 coverImageAlt: "I've finally decided on a framework to use."
 date: "2021-01-17"
 author:
