@@ -115,14 +115,14 @@ I'm going to dive in and try [rweb]. My biggest near-term concern was the lack o
 
 _Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
 
-_Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo]._
+_This post is part of a series and the [next part] is already available!_
 
 _Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
 
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/18
+[discussions]: https://github.com/dbanty/dylananthony.com/discussions/22
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-2-research
@@ -141,3 +141,4 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [warp_lambda]: https://github.com/aslamplr/warp_lambda
 [warp]: https://github.com/seanmonstar/warp
 [experiments repo]: https://github.com/dbanty/rust-fastapi-experiments
+[next part]: https://dylananthony.com/posts/fastapi-rust-4-a-solution

@@ -95,6 +95,22 @@ That's it! So easy! And this crate clearly has a responsive and helpful maintain
 
 Now I have a self-documenting API compatible with AWS Lambda with very minimal work on my part. [okapi] even comes with a functional (if a bit outdated) Swagger UI, just like FastAPI does!
 
+## Requirements Check
+
+Let's check in with our list of requirements for a FastAPI solution and see where we're at.
+
+1. _"MUST be written in Rust."_ Yup!
+2. _"MUST automatically produce an OpenAPI v3 document from the Rust code and comments."_ Yes!
+3. _"MUST be easily deployable on AWS Lambda using some infrastructure as code tool (SAM, Serverless, etc.)."_ Actually yes, the only one so far!
+4. _"MUST perform at least as fast as an equivalent FastAPI application for common CRUD tasks."_ Tentatively? TechEmpower has it showing a little better in some cases and worse in others, but switching to Tokio in 0.5 is bound change this one way or another.
+5. _"MUST interact with a relational database (MySQL or Postgres)."_ Yes, even though the method will likely change with 0.5.
+6. _"MUST have a simple way to test endpoints, comparable to pytest with FastAPI."_ The basic tests were quite simple! Much better than what I was able to achieve with actix-web.
+7. _"MUST have great documentation."_ I was able to get my basic examples working by just reading the docs, so I'm giving this one a yes as well.
+8. _"MUST have stable, active maintenance."_ The Rocket community is definitely active in developing 0.5, and the maintainer of [rocket_lamb] was quite responsive, so yes.
+9. _"SHOULD have automatically hosted documentation which allows direct interaction with the API."_ Yes! The version of Swagger UI is a bit old but it works!
+
+If you tally it up, this solution meets every single one of my framework requirements, even the optional one!
+
 ## Conclusion
 
 I'm using Rocket! It was way too easy to get all of this working to pass it up. There will certainly be work to do to get [rocket_lamb] and [okapi] ready for Rocket 0.5, but my experience so far has left me very confident!
