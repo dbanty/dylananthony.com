@@ -122,7 +122,7 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/22
+[discussions]: https://github.com/dbanty/dylananthony.com/discussions/18
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-2-research

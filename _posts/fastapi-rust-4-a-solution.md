@@ -19,16 +19,16 @@ After investigating a few more options, I've finally decided on a framework to u
 
 ## [rweb]
 
-As planned, I started with [rweb]. This framework was ranked second of the three options I considered in [part 2] of this blog series. As a short reminder, this framework is build around [warp] and seems to provide most of the features I'm looking for. My main reservations are about the maintenance and community around this project.
+As planned, I started with [rweb]. This framework was ranked second of the three options I considered in [part 2] of this blog series. As a short reminder, this framework is built around [warp] and seems to provide most of the features I'm looking for. My main reservations are about the maintenance and community around this project.
 
 I started out by copying and pasting the example from the docs and trying to run it. I noticed right off the bat that the version included in the example is much older than the latest released version, so I went ahead and updated that. Attempting to run the example produced a series of issues:
 
 1. The example doesn't include the `tokio` "macros" feature or `serde` as a dependency, both of which were required. Easy enough to fix.
 2. `rweb` requires `rweb-macros` which requires a different version of `rweb-openapi` than `rweb` itself does, so you get two different copies of that. I assume this was just a failure to update internal versions on release at some point. All three of these crates are in the same GitHub repository.
 3. CLion (my editor of choice) highlights a syntax error because of the way endpoints are registered. Basically, it seems like the macros transform the functions into something completely different. You then call the functions to register them, but CLion is expecting you to pass the input params (e.g. json body) to the function which you aren't doing.
-4. The code doesn't compile because it was using a module of `syn` which was documented as internal only and do not use. The maintainers of `syn` changed the name of that module to make it even more clear that it was internal only which broke `rweb`. There are a couple of sub-issues here:
+4. The code doesn't compile because it was using a module of `syn` which was documented as internal only and do not use. The maintainers of `syn` changed the name of that module which broke `rweb`. There are a couple of sub-issues here:
    1. rweb was using an internal module of `syn` which it should not have been. This seems to be a common issue though or `syn` would not have been changed to make the internal code more internal.
-   2. Someone reported this issue and the maintainer basically said it wasn't broken and closed the issue. It required some additional prodding from both myself and the issue opener for the maintainer to fix the problem.
+   2. Someone reported this as an issue, but the maintainer closed it without investigation. With additional prodding from both myself and the issue opener the maintainer fixed the problem.
 
 All of this basically confirmed my fears about rweb. The maintenance and stability of the project are not consistent enough for me to be comfortable relying on it. By the time the maintainer fixed the issue, I'd already investigated two other frameworks and chosen one.
 
@@ -128,7 +128,7 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/18
+[discussions]: https://github.com/dbanty/dylananthony.com/discussions/22
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-3-trying-actix
