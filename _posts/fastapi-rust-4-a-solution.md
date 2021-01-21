@@ -2,7 +2,7 @@
 title: "Replacing FastAPI with Rust: Part 4 - A Solution"
 excerpt: "I've finally decided on a framework to use."
 coverImage: "/assets/blog/fastapi-rust-4-a-solution/cover.png"
-coverImageAlt: "I've finally decided on a framework to use."
+coverImageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
 date: "2021-01-17"
 author:
   name: Dylan Anthony
