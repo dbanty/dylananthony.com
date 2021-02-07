@@ -941,7 +941,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.16.1, browserslist@npm:^4.16.1":
+"browserslist@npm:4.16.1, browserslist@npm:^4.12.0, browserslist@npm:^4.16.1, browserslist@npm:^4.6.4":
   version: 4.16.1
   resolution: "browserslist@npm:4.16.1"
   dependencies:
@@ -953,21 +953,6 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 56f51464c3a3bd9b2aeb75ded1dc3fce5ad91bd6d84187aba812a78ba66b69bc97c2de25a1b7409daac3c0049e979bf0faa6cca4aacce0abcaf3107c250ce3fb
-  languageName: node
-  linkType: hard
-
-"browserslist@npm:^4.12.0, browserslist@npm:^4.6.4":
-  version: 4.16.0
-  resolution: "browserslist@npm:4.16.0"
-  dependencies:
-    caniuse-lite: ^1.0.30001165
-    colorette: ^1.2.1
-    electron-to-chromium: ^1.3.621
-    escalade: ^3.1.1
-    node-releases: ^1.1.67
-  bin:
-    browserslist: cli.js
-  checksum: 5385f3dfb1bd1d321093a88c758a5429b55e5f4c76abd91ce865729cfcaa45dc1a54e934e2a8400aca7200f1b9993b1e147bea9fe0fa6704a968b230abd4f277
   languageName: node
   linkType: hard
 
@@ -1054,21 +1039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001093, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001165":
-  version: 1.0.30001170
-  resolution: "caniuse-lite@npm:1.0.30001170"
-  checksum: 26ec112bc9d09a2ba5391d6202dcb3de8c10b080766c79c58d6ab9bc2bcd0b5d9e9e440de04aace97a9537ea60ad51feaaf311e1336bf1a0536f17d52a1886d1
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001173":
-  version: 1.0.30001173
-  resolution: "caniuse-lite@npm:1.0.30001173"
-  checksum: e90b1f29f437708dcb0cab352cb932a3437ae4826dbae3a0f20eaf112b9151aba490cfd8a0f693b08c254c3075baa69a375c235ec5dd002e345283f98981190a
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001179, caniuse-lite@npm:^1.0.30001181":
+"caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001093, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001173, caniuse-lite@npm:^1.0.30001179, caniuse-lite@npm:^1.0.30001181":
   version: 1.0.30001185
   resolution: "caniuse-lite@npm:1.0.30001185"
   checksum: 35a6087bfefebe963de5025c8eb7165c3ccb4e8f55e27beb6169391c9ccd7b1cb09c430779e10211d3afd7ead55be8ade13971e85d80fbe614405afb2467d6c2
@@ -1616,19 +1587,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4":
-  version: 4.3.1
-  resolution: "debug@npm:4.3.1"
-  dependencies:
-    ms: 2.1.2
-  peerDependenciesMeta:
-    supports-color:
-      optional: true
-  checksum: 0d41ba5177510e8b388dfd7df143ab0f9312e4abdaba312595461511dac88e9ef8101939d33b4e6d37e10341af6a5301082e4d7d6f3deb4d57bc05fc7d296fad
-  languageName: node
-  linkType: hard
-
-"debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.1":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.1":
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
   dependencies:
@@ -1922,13 +1881,6 @@ __metadata:
     jsbn: ~0.1.0
     safer-buffer: ^2.1.0
   checksum: 5b4dd05f24b2b94c1bb882488dba2b878bb5b83182669aa71fbdf53c6941618180cb226c4eb9a3e2fa51ad11f87b5edb0a7d7289cdef468ba2e6024542f73f07
-  languageName: node
-  linkType: hard
-
-"electron-to-chromium@npm:^1.3.621":
-  version: 1.3.633
-  resolution: "electron-to-chromium@npm:1.3.633"
-  checksum: 986784f90de03f26976e0d35069bf24424207766cc328385126f4a37eaa70508a04584b52075514f1e5449926159616aaf28d3dbdeb1cb8ea806638fc49f4074
   languageName: node
   linkType: hard
 
@@ -3922,13 +3874,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^1.1.67":
-  version: 1.1.67
-  resolution: "node-releases@npm:1.1.67"
-  checksum: 19a76af9498421b28bbc0123effc870a2ebe68a6364a4eb6547c5f871d6c2d8095fb66cc582a2378af8fbb6124ef8360207ef29d7a5a507e27691c53a85e9df4
-  languageName: node
-  linkType: hard
-
 "node-releases@npm:^1.1.69":
   version: 1.1.69
   resolution: "node-releases@npm:1.1.69"
@@ -4805,18 +4750,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.6, postcss@npm:^8.2.1":
-  version: 8.2.1
-  resolution: "postcss@npm:8.2.1"
-  dependencies:
-    colorette: ^1.2.1
-    nanoid: ^3.1.20
-    source-map: ^0.6.1
-  checksum: aa7ba3d80a4d8e25bc1a3f61461d7f6b60d361fb1301465d0eb973c5f38b347ad0842b02b8cc8801ede46559391d7c640c7313301a829ef9ca77e34be7230854
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.5":
+"postcss@npm:^8.1.6, postcss@npm:^8.2.1, postcss@npm:^8.2.5":
   version: 8.2.5
   resolution: "postcss@npm:8.2.5"
   dependencies:
