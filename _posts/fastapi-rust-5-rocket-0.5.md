@@ -55,7 +55,7 @@ There were some API differences both in the new `rocket` version and in the `lam
 
 ## Step 2: Check and Check and Check
 
-I’ve now entered the stage where I’m repeatedly running `cargo check` and fixing the errors I’ve found. Unfortunately I came to a similar issue quite quickly to the one I faced when implementing my own `Handler` for `async-std`: passing data to the `Future` doing the actual handling. The code changes for Step 2 can be found [in this commit](https://github.com/dbanty/rocket-lamb/commit/6a995b1b977675736fa32d96e1094ba3fcc05098).
+I’ve now entered the stage where I’m repeatedly running `cargo check` and fixing the errors I’ve found. Unfortunately I came to a similar issue quite quickly to the one I faced when implementing my own `Handler` for `actix-web`: passing data to the `Future` doing the actual handling. The code changes for Step 2 can be found [in this commit](https://github.com/dbanty/rocket-lamb/commit/6a995b1b977675736fa32d96e1094ba3fcc05098).
 
 ### Step 2.1: Solving Async References
 
