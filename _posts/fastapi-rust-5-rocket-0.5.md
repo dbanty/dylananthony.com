@@ -24,7 +24,6 @@ Both of these issues are fixed on the `master` branch of the Rocket repository, 
 
 In this post, I walk through my experience updating `rocket_lamb` to support the latest development version of Rocket in an effort to prepare it for the inevitable 0.5 Rocket release.
 
-
 ## Step 1: Just Try It!
 
 One of the nicest things about Rust is that the strict compiler means generally you can refactor by following the errors. If you also have good test coverage in your library, you can be even more confident! So far in my Rust journey, I’ve been able to follow this process in every significant refactor:
@@ -38,9 +37,31 @@ So in this case, step 1 is to replace Rocket 0.4 with the current development ve
 
 ### Step 1.0: Replace the Dependencies
 
-I replaced the `rocket` dependency with one which pointed at the latest source code. Cargo lets you use `git` as a source of dependencies fairly easily like this: `rocket = { git = “https://github.com/SergioBenitez/Rocket” }`.
+If I want to get `rocket_lamb` working with the latest Rocket, the first step is to swap out the released 0.4 Rocket in `Cargo.toml` with the latest development version (using a git source). I then swapped in some `lamedh_` crates for the `lambda_` crates, since the former supports the latest Tokio. I also had to change out the `http` version and add `aws_lambda_events` to satisfy some compiler complaints. All in all, here are the changes:
 
-Next up was `lambda_runtime = “0.2.1”` and `lambda_http = “0.1.1”` which could be replaced with the similarly named `lamedh_runtime = “0.3.0”` and `lamedh_http = “0.3.0”`. These `lamedh_` crates depend on a newer version of `http` so I replaced `http = “0.1”` with `http = "0.2.3"`. In sorting out the imports, I discovered that something which was re-exported in the `lambda_` crates is not in the `lamedh_` crates, so I also had to add `aws_lambda_events = "0.4.0"`.
+#### Before
+
+```toml
+[dependencies]
+rocket = { version = "0.4.0", default-features = false }
+lambda_runtime = "0.2.1"
+lambda_http = "0.1.1"
+http = "0.1"
+failure = "0.1.5"
+```
+
+#### After
+
+```toml
+[dependencies]
+rocket = { git = "https://github.com/SergioBenitez/Rocket" }
+lamedh_runtime = "0.3.0"
+lamedh_http = "0.3.0"
+http = "0.2.3"
+failure = "0.1.5"
+aws_lambda_events = "0.4.0"
+tokio = { version = "1", features = ["full"] }
+```
 
 Cargo (or maybe it’s `rustc` under the hood?) can provide pretty helpful error messages in this process, though sometimes you have to know what to look for. I always recommend reading the _entire_ output of Rust compiler errors. In other languages (notably Python) I’m used to looking at stack traces where I’ve gotten good at ignoring most of the content since it’s not relevant to the problem I’m solving. A ton of care is taken in designing Rust compiler messages, so all of the information is likely to be relevant. In the case of `http` being on the wrong version, the error was something like ` expected struct http::Method``, found struct lamedh_http::http::Method ` however there is a note which says “perhaps two different versions of crate `http` are being used?” informing you of exactly the problem!
 
