@@ -15,9 +15,15 @@ _This post is part of a series. If you haven't already, you may want to read the
 
 ---
 
-## Background
+In the [previous post], I selected Rocket as the web framework to use for future projects. It seems like the best option when compared with the others I've tested with two big caveats:
 
-`rocket_lamb` is based on Rocket 0.4 and the official aws runtime. That means it uses Tokio 0.1 for communicating with the Lambda API, but runs blocking code for handling Rocket requests. Rocket 0.5 is in development and supports Tokio 1.x, allowing for async requests. The lamedh crates (formerly Netlify) use Tokio 1 so in theory we can use that to upgrade `rocket_lamb`.
+1. It requires nightly Rust, which means compiling your project could break unexpectedly. If you don't know, nightly is the proving ground for potential future Rust features. If something requires nightly, that means it's using features that are inherently unstable.
+2. It is not async, and therefore not compatible with my favorite option for handling SQL: SQLx.
+
+Both of these issues are fixed on the `master` branch of the Rocket repository, which will become Rocket 0.5 once released. However, hosting a Rocket application on AWS Lambda requires a crate called `rocket_lamb` which will need to be updated for Rocket 0.5 before it will work.
+
+In this post, I walk through my experience updating `rocket_lamb` to support the latest development version of Rocket in an effort to prepare it for the inevitable 0.5 Rocket release.
+
 
 ## Step 1: Just Try It!
 
