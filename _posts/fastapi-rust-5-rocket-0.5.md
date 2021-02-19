@@ -108,11 +108,21 @@ This isn’t magic, `Rc` stands for “reference counting” which is a common w
 
 ### Step 2.1: Being Less Selfish
 
-In order to aid me with `Arc`ing the codebase, I pulled out most of the methods on `RocketHandler` into functions instead which took just the data they needed rather than the whole `self`. This made it _way_ easier to reason about the code, and understanding led me to faster, more confident modifications. I prefer this style anyway because it makes it clear when you _call_ something exactly what that something is taking. An object-oriented “method” style hides whether something is just reading data, or mutating it, or outright consuming it until you jump to definition. Why not take full advantage of how explicit Rust is?
+In order to aid me with `Arc`ing the codebase, I pulled out most of the methods on `RocketHandler` into functions instead which took just the data they needed rather than the whole `self`. This made it _way_ easier to reason about the code, and understanding led me to faster, more confident modifications. I prefer this style anyway because it makes it clear when you _call_ something exactly what that something is taking. An object-oriented “method” style hides whether something is just reading data, or mutating it, or outright consuming it until you jump to definition. Why not take full advantage of how explicit Rust is? Here's an example to illustrate my point:
+
+```rust
+// Method style
+handler.ensure_client_ready(request)
+
+// Function style
+ensure_client_ready(&mut handler.client, &handler.config, &request)
+```
+
+It's more verbose, but now I can clearly see that I need to `Arc` the handler's config attribute to share it in this manner and that the `handler.client` needs to be mutable, so I need some way to deal with this. Also, I'm not sure how I would go about `Arc`ing the entire `RocketHandler` anyway to pass it through to methods in a thread-safe manner, so I had to pick functional style whether I wanted to or not.
 
 ### Step 2.2: Disabling a Feature
 
-In reorganizing the code, I found one example of interior mutability that was fairly dense code. Basically it was lazily initializing a `Client` (the thing from Rocket that actually lets you process a request) so it could include some information from the first request. This was very much related to the code I disabled in step 1.2.3 so for now I just removed this feature as well, figuring I’d come back to this once I understood the code better.
+That `ensure_client_ready` function from before required mutability and was fairly dense code related to what I disabled in step 1.2.3. So for now I just removed this feature as well, figuring I’d come back to this once I understood the code better.
 
 And with that, `cargo check` passed! Next it was on to `cargo test` , which of course couldn’t even complete the compilation step to start with.
 
