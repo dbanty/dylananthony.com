@@ -3,7 +3,7 @@ title: "Replacing FastAPI with Rust: Part 5 - Rocket 0.5"
 excerpt: "I walk through my experience updating rocket_lamb to support the latest development version of Rocket"
 coverImage: "/assets/blog/fastapi-rust-5-rocket-0.5/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
-date: "2021-02-19"
+date: "2021-02-20"
 author:
   name: Dylan Anthony
   picture: "/assets/blog/initials.png"
@@ -17,12 +17,16 @@ _This post is part of a series. If you haven't already, you may want to read the
 
 In the [previous post], I decided that Rocket is the best candidate to replace FastAPI with two big caveats:
 
-1. It requires nightly Rust, which means compiling your project could break unexpectedly. If you don't know, nightly is the proving ground for potential future Rust features. If something requires nightly, that means it's using features that are inherently unstable.
+1. It *requires* nightly Rust, and therefore [unstable features](https://doc.rust-lang.org/stable/book/appendix-07-nightly-rust.html#unstable-features).
 2. It is not async, and therefore not compatible with my favorite option for handling SQL: [SQLx].
 
 Both of these issues are fixed on the `master` branch of the Rocket repository, which will become Rocket 0.5 once released. However, hosting a Rocket application on AWS Lambda requires a crate called `rocket_lamb` which will need to be updated for Rocket 0.5 before it will work.
 
-In this post, I walk through my experience updating `rocket_lamb` to support the latest development version of Rocket in an effort to prepare it for the inevitable 0.5 Rocket release.
+In this post, I walk through my experience updating `rocket_lamb` to support the latest development version of Rocket in an effort to prepare it for the inevitable 0.5 Rocket release. The highlights are:
+
+1. My general purpose process for refactoring in Rust
+2. How to solve async lifetime issues using `Arc` and `Mutex`
+3. Some thoughts on testing methodology
 
 ## Step 1: Just Try It!
 
@@ -52,13 +56,13 @@ failure = "0.1.5"
 #### After
 
 ```toml
-rocket = { git = "https://github.com/SergioBenitez/Rocket" }
+rocket = { git = "https://github.com/SergioBenitez/Rocket", branch = "master", default-features = false }
 lamedh_runtime = "0.3.0"
 lamedh_http = "0.3.0"
 http = "0.2.3"
 failure = "0.1.5"
 aws_lambda_events = "0.4.0"
-tokio = { version = "1", features = ["full"] }
+tokio = "1"
 parking_lot = "0.11.1"
 ```
 
