@@ -192,7 +192,7 @@ The obvious problem I see with my new code is it will have significantly more ov
 
 ## Conclusion
 
-That’s it! [My fork of rocket_lamb](https://github.com/dbanty/rocket-lamb/tree/rocket-0.5) now works with the development version of `rocket` and the latest `tokio`. I was even able to get [my rocket experiment](https://github.com/dbanty/rust-fastapi-experiments/tree/rocket-0.5) working with the latest `rocket` by combining my fork with [a fork of okapi which has been updated](https://github.com/ThouCheese/okapi/tree/async) (though it doesn’t work on stable Rust yet). So what’s next? Well now that everything has been updated, in theory my endpoints can be async, which means I should finally be able to use [SQLx] with this project!
+That’s it! [My fork of rocket_lamb](https://github.com/dbanty/rocket-lamb/tree/rocket-0.5) now works with the development version of `rocket` and the latest `tokio`. I was even able to get [my rocket experiment](https://github.com/dbanty/rust-fastapi-experiments/tree/rocket-0.5) working with the latest `rocket` by combining my fork with [a fork of okapi which has been updated](https://github.com/dbanty/okapi/tree/async2). So what’s next? Well now that everything has been updated, in theory my endpoints can be async, which means I should finally be able to use [SQLx] with this project!
 
 ---
 
