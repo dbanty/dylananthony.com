@@ -17,7 +17,7 @@ _This post is part of a series. If you haven't already, you may want to read the
 
 In the [previous post], I decided that Rocket is the best candidate to replace FastAPI with two big caveats:
 
-1. It *requires* nightly Rust, and therefore [unstable features](https://doc.rust-lang.org/stable/book/appendix-07-nightly-rust.html#unstable-features).
+1. It _requires_ nightly Rust, and therefore [unstable features](https://doc.rust-lang.org/stable/book/appendix-07-nightly-rust.html#unstable-features).
 2. It is not async, and therefore not compatible with my favorite option for handling SQL: [SQLx].
 
 Both of these issues are fixed on the `master` branch of the Rocket repository, which will become Rocket 0.5 once released. However, hosting a Rocket application on AWS Lambda requires a crate called `rocket_lamb` which will need to be updated for Rocket 0.5 before it will work.
