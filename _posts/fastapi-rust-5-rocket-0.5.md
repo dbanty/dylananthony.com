@@ -62,7 +62,7 @@ tokio = { version = "1", features = ["full"] }
 parking_lot = "0.11.1"
 ```
 
-Cargo (or maybe it’s `rustc` under the hood?) can provide pretty helpful error messages in this process, though sometimes you have to know what to look for. I always recommend reading the _entire_ output of Rust compiler errors. In other languages (notably Python) I’m used to looking at stack traces where I’ve gotten good at ignoring most of the content since it’s not relevant to the problem I’m solving. A ton of care is taken in designing Rust compiler messages, so all of the information is likely to be relevant. In the case of `http` being on the wrong version, the error was something like ` expected struct http::Method, found struct lamedh_http::http::Method ` however there is a note which says “perhaps two different versions of crate `http` are being used?” informing you of exactly the problem!
+Cargo (or maybe it’s `rustc` under the hood?) can provide pretty helpful error messages in this process, though sometimes you have to know what to look for. I always recommend reading the _entire_ output of Rust compiler errors. In other languages (notably Python) I’m used to looking at stack traces where I’ve gotten good at ignoring most of the content since it’s not relevant to the problem I’m solving. A ton of care is taken in designing Rust compiler messages, so all of the information is likely to be relevant. In the case of `http` being on the wrong version, the error was something like `expected struct http::Method, found struct lamedh_http::http::Method` however there is a note which says “perhaps two different versions of crate `http` are being used?” informing you of exactly the problem!
 
 ### Step 1.1: Update the Imports
 
@@ -209,4 +209,4 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-4-a-solution
-[SQLx]: https://crates.io/crates/sqlx
+[sqlx]: https://crates.io/crates/sqlx
