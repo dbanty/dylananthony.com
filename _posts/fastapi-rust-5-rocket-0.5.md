@@ -202,7 +202,7 @@ That’s it! [My fork of rocket_lamb](https://github.com/dbanty/rocket-lamb/tree
 
 _Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
 
-_Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo]._
+_This post is part of a series and the [next part] is already available!_
 
 _Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
 
@@ -214,3 +214,4 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-4-a-solution
 [sqlx]: https://crates.io/crates/sqlx
+[next post]: https://dylananthony.com/posts/fastapi-rust-6-aws-lambda

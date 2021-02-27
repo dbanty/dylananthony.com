@@ -1,6 +1,6 @@
 ---
 title: "Replacing FastAPI with Rust: Part 6 - AWS Lambda"
-excerpt: ""
+excerpt: "In this post, we'll take a look at two different methods to deploy our Rocket application to AWS Lambda: the SAM CLI and AWS CDK."
 coverImage: "/assets/blog/fastapi-rust-6-aws-lambda/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
 date: "2021-02-24"
@@ -43,23 +43,24 @@ Overall the `sam` experience was _fairly_ painless. I'd say the toughest part wa
 
 AWS CDK is a tool that allows you to define your AWS infrastructure in a programming language instead of using CloudFormation syntax (e.g. in `template.yml` for `sam`). The languages available listed in the docs are TypeScript, JavaScript, Java, Python, and C#. The CLI tool also seems to indicate that F# is an option, so that might be worth looking into if it interests you. I went with TypeScript for this project because:
 
-1. It's a language I know
-2. It's strongly, statically typed
+1. It's a language I know.
+2. It's strongly, statically typed.
 3. The CDK CLI requires `node` anyway.
 
-It ended up being pretty difficult to figure out how to do this, you can copy my work from [the CDK branch]. The relevant bits are:
+Before I walk through how I got to a working solution (as it was fairly difficult to piece together all the answers), feel free to take a look at [the CDK branch of the experiments repo] to see the result for yourself. The relevant bits are:
 
 1. The `Makefile` which contains rules for building/deploying via CDK
 2. The various `.json` files which configure the Node/TypeScript things
 3. The `cdk` directory which contains the actual infrastructure code
 
-Here's basically the process I followed to get there:
+Here's the high level process I followed to get there:
 
 1. Follow [these instructions](https://docs.aws.amazon.com/cdk/latest/guide/home.html) to install CDK.
-2. Create a directory to keep your infrastructure code in and initialize it with cdk. I did `mkdir cdk && cd cdk && cdk init app --language typescript`
-3. Follow [these instructions](https://docs.aws.amazon.com/cdk/latest/guide/serverless_example.html) to add the necessary components for lambda and API Gateway.
-4. Take some inspiration from [this blog post](https://dev.to/aws-builders/building-an-aws-lambda-extension-with-rust-3p81) for setting up Rust builds with CDK.
-5. Find and use `apigateway.LambdaRestApi` in CDK to make the infrastructure setup way simpler.
+2. Create a directory to keep your infrastructure code in and initialize it with cdk. I did `mkdir cdk && cd cdk && cdk init app --language typescript`.
+3. Delete the TypeScript handler code since we won't be needing that.
+4. Follow [these instructions](https://docs.aws.amazon.com/cdk/latest/guide/serverless_example.html) to add the necessary components for Lambda and API Gateway.
+5. Take some inspiration from [this blog post](https://dev.to/aws-builders/building-an-aws-lambda-extension-with-rust-3p81) for setting up Rust builds with CDK.
+6. Find and use `apigateway.LambdaRestApi` in CDK to make the infrastructure setup way simpler.
 
 With the CDK code all set up correctly, the steps to deploy are:
 
@@ -73,9 +74,9 @@ The solution is very nice once you put all the pieces together. I strongly recom
 3. CDK comes with a nice `cdk destroy` command which will tear down _most_ of what it created (just not the bootstrap stuff).
 4. It's easy to break up your code into reusable components. You can even create normal packages with whatever language you selected and share those to other projects, so you don't have to copy/paste infrastructure. I'll _definitely_ be doing this in the future.
 
-The only question left to answer was how to run the function locally? Luckily AWS provides official and easy instructions for running a CDK function using SAM, and it works super easily! In my repo, I can do `make local` which basically builds the app, runs `cdk synth > template.yaml`, then runs the same `sam local start-api` I was already doing.
+The only question left to answer was how to run the function locally. Luckily AWS provides official and easy instructions for running a CDK function using SAM, and it works super easily! In my repo, I can do `make local` which basically builds the app, runs `cdk synth > template.yaml`, then runs the same `sam local start-api` I was already doing.
 
-There is another option to running locally which you can try, but I had very little success with. LocalStack is a project for emulating AWS services via Docker containers. It's a fantastic project, I have used it to emulate SQS in other work, however their API Gateway support is pretty atrocious. You have to dig around in their docs for a while to find the long, custom URL you need to call which requires copying and pasting the API ID every time. All the effort didn't seem worth it to me, but if you want to try it out yourself I found [this GitHub repo](https://github.com/codetalkio/patterns-serverless-rust-minimal) which should get you started in the right direction.
+There is another option for running locally which you can try, but I had very little success with it. There is a project called LocalStack for emulating AWS services via Docker containers. I've used it in the past for doing integration tests with SQS, however their API Gateway support is pretty atrocious. You have to dig around in their docs for a while to find the long, custom URL you need to call which requires copying and pasting the API ID every time. All the effort didn't seem worth it to me, but if you want to try it out yourself I found [this GitHub repo](https://github.com/codetalkio/patterns-serverless-rust-minimal) which should get you started in the right direction.
 
 ## Conclusion
 
