@@ -25,9 +25,9 @@ Once you have your account set up, you'll need to generate some IAM credentials,
 
 ## SAM CLI
 
-If you've followed along with previous posts, you'll know that so far I've been using the [SAM CLI] in order to test the application locally. This allows me to run the app in an environment as close to AWS as possible without actually deploying. Eventually though, you have to actually host this API somewhere, so let's see what it takes to convert what we already have to something deployable.
+If you've followed along with previous posts, you'll know that I've been using the [SAM CLI] in order to test the application locally. This allows me to emulate the AWS environment for testing, which is invaluable, but it's not the only purpose of the tool. It can also be used to build and deploy the application to AWS.
 
-To start off, you'll need to do a `sam build` before each deploy, just like was necessary before doing a `sam local start-api` to run locally. If you've run this before with the same settings I have in [the experiments repo], you'll know that it feels like it takes _forever_ because you get no feedback on the build process. There might be a way to fix this but I haven't found it yet.
+To start off, you'll need to do a `sam build` before each deploy, just like was necessary before doing a `sam local start-api` to run locally. If you've run this before with the same settings I have in [the experiments repo], you'll know that it feels like it takes _forever_ because you get no feedback on the build process. There might be a way to fix this, but I haven't found it yet.
 
 After the app is finish building, you'll want to do a `sam deploy --profile <aws_profile_name> --guided` (omit the `--profile` if you've only got one AWS profile configured) and follow the prompts. This will create a `samconfig.toml` file with some additional required information for SAM. In the future, to redeploy, you can omit the `--guided` because you already have this file. Now feels like a good time to note that if you've copied the `template.yml` from my repo previously, you'll want to update it from the one in [the SAM experiments branch] because it was missing a required attribute previously.
 
@@ -47,9 +47,9 @@ AWS CDK is a tool that allows you to define your AWS infrastructure in a program
 2. It's strongly, statically typed.
 3. The CDK CLI requires `node` anyway.
 
-Before I walk through how I got to a working solution (as it was fairly difficult to piece together all the answers), feel free to take a look at [the CDK branch of the experiments repo] to see the result for yourself. The relevant bits are:
+Before I walk through how I got to a working solution (as it was fairly difficult to piece together all the answers), feel free to take a look at [the CDK branch of the experiments repo][the cdk branch] to see the result for yourself. The relevant bits are:
 
-1. The `Makefile` which contains rules for building/deploying via CDK
+1. The `Makefile` which contains rules for building and deploying via CDK
 2. The various `.json` files which configure the Node/TypeScript things
 3. The `cdk` directory which contains the actual infrastructure code
 
@@ -95,7 +95,7 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/26
+[discussions]: https://github.com/dbanty/dylananthony.com/discussions/29
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-5-rocket-0.5
