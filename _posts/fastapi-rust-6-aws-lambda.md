@@ -3,7 +3,7 @@ title: "Replacing FastAPI with Rust: Part 6 - AWS Lambda"
 excerpt: "In this post, we'll take a look at two different methods to deploy our Rocket application to AWS Lambda: the SAM CLI and AWS CDK."
 coverImage: "/assets/blog/fastapi-rust-6-aws-lambda/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
-date: "2021-02-24"
+date: "2021-02-28"
 author:
   name: Dylan Anthony
   picture: "/assets/blog/initials.png"
@@ -88,16 +88,17 @@ AWS CDK definitely seems like a great option for deploying functions, as well as
 
 _Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
 
-_Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo]._
+_Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo] or [follow me on Twitter][twitter]._
 
 _Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
 
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/29
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
+[twitter]: https://twitter.com/TBDylan
+[discussions]: https://github.com/dbanty/dylananthony.com/discussions/29
 [previous post]: https://dylananthony.com/posts/fastapi-rust-5-rocket-0.5
 [sam cli]: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html
 [aws cdk]: https://docs.aws.amazon.com/cdk/latest/guide/home.html
