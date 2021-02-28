@@ -84,6 +84,8 @@ AWS CDK definitely seems like a great option for deploying functions, as well as
 
 ---
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R7223BQ)
+
 _Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
 
 _Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo]._
