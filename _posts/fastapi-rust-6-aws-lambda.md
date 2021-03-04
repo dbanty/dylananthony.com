@@ -3,7 +3,7 @@ title: "Replacing FastAPI with Rust: Part 6 - AWS Lambda"
 excerpt: "In this post, we'll take a look at two different methods to deploy our Rocket application to AWS Lambda: the SAM CLI and AWS CDK."
 coverImage: "/assets/blog/fastapi-rust-6-aws-lambda/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
-date: "2021-02-28"
+date: "2021-03-03"
 author:
   name: Dylan Anthony
   picture: "/assets/blog/initials.png"
