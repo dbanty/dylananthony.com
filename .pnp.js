@@ -4898,16 +4898,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.2.5", {
-          "packageLocation": "./.yarn/cache/postcss-npm-8.2.5-603d3d0c9b-dbd8281a32.zip/node_modules/postcss/",
-          "packageDependencies": [
-            ["postcss", "npm:8.2.5"],
-            ["colorette", "npm:1.2.1"],
-            ["nanoid", "npm:3.1.20"],
-            ["source-map", "npm:0.6.1"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:8.2.6", {
           "packageLocation": "./.yarn/cache/postcss-npm-8.2.6-77313d6d89-31dcc66325.zip/node_modules/postcss/",
           "packageDependencies": [
@@ -5133,7 +5123,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-js", "npm:3.0.3"],
             ["camelcase-css", "npm:2.0.1"],
-            ["postcss", "npm:8.2.5"]
+            ["postcss", "npm:8.2.6"]
           ],
           "linkType": "HARD",
         }]
@@ -5566,7 +5556,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["purgecss", "npm:3.1.3"],
             ["commander", "npm:6.2.1"],
             ["glob", "npm:7.1.6"],
-            ["postcss", "npm:8.2.5"],
+            ["postcss", "npm:8.2.6"],
             ["postcss-selector-parser", "npm:6.0.4"]
           ],
           "linkType": "HARD",

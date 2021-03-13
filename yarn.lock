@@ -4534,18 +4534,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.6, postcss@npm:^8.2.1":
-  version: 8.2.5
-  resolution: "postcss@npm:8.2.5"
-  dependencies:
-    colorette: ^1.2.1
-    nanoid: ^3.1.20
-    source-map: ^0.6.1
-  checksum: dbd8281a32abdbb68be53a7022f405f25207cfadf86cd603bc47e29579432d6fe970fb4189af6ddbd81170c9f226ae36413970bed5bfcd6d04544c86374547be
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.6":
+"postcss@npm:^8.1.6, postcss@npm:^8.2.1, postcss@npm:^8.2.6":
   version: 8.2.6
   resolution: "postcss@npm:8.2.6"
   dependencies:
