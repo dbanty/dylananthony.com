@@ -41,12 +41,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.13.7":
-  version: 7.13.7
-  resolution: "@babel/runtime@npm:7.13.7"
+"@babel/runtime@npm:7.13.10":
+  version: 7.13.10
+  resolution: "@babel/runtime@npm:7.13.10"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: 8be9fd44bb684ad42069170ca1bce9e225af7bc13861f5ac9c2517b6f1c585fb167cedb54f1a0c5b3f26a8391a9e1afef874829df494d945398d3f67b39e6116
+  checksum: 22014226b96a8c8e8d4e8bcdb011f317d1b32881aef424a669dc6ceaee14993d3609172967853cbf9c25c724c25145d45885b6c9df56ba241c12820776607f1f
   languageName: node
   linkType: hard
 
@@ -1664,7 +1664,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dylan-anthony-com@workspace:."
   dependencies:
-    "@babel/runtime": 7.13.7
+    "@babel/runtime": 7.13.10
     "@tailwindcss/typography": 0.4.0
     "@types/node": 14.14.37
     "@types/react": 17.0.0
