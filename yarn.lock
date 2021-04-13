@@ -1109,10 +1109,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:2.2.6, classnames@npm:^2.2.6":
+"classnames@npm:2.2.6":
   version: 2.2.6
   resolution: "classnames@npm:2.2.6"
   checksum: 490eaeca5931846737ffd33e472a701d268d5b8bc5717dd4cf108a127b06e86e05350e06799abbbe763a0e4c945b4217f6700b7ae00ddc703505682c370e5cf2
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: 57d536edede609f81425d24b062d8d720a466565faf1e38d32c881e883920baa71519ac70c7b565e9cd39201fb1c1ff9bdf8aabf8e26544bac481e7924867c83
   languageName: node
   linkType: hard
 
@@ -1694,7 +1701,7 @@ __metadata:
     react-dom: 17.0.2
     remark: 13.0.0
     remark-html: 13.0.1
-    remark-prism: 1.3.5
+    remark-prism: 1.3.6
     tailwindcss: 2.0.4
     typescript: 4.1.5
   languageName: unknown
@@ -3052,9 +3059,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^16.5.2":
-  version: 16.5.2
-  resolution: "jsdom@npm:16.5.2"
+"jsdom@npm:^16.5.3":
+  version: 16.5.3
+  resolution: "jsdom@npm:16.5.3"
   dependencies:
     abab: ^2.0.5
     acorn: ^8.1.0
@@ -3087,7 +3094,7 @@ fsevents@~2.3.1:
   peerDependenciesMeta:
     canvas:
       optional: true
-  checksum: a0be91b456596db988e1c5c6a146fcceb4fb6d401b947498c5b4cd7ff3202ce8ca3816be77a60d112bc45916fc7959fb7aeb98e81729c36bf4fef566c91c02db
+  checksum: 02f6e3b5bb6c75f70b256f9fb522ce67cdf035c8e073a61f152876570d29453f164a4f1ea38a62e419511f81f6f75ced793e6332b66a647dc8012daacff27b8e
   languageName: node
   linkType: hard
 
@@ -4918,20 +4925,20 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"remark-prism@npm:1.3.5":
-  version: 1.3.5
-  resolution: "remark-prism@npm:1.3.5"
+"remark-prism@npm:1.3.6":
+  version: 1.3.6
+  resolution: "remark-prism@npm:1.3.6"
   dependencies:
-    classnames: ^2.2.6
+    classnames: ^2.3.1
     css-selector-parser: ^1.4.1
     escape-html: ^1.0.3
-    jsdom: ^16.5.2
+    jsdom: ^16.5.3
     parse-numeric-range: ^1.2.0
     parse5: ^6.0.1
     parse5-htmlparser2-tree-adapter: ^6.0.1
     prismjs: ^1.23.0
     unist-util-map: ^2.0.1
-  checksum: f3e1b304e468344f830cec8f7b8201bf684e55dc183bda08b44a693560b3a00cc40cc6725433d25fc8c45888cdc41fbdf193355af9dc39870ed7ec1c16a75d0a
+  checksum: 161b16fd3fdc7af83c2fe2e5643ccf80c6218f05c60d19505dfe825a6995cb438bdc32f9f32963d8ab688a13c5a9b8ff7125c1ac0a68041b42ffb44252b3b19b
   languageName: node
   linkType: hard
 
