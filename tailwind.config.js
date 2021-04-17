@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   plugins: [require("@tailwindcss/typography")],
   theme: {
