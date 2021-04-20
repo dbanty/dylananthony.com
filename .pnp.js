@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@babel/runtime", "npm:7.13.10"],
+            ["@babel/runtime", "npm:7.13.16"],
             ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:17.0.3"],
@@ -106,10 +106,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.13.10", {
-          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.13.10-d9a6e8f765-22014226b9.zip/node_modules/@babel/runtime/",
+        ["npm:7.13.16", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.13.16-e6c8d6bd5e-5975f71ee9.zip/node_modules/@babel/runtime/",
           "packageDependencies": [
-            ["@babel/runtime", "npm:7.13.10"],
+            ["@babel/runtime", "npm:7.13.16"],
             ["regenerator-runtime", "npm:0.13.7"]
           ],
           "linkType": "HARD",
@@ -2101,7 +2101,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["dylan-anthony-com", "workspace:."],
-            ["@babel/runtime", "npm:7.13.10"],
+            ["@babel/runtime", "npm:7.13.16"],
             ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:17.0.3"],
