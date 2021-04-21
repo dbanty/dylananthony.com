@@ -1,6 +1,6 @@
 ---
 title: "Running GraphQL on Lambda with Rust"
-excerpt: ""
+excerpt: "I've been pleasantly surprised so far at how easy it's been to write a GraphQL API using Rust."
 coverImage: "/assets/blog/graphql-lambda-rust/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' sits beneath the logos for GraphQL and AWS Lambda. Text beneath the images states 'GraphQL on Lambda with Rust'"
 date: "2021-04-20"
