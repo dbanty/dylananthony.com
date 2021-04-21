@@ -3,7 +3,7 @@ title: "Running GraphQL on Lambda with Rust"
 excerpt: ""
 coverImage: "/assets/blog/graphql-lambda-rust/cover.png"
 coverImageAlt: "The Rust mascot 'Ferris the Crab' sits beneath the logos for GraphQL and AWS Lambda. Text beneath the images states 'GraphQL on Lambda with Rust'"
-date: "2021-04-17"
+date: "2021-04-20"
 author:
   name: Dylan Anthony
   picture: "/assets/blog/initials.png"
@@ -17,9 +17,9 @@ Taking a break from OpenAPI for a bit, I decided to explore the primary alternat
 
 ## The Options
 
-There are two real contenders for GraphQL crates: [async-graphql] and [Juniper]. Having read briefly through both sets of documentation, [async-graphql] seemed like the more feature-rich and better-documented option, so that's what I went with. If you'd like me to take a look at Juniper and do an in-depth comparison, please leave a note [in the discussion thread][discussion]!
+There are two real contenders for GraphQL crates: [async-graphql] and [Juniper]. Having read briefly through both sets of documentation, [async-graphql] seemed like the more feature-rich and well-documented option, so that's what I went with. If you'd like me to take a look at Juniper and do an in-depth comparison, please leave a note [in the discussion thread][discussion]!
 
-The good news is that both solutions are fairly feature-complete using stable Rust and neither is tightly coupled to a web server! You'll know this is perfect for my use-cases if you've read [my previous posts][fastapi-rust-research] where I repeatedly jumped through hoops shoe-horning a web server into a serverless environment.
+The good news is that both solutions are fairly feature-complete using stable Rust, and neither is tightly coupled to a web server! You'll know that this is perfect for my use-cases if you've read [my previous posts][fastapi-rust-research] where I repeatedly jumped through hoops shoe-horning a web server into a serverless environment.
 
 ## The Setup
 
@@ -27,7 +27,7 @@ As I mentioned, I went with [async-graphql] as the primary crate to build my exp
 
 > Interested in seeing how to apply this CDK setup to Python applications? Upvote [this idea thread][python cdk idea].
 
-I used [cargo-make] to orchestrate a bunch of building and running tasks (I highly recommend you check it out if you find yourself using `Makefile`s with Rust). Postgres via `docker-compose` is my go-to database, though you can easily swap in MySQL or MSSQL since I'm using [SQLx] to run queries. Throw in a bit of [tracing] following the examples of the fantastic [Zero to Production in Rust] book, and we've got ourselves a pretty solid development platform for building our API.
+I used [cargo-make] to orchestrate a bunch of tasks (I highly recommend you check it out if you find yourself using `Makefile`s with Rust). Postgres via `docker-compose` is my go-to database, though you can easily swap in MySQL or MSSQL since I'm using [SQLx] to run queries. Throw in a bit of [tracing] following the examples of the fantastic [Zero to Production in Rust] book, and we've got ourselves a pretty solid development platform for building our API.
 
 ## The Code
 
@@ -51,7 +51,7 @@ _Was this post super helpful to you? [Tip me on GitHub][github one time]._
 
 _Have a question or comment about this post? Leave it in the [discussion] thread on GitHub!_
 
-_Want to be notified when the next part of this series is released? Watch releases in [the GitHub repo] or [follow me on Twitter][twitter]._
+_Want to be notified of future posts? Watch releases in [the GitHub repo] or [follow me on Twitter][twitter]._
 
 _Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
 
