@@ -28,9 +28,6 @@ export default function Footer(): JSX.Element {
               <li>
                 <a href="https://dev.to/dbanty">Dev.to</a>
               </li>
-              <li>
-                <a href="https://dylananthony.substack.com">Substack </a>
-              </li>
             </ul>
           </div>
         </div>
