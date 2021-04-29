@@ -36,49 +36,49 @@ I'm a big fan of serverless functions, but my perspective is usually limited to 
 Here is the list of all the supported languages with the platforms that support them. Reminder, a number in {} after the language means there's a caveat, check the bottom of the post for it!
 
 1. JavaScript
-    1. Netlify
-    2. AWS
-    3. GCP
-    4. Azure
-    5. Vercel
-    6. Cloudflare
+   1. Netlify
+   2. AWS
+   3. GCP
+   4. Azure
+   5. Vercel
+   6. Cloudflare
 2. TypeScript
-    1. Netlify
-    2. Azure
-    3. Vercel
-    4. Cloudflare
-    5. AWS {1}
-    6. GCP {1}
+   1. Netlify
+   2. Azure
+   3. Vercel
+   4. Cloudflare
+   5. AWS {1}
+   6. GCP {1}
 3. Go
-    1. Netlify
-    2. AWS
-    3. GCP
-    4. Azure {2}
-    5. Vercel
+   1. Netlify
+   2. AWS
+   3. GCP
+   4. Azure {2}
+   5. Vercel
 4. Python
-    1. AWS
-    2. GCP
-    3. Azure
-    4. Vercel
-    5. Cloudflare {3}
+   1. AWS
+   2. GCP
+   3. Azure
+   4. Vercel
+   5. Cloudflare {3}
 5. Ruby
-    1. AWS
-    2. GCP
-    3. Vercel
+   1. AWS
+   2. GCP
+   3. Vercel
 6. Java
-    1. AWS
-    2. GCP
-    3. Azure
+   1. AWS
+   2. GCP
+   3. Azure
 7. C#
-    1. AWS
-    2. GCP
-    3. Azure
+   1. AWS
+   2. GCP
+   3. Azure
 8. PHP
-    1. GCP
-    2. Cloudflare {3}
+   1. GCP
+   2. Cloudflare {3}
 9. Powershell
-    1. AWS
-    2. Azure
+   1. AWS
+   2. Azure
 10. Rust
     1. Azure {2}
     2. Cloudflare {4}
@@ -105,6 +105,7 @@ Here is the list of all the supported languages with the platforms that support 
 2. There is a tutorial for using this language, but not an official runtime.
 3. Supported by compiling to JavaScript, some language features / libraries may not work.
 4. Supported by compiling to WebAssembly, your mileage may vary.
+
 ---
 
 _Was this post super helpful to you? [Tip me on GitHub][github one time]._
@@ -117,7 +118,7 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 
 [community typescript logo]: https://github.com/remojansen/logo.ts
 [go logo]: https://blog.golang.org/go-brand
-[.NET logo]: https://github.com/dotnet/brand
+[.net logo]: https://github.com/dotnet/brand
 [ferris the crab]: https://www.rustacean.net
 [github one time]: https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
