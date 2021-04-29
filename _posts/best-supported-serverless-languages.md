@@ -26,7 +26,7 @@ I'm a big fan of serverless functions, but my perspective is usually limited to 
 ## Big Takeaways
 
 1. The best supported language is JavaScript, followed closely by TypeScript. No shock there.
-2. Python and Go are tied for second place in availability.
+2. Python and Go are tied for third place in availability.
 3. Cloudflare Workers are _by far_ the most flexible in way of supported / documented languages with 12—though many of those rely on cross-compiling the language to JavaScript.
 4. AWS, Azure, and GCP are all tied for second at 8 supported languages. Realistically, these are the most flexible platforms as those 8 languages don't require transpilation (except for TypeScript but... you know...).
 5. Rust has an explicit tutorial on the Azure website! 🥰 I'm suddenly more likely to use Azure than AWS in my next big project.
@@ -35,69 +35,80 @@ I'm a big fan of serverless functions, but my perspective is usually limited to 
 
 Here is the list of all the supported languages with the platforms that support them. Reminder, a number in {} after the language means there's a caveat, check the bottom of the post for it!
 
-1. JavaScript
-   1. Netlify
-   2. AWS
-   3. GCP
-   4. Azure
-   5. Vercel
-   6. Cloudflare
-2. TypeScript
-   1. Netlify
-   2. Azure
-   3. Vercel
-   4. Cloudflare
-   5. AWS {1}
-   6. GCP {1}
-3. Go
-   1. Netlify
-   2. AWS
-   3. GCP
-   4. Azure {2}
-   5. Vercel
-4. Python
-   1. AWS
-   2. GCP
-   3. Azure
-   4. Vercel
-   5. Cloudflare {3}
-5. Ruby
-   1. AWS
-   2. GCP
-   3. Vercel
-6. Java
-   1. AWS
-   2. GCP
-   3. Azure
-7. C#
-   1. AWS
-   2. GCP
-   3. Azure
-8. PHP
-   1. GCP
-   2. Cloudflare {3}
-9. Powershell
-   1. AWS
-   2. Azure
-10. Rust
-    1. Azure {2}
-    2. Cloudflare {4}
-11. C
-    1. Cloudflare {4}
-12. Cobol
-    1. Cloudflare {4}
-13. Kotlin
-    1. Cloudflare {3}
-14. Dart
-    1. Cloudflare {3}
-15. Scala
-    1. Cloudflare {3}
-16. Reason / OCaml
-    1. Cloudflare {3}
-17. Perl
-    1. Cloudflare {3}
-18. F#
-    1. Cloudflare {3}
+### JavaScript
+
+1.  Netlify
+2.  AWS
+3.  GCP
+4.  Azure
+5.  Vercel
+6.  Cloudflare
+
+### TypeScript
+
+1.  Netlify
+2.  Azure
+3.  Vercel
+4.  Cloudflare
+5.  AWS {1}
+6.  GCP {1}
+
+### Go
+
+1.  Netlify
+2.  AWS
+3.  GCP
+4.  Azure {2}
+5.  Vercel
+
+### Python
+
+1.  AWS
+2.  GCP
+3.  Azure
+4.  Vercel
+5.  Cloudflare {3}
+
+### Ruby
+
+1.  AWS
+2.  GCP
+3.  Vercel
+
+### Java
+
+1.  AWS
+2.  GCP
+3.  Azure
+
+### C#
+
+1.  AWS
+2.  GCP
+3.  Azure
+
+### PHP
+
+1.  GCP
+2.  Cloudflare {3}
+
+### Powershell
+
+1.  AWS
+2.  Azure
+
+### Rust
+
+1. Azure {2}
+2. Cloudflare {4}
+
+### C and Cobol
+
+1. Cloudflare {4}
+
+### Kotlin, Dart, Scala, Reason / OCaml, Perl, and F#
+
+1. Cloudflare {3}
 
 ## Language-Specific Caveats
 
