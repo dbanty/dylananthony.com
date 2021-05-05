@@ -51,7 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:7.23.2"],
             ["gray-matter", "npm:4.0.3"],
             ["next", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.2.0"],
-            ["postcss", "npm:8.2.13"],
+            ["postcss", "npm:8.2.14"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.2.1"],
             ["prismjs", "npm:1.23.0"],
@@ -961,7 +961,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:1.2.2"],
             ["fraction.js", "npm:4.0.13"],
             ["normalize-range", "npm:0.1.2"],
-            ["postcss", "npm:8.2.13"],
+            ["postcss", "npm:8.2.14"],
             ["postcss-value-parser", "npm:4.1.0"]
           ],
           "packagePeers": [
@@ -2146,7 +2146,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:7.23.2"],
             ["gray-matter", "npm:4.0.3"],
             ["next", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.2.0"],
-            ["postcss", "npm:8.2.13"],
+            ["postcss", "npm:8.2.14"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.2.1"],
             ["prismjs", "npm:1.23.0"],
@@ -5048,6 +5048,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["npm:8.2.14", {
+          "packageLocation": "./.yarn/cache/postcss-npm-8.2.14-61c4216d41-46bcc7c05f.zip/node_modules/postcss/",
+          "packageDependencies": [
+            ["postcss", "npm:8.2.14"],
+            ["colorette", "npm:1.2.2"],
+            ["nanoid", "npm:3.1.22"],
+            ["source-map", "npm:0.6.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:8.2.9", {
           "packageLocation": "./.yarn/cache/postcss-npm-8.2.9-5f6584d6dd-b661a6e858.zip/node_modules/postcss/",
           "packageDependencies": [
@@ -5323,7 +5333,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-nested", "virtual:c41eaa5e4cd486b816cdbd5633763ba6fbcee0c223bde05817de4db5166710b0b13624560253bf6887fb1d1ed50ab0ad90abcd18c1f2c4ae0a63976f60ffbfe5#npm:5.0.5"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.2.13"],
+            ["postcss", "npm:8.2.14"],
             ["postcss-selector-parser", "npm:6.0.4"]
           ],
           "packagePeers": [
@@ -6739,7 +6749,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["normalize-path", "npm:3.0.0"],
             ["object-hash", "npm:2.1.1"],
             ["parse-glob", "npm:3.0.4"],
-            ["postcss", "npm:8.2.13"],
+            ["postcss", "npm:8.2.14"],
             ["postcss-functions", "npm:3.0.0"],
             ["postcss-js", "npm:3.0.3"],
             ["postcss-nested", "virtual:c41eaa5e4cd486b816cdbd5633763ba6fbcee0c223bde05817de4db5166710b0b13624560253bf6887fb1d1ed50ab0ad90abcd18c1f2c4ae0a63976f60ffbfe5#npm:5.0.5"],
