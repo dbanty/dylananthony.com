@@ -8,7 +8,7 @@
     "lint": "prettier --write . && eslint ."
   },
   "dependencies": {
-    "date-fns": "2.21.1",
+    "date-fns": "2.21.2",
     "gray-matter": "4.0.3",
     "next": "10.2.0",
     "prismjs": "1.23.0",
