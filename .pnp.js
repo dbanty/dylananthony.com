@@ -40,7 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.14.0"],
             ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.0"],
             ["@types/node", "npm:14.14.44"],
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["@typescript-eslint/eslint-plugin", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.23.0"],
             ["@typescript-eslint/parser", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.23.0"],
             ["autoprefixer", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.2.5"],
@@ -225,7 +225,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@next/react-dev-overlay", "virtual:9b2575b75547fc75e27571f834e963ff0d630e588e478f36b804fecc4827d1c0d209412fd041193d11c26dbf9ea5c9f890d1f33c6044b9261ce1a2aac6d65be3#npm:10.2.0"],
             ["@babel/code-frame", "npm:7.12.11"],
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["@types/react-dom", null],
             ["anser", "npm:1.4.9"],
             ["chalk", "npm:4.0.0"],
@@ -396,10 +396,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react", [
-        ["npm:17.0.5", {
-          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.5-b0d58aba4c-f9793e8113.zip/node_modules/@types/react/",
+        ["npm:17.0.6", {
+          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.6-e56f24c908-dcd8e559f7.zip/node_modules/@types/react/",
           "packageDependencies": [
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["@types/prop-types", "npm:15.7.3"],
             ["@types/scheduler", "npm:0.16.1"],
             ["csstype", "npm:3.0.5"]
@@ -2135,7 +2135,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.14.0"],
             ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.0"],
             ["@types/node", "npm:14.14.44"],
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["@typescript-eslint/eslint-plugin", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.23.0"],
             ["@typescript-eslint/parser", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.23.0"],
             ["autoprefixer", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.2.5"],
@@ -4397,7 +4397,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@opentelemetry/api", "npm:0.14.0"],
             ["@types/fibers", null],
             ["@types/node-sass", null],
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["@types/react-dom", null],
             ["@types/sass", null],
             ["assert", "npm:2.0.0"],
@@ -5787,7 +5787,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/react-dom-virtual-bd694f0af0/0/cache/react-dom-npm-17.0.2-f551215af1-960a74ff66.zip/node_modules/react-dom/",
           "packageDependencies": [
             ["react-dom", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:17.0.2"],
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["loose-envify", "npm:1.4.0"],
             ["object-assign", "npm:4.1.1"],
             ["react", "npm:17.0.2"],
@@ -6619,7 +6619,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["styled-jsx", "virtual:9b2575b75547fc75e27571f834e963ff0d630e588e478f36b804fecc4827d1c0d209412fd041193d11c26dbf9ea5c9f890d1f33c6044b9261ce1a2aac6d65be3#npm:3.3.2"],
             ["@babel/types", "npm:7.8.3"],
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["babel-plugin-syntax-jsx", "npm:6.18.0"],
             ["convert-source-map", "npm:1.7.0"],
             ["loader-utils", "npm:1.2.3"],
@@ -7230,7 +7230,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/use-subscription-virtual-1bef7ecbe7/0/cache/use-subscription-npm-1.5.1-d91d77edbb-3abcef5524.zip/node_modules/use-subscription/",
           "packageDependencies": [
             ["use-subscription", "virtual:9b2575b75547fc75e27571f834e963ff0d630e588e478f36b804fecc4827d1c0d209412fd041193d11c26dbf9ea5c9f890d1f33c6044b9261ce1a2aac6d65be3#npm:1.5.1"],
-            ["@types/react", "npm:17.0.5"],
+            ["@types/react", "npm:17.0.6"],
             ["object-assign", "npm:4.1.1"],
             ["react", "npm:17.0.2"]
           ],
