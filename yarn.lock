@@ -94,13 +94,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/accept@npm:5.0.1":
-  version: 5.0.1
-  resolution: "@hapi/accept@npm:5.0.1"
+"@hapi/accept@npm:5.0.2":
+  version: 5.0.2
+  resolution: "@hapi/accept@npm:5.0.2"
   dependencies:
     "@hapi/boom": 9.x.x
     "@hapi/hoek": 9.x.x
-  checksum: 29e3281bd823fbb36d3b838cc25df4c26a9e5db4ed5b36919cf51fe63110e7cddfe3f3b1a88acf31dfe6c0f9c4be449cbe7e58429fa3597698aa1b1ea653d57a
+  checksum: ea9ae15ac21887927082321dbb12334d5ea8db6564a2e0130b759757b515a33c5f00dab08a69ec0de7dad972978456c2f2810e86f006cf6efd8b7d251229a9aa
   languageName: node
   linkType: hard
 
@@ -120,23 +120,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/env@npm:10.2.0"
-  checksum: 664e0c3166453cb4b5edd042594d0bd9833682e9151e372431b91bf510befa69a0e6fb40f14d31f2006fed4f157f5a658efbaaf2b95ba76f2b2ca8b05e752ef0
+"@next/env@npm:10.2.1":
+  version: 10.2.1
+  resolution: "@next/env@npm:10.2.1"
+  checksum: c7c7d234fd72fb4ea1d386e78c7b8a9ec94cece1852af54c475909611f3da9847f1021aba02c5c2453e42f1234994b7c56d80df41f9ec691530a34f7c4c6ba6e
   languageName: node
   linkType: hard
 
-"@next/polyfill-module@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/polyfill-module@npm:10.2.0"
-  checksum: 57616853ef5aee3a1f11ff8cfa04846184efb95e514cce3abc706e9470e35cedd0966ab9328c8957878255f51fab7e3f6211db0aaee318de4476bed1d490fbe1
+"@next/polyfill-module@npm:10.2.1":
+  version: 10.2.1
+  resolution: "@next/polyfill-module@npm:10.2.1"
+  checksum: 28a97df0f98613b63ceb03c373250b964f851c16e442eab25450cb0d31eddee35aebe637aa724275943fdd8a10d0a35fc960b761735104e12ebc510d7dbc6bbe
   languageName: node
   linkType: hard
 
-"@next/react-dev-overlay@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/react-dev-overlay@npm:10.2.0"
+"@next/react-dev-overlay@npm:10.2.1":
+  version: 10.2.1
+  resolution: "@next/react-dev-overlay@npm:10.2.1"
   dependencies:
     "@babel/code-frame": 7.12.11
     anser: 1.4.9
@@ -152,20 +152,20 @@ __metadata:
   peerDependencies:
     react: ^16.9.0 || ^17
     react-dom: ^16.9.0 || ^17
-  checksum: 9f33f361a3d1fbe641d01ca281e5ce5562cbcd3e5bfc06ed5c270f560164d3a9a0a9e02df6d0ddaa9840690e26f4543f9a48334b0ce30075fe028c0467b3a768
+  checksum: 59782cdec7b7f9005ab73ccb6c214cac3193439d1062651c6853ed467e4e022d0626b5850da5dfe4a81d9d12fe0d1896b3fd2471c6e397a891f4b389ab4eb886
   languageName: node
   linkType: hard
 
-"@next/react-refresh-utils@npm:10.2.0":
-  version: 10.2.0
-  resolution: "@next/react-refresh-utils@npm:10.2.0"
+"@next/react-refresh-utils@npm:10.2.1":
+  version: 10.2.1
+  resolution: "@next/react-refresh-utils@npm:10.2.1"
   peerDependencies:
     react-refresh: 0.8.3
     webpack: ^4 || ^5
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: 5b7f9068aa6315bb1c460a1f1c804baf7a62ad701d2b26061f2a6032bc5014dc5b4881f8c313b3bdd1e9616fabf038abfaf83c8955f826750b64b2af96bfe060
+  checksum: c1212f3e21595a0d641463ac207d9141a0cfe2e9ba1ce883d561397153153e7ebb673b0197584ca3a35a71030d217c4601881200690f38b3eed8d0fa3a4361b3
   languageName: node
   linkType: hard
 
@@ -904,18 +904,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.16.1":
-  version: 4.16.1
-  resolution: "browserslist@npm:4.16.1"
+"browserslist@npm:4.16.6":
+  version: 4.16.6
+  resolution: "browserslist@npm:4.16.6"
   dependencies:
-    caniuse-lite: ^1.0.30001173
-    colorette: ^1.2.1
-    electron-to-chromium: ^1.3.634
+    caniuse-lite: ^1.0.30001219
+    colorette: ^1.2.2
+    electron-to-chromium: ^1.3.723
     escalade: ^3.1.1
-    node-releases: ^1.1.69
+    node-releases: ^1.1.71
   bin:
     browserslist: cli.js
-  checksum: 56f51464c3a3bd9b2aeb75ded1dc3fce5ad91bd6d84187aba812a78ba66b69bc97c2de25a1b7409daac3c0049e979bf0faa6cca4aacce0abcaf3107c250ce3fb
+  checksum: ebb0ab279c5e61f882467f7ccd7d22c0edfcc01201eba06e85e835ca4d355e682f9aa3310bfa18c3a23bb244f0b8e498b3113dae3e9b0fa4908c5ffb4a26b3a2
   languageName: node
   linkType: hard
 
@@ -1000,7 +1000,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001173, caniuse-lite@npm:^1.0.30001179, caniuse-lite@npm:^1.0.30001181, caniuse-lite@npm:^1.0.30001196":
+"caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001181, caniuse-lite@npm:^1.0.30001196":
   version: 1.0.30001205
   resolution: "caniuse-lite@npm:1.0.30001205"
   checksum: 7be985a0817531780134e698b159f4a135a95b1650703db6e0c4f6a04152e32860ad8fde748b7f91c3b343e541f8d39125b237fd7d497a4a888a6971bd8eb6fc
@@ -1011,6 +1011,13 @@ __metadata:
   version: 1.0.30001219
   resolution: "caniuse-lite@npm:1.0.30001219"
   checksum: 0a45591af1ffdd86b5c67534adceeb792b088418aa32912249a5609f32d2ded35254d8b300775b43b4d9d9b81d2d40f1e8e1c4aeebe6c69ed549bc52b41f2b30
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001219, caniuse-lite@npm:^1.0.30001228":
+  version: 1.0.30001228
+  resolution: "caniuse-lite@npm:1.0.30001228"
+  checksum: a4eb04288e9b7f7bda158126f37e8dab97a5fc851dab192083f36906d8bf76e0526afa0692a662267ea4b3df0b0ba13f847457ac2be0f1ea209ec3013b7caabe
   languageName: node
   linkType: hard
 
@@ -1715,7 +1722,7 @@ __metadata:
     eslint-plugin-prettier: 3.4.0
     eslint-plugin-react: 7.23.2
     gray-matter: 4.0.3
-    next: 10.2.0
+    next: 10.2.1
     postcss: 8.2.15
     postcss-preset-env: 6.7.0
     prettier: 2.3.0
@@ -1740,10 +1747,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.634, electron-to-chromium@npm:^1.3.649":
+"electron-to-chromium@npm:^1.3.649":
   version: 1.3.707
   resolution: "electron-to-chromium@npm:1.3.707"
   checksum: 9bd9e7174d197c35137e0906dfab8cf5cedeea056341a8105ef7f9b1c7d6ea7c4dd72d84b419f19f0ef804f836c0999e84f00a5c57dd6c0e08203bdc8130e8d6
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.3.723":
+  version: 1.3.732
+  resolution: "electron-to-chromium@npm:1.3.732"
+  checksum: 9a11947d9970ff10447b7a9260eec95d578aaf6c7e7e9b36ab5b57e44e346a9312cbd91167b4a9966eb70ceddc415e2207ff4a65c1c80b3749d38d5868d9a074
   languageName: node
   linkType: hard
 
@@ -3659,23 +3673,23 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"next@npm:10.2.0":
-  version: 10.2.0
-  resolution: "next@npm:10.2.0"
+"next@npm:10.2.1":
+  version: 10.2.1
+  resolution: "next@npm:10.2.1"
   dependencies:
     "@babel/runtime": 7.12.5
-    "@hapi/accept": 5.0.1
-    "@next/env": 10.2.0
-    "@next/polyfill-module": 10.2.0
-    "@next/react-dev-overlay": 10.2.0
-    "@next/react-refresh-utils": 10.2.0
+    "@hapi/accept": 5.0.2
+    "@next/env": 10.2.1
+    "@next/polyfill-module": 10.2.1
+    "@next/react-dev-overlay": 10.2.1
+    "@next/react-refresh-utils": 10.2.1
     "@opentelemetry/api": 0.14.0
     assert: 2.0.0
     ast-types: 0.13.2
     browserify-zlib: 0.2.0
-    browserslist: 4.16.1
+    browserslist: 4.16.6
     buffer: 5.6.0
-    caniuse-lite: ^1.0.30001179
+    caniuse-lite: ^1.0.30001228
     chalk: 2.4.2
     chokidar: 3.5.1
     constants-browserify: 1.0.0
@@ -3728,7 +3742,7 @@ fsevents@~2.3.1:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 2c5c1da075664ff9646a66fb6495982f1258a81cb1264dcd909df13411a6c55ccbb1c777a67c27cff3d7ff901c627f14144ebaa647080e07cf8fee840c3eae45
+  checksum: 33e39e38bffed98a86fcdb13e62ca0b73c1a6b51daa67bc69e71dafdefd09920ee0d57bce5e11887d840957414fb5378d986bb59c819da8df75a014c5fa0d1b7
   languageName: node
   linkType: hard
 
@@ -3808,10 +3822,17 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^1.1.69, node-releases@npm:^1.1.70":
+"node-releases@npm:^1.1.70":
   version: 1.1.71
   resolution: "node-releases@npm:1.1.71"
   checksum: 9e283003f1deafd0ca7f9bbde9c4b5b05d880ca165217f5227b37406626d6689a246a5c4c72f9a8512be65cd51b13cc7d0f5d8bc68ad36089b620f1810292340
+  languageName: node
+  linkType: hard
+
+"node-releases@npm:^1.1.71":
+  version: 1.1.72
+  resolution: "node-releases@npm:1.1.72"
+  checksum: a9ded860baa3c90fa6fde2e1be597959b238940cda1e5bbeceb5de6a16faa1db81982b629429fd6ebbec98f7dd241378cda5918a57c9baf68cb6a6e002b4fc15
   languageName: node
   linkType: hard
 
