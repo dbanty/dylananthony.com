@@ -1723,7 +1723,7 @@ __metadata:
     eslint-plugin-react: 7.23.2
     gray-matter: 4.0.3
     next: 10.2.2
-    postcss: 8.2.15
+    postcss: 8.3.0
     postcss-preset-env: 6.7.0
     prettier: 2.3.0
     prismjs: 1.23.0
@@ -4663,14 +4663,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.2.15":
-  version: 8.2.15
-  resolution: "postcss@npm:8.2.15"
+"postcss@npm:8.3.0":
+  version: 8.3.0
+  resolution: "postcss@npm:8.3.0"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.23
-    source-map: ^0.6.1
-  checksum: 2d26bc29dedd7656d1f53fa002374a014a8c2c7b9f1538d0fafadb9eae2494f5b037c87de4390d620f622b31d7f15c8c8d88de2bd682e206104fb44e781737df
+    source-map-js: ^0.6.2
+  checksum: 438f9b9ea5a1ad66a36c944c77a55218ea0ac9d07ba63891854e8597b1a3b7710caa25d01f7783a6b8f4a3a8d52c295da422b92e546b37d6896909c19c7d4975
   languageName: node
   linkType: hard
 
@@ -5393,6 +5393,13 @@ resolve@^2.0.0-next.3:
     astral-regex: ^2.0.0
     is-fullwidth-code-point: ^3.0.0
   checksum: f411aa051802605c3dc8523edee42d39ef59d7c36e6bef6bf1e61d9d2a83894187f6af56911a43ec8e58b921996722d75b354a4c3050b924426ffd1b05da33f9
+  languageName: node
+  linkType: hard
+
+"source-map-js@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "source-map-js@npm:0.6.2"
+  checksum: 8e2f992cfbedb71286fa6f6e011e2fa756b7f4d944ea4b0f49e9ff6ea34ad0a17dc655f067fdddb32efa7b45000e8c59e47a2e875d91744c86a56329b5f58b32
   languageName: node
   linkType: hard
 
