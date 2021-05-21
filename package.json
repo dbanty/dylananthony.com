@@ -30,7 +30,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.23.2",
-    "postcss": "8.2.15",
+    "postcss": "8.3.0",
     "postcss-preset-env": "6.7.0",
     "prettier": "2.3.0",
     "tailwindcss": "2.1.2",
