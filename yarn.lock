@@ -212,17 +212,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:0.4.0":
-  version: 0.4.0
-  resolution: "@tailwindcss/typography@npm:0.4.0"
+"@tailwindcss/typography@npm:0.4.1":
+  version: 0.4.1
+  resolution: "@tailwindcss/typography@npm:0.4.1"
   dependencies:
     lodash.castarray: ^4.4.0
     lodash.isplainobject: ^4.0.6
     lodash.merge: ^4.6.2
     lodash.uniq: ^4.5.0
   peerDependencies:
-    tailwindcss: 2.0.0-alpha.24 || ^2.0.0
-  checksum: 1d5748dbbcb376927c1c880c91560c48c7a260aeeb5507fe07df1e9f6610d9d7cc943b1e878aec9e6a480f21d28f2ec291fb4d213dfe798e08f8760051fd6ade
+    tailwindcss: ">=2.0.0"
+  checksum: d26815b8f599631052e489ac1faa208a7c085304c9b023a2ea5e1eb4c6ceb52476fd7324854bbbc3768dc32992952c588f22f0bf8f7d5a8216ca8c9ccae30511
   languageName: node
   linkType: hard
 
@@ -1722,7 +1722,7 @@ __metadata:
   resolution: "dylan-anthony-com@workspace:."
   dependencies:
     "@babel/runtime": 7.14.0
-    "@tailwindcss/typography": 0.4.0
+    "@tailwindcss/typography": 0.4.1
     "@types/node": 14.17.0
     "@types/react": 17.0.6
     "@typescript-eslint/eslint-plugin": 4.24.0
