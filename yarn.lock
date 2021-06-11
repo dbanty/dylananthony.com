@@ -1742,7 +1742,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     gray-matter: 4.0.3
     next: 10.2.3
-    postcss: 8.3.1
+    postcss: 8.3.2
     postcss-preset-env: 6.7.0
     prettier: 2.3.1
     prismjs: 1.23.0
@@ -4778,14 +4778,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.1":
-  version: 8.3.1
-  resolution: "postcss@npm:8.3.1"
+"postcss@npm:8.3.2":
+  version: 8.3.2
+  resolution: "postcss@npm:8.3.2"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.23
     source-map-js: ^0.6.2
-  checksum: 3e63ff4c5449a2cb0566e023a16bc9ef283525f171a0682527b0f58972034b1b938e395e65e2ef218f4b64d3bc5cf5a289717b61b363f6dd4e067fd36da7373f
+  checksum: 31e03ca7a5fdb86b92066bb31c152145254da2fc47dab1bb015ac4a3649a621d1a43d9464c2ce9fe8c13a7a253beb45185ac6ed0b059009c757fe65a2af35ab2
   languageName: node
   linkType: hard
 
