@@ -263,14 +263,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.9":
-  version: 17.0.9
-  resolution: "@types/react@npm:17.0.9"
+"@types/react@npm:17.0.11":
+  version: 17.0.11
+  resolution: "@types/react@npm:17.0.11"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 12f1962a317cad805bd6fcd1da3ac1a58a782db28e522bdded163f1bdfc8388f8a110d200a6925cccbf3d442e1325199ce5da710f11ee73f0f140c6734fea127
+  checksum: ed2b57e44e8da99b13a7b0cd7d9d9159e3113a5160e25c9deae4f577cfb87f05103b54bb0e9722f48a7db3ddb3a836ade12b971bbc338d397b719886fb81efff
   languageName: node
   linkType: hard
 
@@ -1731,7 +1731,7 @@ __metadata:
     "@babel/runtime": 7.14.5
     "@tailwindcss/typography": 0.4.1
     "@types/node": 14.17.3
-    "@types/react": 17.0.9
+    "@types/react": 17.0.11
     "@typescript-eslint/eslint-plugin": 4.26.1
     "@typescript-eslint/parser": 4.26.1
     autoprefixer: 10.2.6
