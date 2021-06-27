@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.3.5"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.3.2"],
-            ["prismjs", "npm:1.23.0"],
+            ["prismjs", "npm:1.24.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:17.0.2"],
             ["remark", "npm:13.0.0"],
@@ -2268,7 +2268,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.3.5"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.3.2"],
-            ["prismjs", "npm:1.23.0"],
+            ["prismjs", "npm:1.24.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:17.0.2"],
             ["remark", "npm:13.0.0"],
@@ -5860,6 +5860,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["prismjs", "npm:1.23.0"],
             ["clipboard", "npm:2.0.6"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.24.0", {
+          "packageLocation": "./.yarn/cache/prismjs-npm-1.24.0-b67f6d3324-3777f808eb.zip/node_modules/prismjs/",
+          "packageDependencies": [
+            ["prismjs", "npm:1.24.0"]
           ],
           "linkType": "HARD",
         }]
