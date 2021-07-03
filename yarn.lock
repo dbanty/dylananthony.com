@@ -1832,7 +1832,7 @@ __metadata:
     postcss: 8.3.5
     postcss-preset-env: 6.7.0
     prettier: 2.3.2
-    prismjs: 1.24.0
+    prismjs: 1.24.1
     react: 17.0.2
     react-dom: 17.0.2
     remark: 13.0.0
@@ -4972,10 +4972,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:1.24.0":
-  version: 1.24.0
-  resolution: "prismjs@npm:1.24.0"
-  checksum: 3777f808eb742a04f3765ef1b88c110bee0879cfa10def7c04ed6f1cf889386392371ae07868bbac6ed2eb13c9ecafbfead7b556708a6eafdf2db9b5e6c5894f
+"prismjs@npm:1.24.1":
+  version: 1.24.1
+  resolution: "prismjs@npm:1.24.1"
+  checksum: 337ce5e07815b38aa8e2b71aa64dc821c1dbe38c5dba9451b0c210c19c139cc01145914920e222ae0f54b45e65523c3863899d0c7f19cdec202a03ccd268a09b
   languageName: node
   linkType: hard
 
