@@ -51,7 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:7.24.0"],
             ["gray-matter", "npm:4.0.3"],
             ["next", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.2.3"],
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.3.2"],
             ["prismjs", "npm:1.24.1"],
@@ -192,7 +192,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@fullhuman/postcss-purgecss", "virtual:a13087f631ff73d8d4825d904eb12836c3289b81d223d0dd331afae1245786a0a1998851ccee117e6fbbd24947147d3db974d107bec12ef2d33a1eccb7b3fddf#npm:4.0.3"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["purgecss", "npm:4.0.3"]
           ],
           "packagePeers": [
@@ -1048,7 +1048,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:1.2.2"],
             ["fraction.js", "npm:4.1.1"],
             ["normalize-range", "npm:0.1.2"],
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["postcss-value-parser", "npm:4.1.0"]
           ],
           "packagePeers": [
@@ -2285,7 +2285,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:7.24.0"],
             ["gray-matter", "npm:4.0.3"],
             ["next", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.2.3"],
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.3.2"],
             ["prismjs", "npm:1.24.1"],
@@ -5344,10 +5344,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.3.5", {
-          "packageLocation": "./.yarn/cache/postcss-npm-8.3.5-2a354f6bd3-87dc16efcf.zip/node_modules/postcss/",
+        ["npm:8.3.6", {
+          "packageLocation": "./.yarn/cache/postcss-npm-8.3.6-e6c5350483-515c264728.zip/node_modules/postcss/",
           "packageDependencies": [
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["colorette", "npm:1.2.2"],
             ["nanoid", "npm:3.1.23"],
             ["source-map-js", "npm:0.6.2"]
@@ -5631,7 +5631,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-nested", "virtual:a13087f631ff73d8d4825d904eb12836c3289b81d223d0dd331afae1245786a0a1998851ccee117e6fbbd24947147d3db974d107bec12ef2d33a1eccb7b3fddf#npm:5.0.5"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["postcss-selector-parser", "npm:6.0.4"]
           ],
           "packagePeers": [
@@ -7110,7 +7110,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-emoji", "npm:1.10.0"],
             ["normalize-path", "npm:3.0.0"],
             ["object-hash", "npm:2.2.0"],
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["postcss-js", "npm:3.0.3"],
             ["postcss-load-config", "virtual:a13087f631ff73d8d4825d904eb12836c3289b81d223d0dd331afae1245786a0a1998851ccee117e6fbbd24947147d3db974d107bec12ef2d33a1eccb7b3fddf#npm:3.1.0"],
             ["postcss-nested", "virtual:a13087f631ff73d8d4825d904eb12836c3289b81d223d0dd331afae1245786a0a1998851ccee117e6fbbd24947147d3db974d107bec12ef2d33a1eccb7b3fddf#npm:5.0.5"],
