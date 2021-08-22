@@ -112,17 +112,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fullhuman/postcss-purgecss@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "@fullhuman/postcss-purgecss@npm:4.0.3"
-  dependencies:
-    purgecss: ^4.0.3
-  peerDependencies:
-    postcss: ^8.0.0
-  checksum: 8c1875f2b58416b796deb28cebf3ff932716034270c8b3e89dd515670194fa9bb44bcd798e4b79da64cfd859f99d017a6a9ea05217512e69e7b66afb180a9228
-  languageName: node
-  linkType: hard
-
 "@hapi/accept@npm:5.0.2":
   version: 5.0.2
   resolution: "@hapi/accept@npm:5.0.2"
@@ -1288,7 +1277,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-convert@npm:^1.9.0, color-convert@npm:^1.9.1":
+"color-convert@npm:^1.9.0, color-convert@npm:^1.9.3":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
   dependencies:
@@ -1320,23 +1309,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-string@npm:^1.5.4":
-  version: 1.5.4
-  resolution: "color-string@npm:1.5.4"
+"color-string@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "color-string@npm:1.6.0"
   dependencies:
     color-name: ^1.0.0
     simple-swizzle: ^0.2.2
-  checksum: 181ab2a0a13dc87b13db1bceab8585c159f1cbf169c4210df61d24349f90e5f6087a18c8c12842dbdd5d4cff9a1008ef86c153201429bc456fb7bf9c9495d366
+  checksum: d48692037a6d38bd1deb91886a075d8af82e4e8269c5ab33eadf174d8aa5e82753a2f3edfe6749e24e48898ea2eb76df706b603c65a721e10ddc57c5d6a078cf
   languageName: node
   linkType: hard
 
-"color@npm:^3.1.3":
-  version: 3.1.3
-  resolution: "color@npm:3.1.3"
+"color@npm:^3.2.0":
+  version: 3.2.1
+  resolution: "color@npm:3.2.1"
   dependencies:
-    color-convert: ^1.9.1
-    color-string: ^1.5.4
-  checksum: d0f4139e986806aaacaa748d170c9778faed93695fb776cd27d9c5825424263eb9354f69033804d0d2d350d9831a31d14dddff045da00713499f279da97e602f
+    color-convert: ^1.9.3
+    color-string: ^1.6.0
+  checksum: 2cf9436cba4cf0cd2da88d82aa69cbad548a850ec24abc1a64930778aa4bc6ef2839b178d85fa2bc254b2a5b982e7db1040c05764f6161a1266880bb0dd14d4f
   languageName: node
   linkType: hard
 
@@ -1776,10 +1765,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"didyoumean@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "didyoumean@npm:1.2.1"
-  checksum: a886a07b4b9212693644309b302122b128ff5abf2c05b99c8ed4721c0650463a2b6bd49e59d8f10eba1f7cc586b35e726348e9dbf7751e12fc4ad37ad023de79
+"didyoumean@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "didyoumean@npm:1.2.2"
+  checksum: 808a1e4855dbb3c099bb9479af665b0065e574afd39c379c19be8cc4a1a9b06a520b919a6f4f07dcea9d88b4e87d3c69736c509d0725b89437f60ae09e8c4498
   languageName: node
   linkType: hard
 
@@ -1878,7 +1867,7 @@ __metadata:
     remark: 13.0.0
     remark-html: 13.0.1
     remark-prism: 1.3.6
-    tailwindcss: 2.2.4
+    tailwindcss: 2.2.7
     typescript: 4.1.5
   languageName: unknown
   linkType: soft
@@ -2375,17 +2364,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.5":
-  version: 3.2.5
-  resolution: "fast-glob@npm:3.2.5"
+"fast-glob@npm:^3.2.7":
+  version: 3.2.7
+  resolution: "fast-glob@npm:3.2.7"
   dependencies:
     "@nodelib/fs.stat": ^2.0.2
     "@nodelib/fs.walk": ^1.2.3
-    glob-parent: ^5.1.0
+    glob-parent: ^5.1.2
     merge2: ^1.3.0
-    micromatch: ^4.0.2
-    picomatch: ^2.2.1
-  checksum: 1a33c4a68d14cb2314c07a451689bc311bde87b09c525dd2064321165127a38a553457d121e2d3ecdd022374e3d53afb82cbb57f5694414d3406ce14ed6c0a1f
+    micromatch: ^4.0.4
+  checksum: 819aa8f1c0b4ca2b86ec89da259c46c370f31db94e91019e99d1f010c0c5750e1ef1ef87266b55c0d0b23e900c22699fd39dacdc79c3b629547889a4f29e3f7b
   languageName: node
   linkType: hard
 
@@ -3798,6 +3786,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"micromatch@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "micromatch@npm:4.0.4"
+  dependencies:
+    braces: ^3.0.1
+    picomatch: ^2.2.3
+  checksum: bc522ad93c086aa176f50fea2dc8060a8f7d7a621c811cf9ba02a1912577cc100190508166d721231465f10a575a40ec8a1bffc23bbc2c0108fcbf02e4be04ed
+  languageName: node
+  linkType: hard
+
 "miller-rabin@npm:^4.0.0":
   version: 4.0.1
   resolution: "miller-rabin@npm:4.0.1"
@@ -4494,6 +4492,13 @@ __metadata:
   version: 2.2.2
   resolution: "picomatch@npm:2.2.2"
   checksum: 20fa75e0a58b39d83425b3db68744d5f6f361fd4fd66ec7745d884036d502abba0d553a637703af79939b844164b13e60eea339ccb043d7fbd74c3da2592b864
+  languageName: node
+  linkType: hard
+
+"picomatch@npm:^2.2.3":
+  version: 2.3.0
+  resolution: "picomatch@npm:2.3.0"
+  checksum: 80113a0fb70cfa62730d5aa3fd3d45b76bf3985f8494080ab2de1cc1fa3ba96d77990c7553a81401e16c51c0eb19c27cf5bc94f2196155090f26c8a167968001
   languageName: node
   linkType: hard
 
@@ -6096,21 +6101,20 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:2.2.4":
-  version: 2.2.4
-  resolution: "tailwindcss@npm:2.2.4"
+"tailwindcss@npm:2.2.7":
+  version: 2.2.7
+  resolution: "tailwindcss@npm:2.2.7"
   dependencies:
-    "@fullhuman/postcss-purgecss": ^4.0.3
     arg: ^5.0.0
     bytes: ^3.0.0
     chalk: ^4.1.1
     chokidar: ^3.5.2
-    color: ^3.1.3
+    color: ^3.2.0
     cosmiconfig: ^7.0.0
     detective: ^5.2.0
-    didyoumean: ^1.2.1
+    didyoumean: ^1.2.2
     dlv: ^1.1.3
-    fast-glob: ^3.2.5
+    fast-glob: ^3.2.7
     fs-extra: ^10.0.0
     glob-parent: ^6.0.0
     html-tags: ^3.1.0
@@ -6127,6 +6131,7 @@ resolve@^2.0.0-next.3:
     postcss-selector-parser: ^6.0.6
     postcss-value-parser: ^4.1.0
     pretty-hrtime: ^1.0.3
+    purgecss: ^4.0.3
     quick-lru: ^5.1.1
     reduce-css-calc: ^2.1.8
     resolve: ^1.20.0
@@ -6137,7 +6142,7 @@ resolve@^2.0.0-next.3:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: e48ad9747ac3082bd46df0a70d839818ecff5033ffd89f785bb4fb399046a49feb2a2a9c7f79468d4728d5edad29b9c453c3b723d6da0e0331e4db4d48b0bd03
+  checksum: 2ba3493c4642cc591f5dbb3f7cc8792bed009ba8f60f843e5694b6e3ceefec7ed457f855485fb192001c2fec1e28910307a8527dda9996fc55b6cb1067f7145b
   languageName: node
   linkType: hard
 
