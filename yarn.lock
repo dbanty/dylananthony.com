@@ -1702,10 +1702,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.23.0":
-  version: 2.23.0
-  resolution: "date-fns@npm:2.23.0"
-  checksum: 5b23cf7f08a27d0c1633e81304c95ac2bacb1160d86a25d36c40c84853796e442e597a4d75acec3f0920a71f3a65dd55b37565d356fa3fb4c2345225df42d930
+"date-fns@npm:2.24.0":
+  version: 2.24.0
+  resolution: "date-fns@npm:2.24.0"
+  checksum: 9f1944e92bbb5da0f4be8c4b3a8aa9f5b8ee3873ed97303194df8d5b62b6cdab74a673e239afbe87d99aceb37e6b989fbdc3345de2b61fafc60979dd354a79ec
   languageName: node
   linkType: hard
 
@@ -1897,7 +1897,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 4.30.0
     "@typescript-eslint/parser": 4.30.0
     autoprefixer: 10.3.3
-    date-fns: 2.23.0
+    date-fns: 2.24.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-plugin-prettier: 4.0.0
