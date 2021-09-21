@@ -58,7 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:17.0.2"],
             ["remark", "npm:13.0.0"],
-            ["remark-html", "npm:13.0.1"],
+            ["remark-html", "npm:13.0.2"],
             ["remark-prism", "npm:1.3.6"],
             ["tailwindcss", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:2.2.9"],
             ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
@@ -2352,7 +2352,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:17.0.2"],
             ["remark", "npm:13.0.0"],
-            ["remark-html", "npm:13.0.1"],
+            ["remark-html", "npm:13.0.2"],
             ["remark-prism", "npm:1.3.6"],
             ["tailwindcss", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:2.2.9"],
             ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
@@ -6422,10 +6422,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["remark-html", [
-        ["npm:13.0.1", {
-          "packageLocation": "./.yarn/cache/remark-html-npm-13.0.1-e49407b8f6-b59c71adad.zip/node_modules/remark-html/",
+        ["npm:13.0.2", {
+          "packageLocation": "./.yarn/cache/remark-html-npm-13.0.2-6bce838788-5c3f28ce6d.zip/node_modules/remark-html/",
           "packageDependencies": [
-            ["remark-html", "npm:13.0.1"],
+            ["remark-html", "npm:13.0.2"],
             ["hast-util-sanitize", "npm:3.0.2"],
             ["hast-util-to-html", "npm:7.1.2"],
             ["mdast-util-to-hast", "npm:10.1.1"]
