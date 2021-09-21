@@ -1551,6 +1551,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-color-names@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "css-color-names@npm:0.0.4"
+  checksum: 6842f38c3ae176f9beef3f92be258936aa508d5c4aa6dca48abfc324574eeda275e265dd0589d6e7a9a29768b6d6dd5ab7c4de27b8255c6142330fde84821af2
+  languageName: node
+  linkType: hard
+
 "css-has-pseudo@npm:^0.10.0":
   version: 0.10.0
   resolution: "css-has-pseudo@npm:0.10.0"
@@ -1913,7 +1920,7 @@ __metadata:
     remark: 13.0.0
     remark-html: 13.0.2
     remark-prism: 1.3.6
-    tailwindcss: 2.2.9
+    tailwindcss: 2.2.15
     typescript: 4.1.5
   languageName: unknown
   linkType: soft
@@ -2931,6 +2938,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hex-color-regex@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "hex-color-regex@npm:1.1.0"
+  checksum: 89899f5f74cdef884e352fe8791018f2f112c338b97f3b486f7d5f4760a9c58181f688eb147937f9f2dd69c976a7296b53d1509c9a0871903eeb26a8382e486c
+  languageName: node
+  linkType: hard
+
 "hmac-drbg@npm:^1.0.0":
   version: 1.0.1
   resolution: "hmac-drbg@npm:1.0.1"
@@ -2939,6 +2953,20 @@ __metadata:
     minimalistic-assert: ^1.0.0
     minimalistic-crypto-utils: ^1.0.1
   checksum: 729d5a55bf793619830aca5e62d101dfdb4164fe30c056cdcaecb32b1a69a23aa663d88e876d9d56cb69b1c3d95395ea60b0a715763c461188b37dca3dea930d
+  languageName: node
+  linkType: hard
+
+"hsl-regex@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "hsl-regex@npm:1.0.0"
+  checksum: b04a50c6c75fc4035e9e212a2c581dcae64289f0ad45bb010a32dd3899c9a5ac95c4d23507a89027aa7950a8a9241de0e6ad66bc87535f261c0eef4817222a1f
+  languageName: node
+  linkType: hard
+
+"hsla-regex@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "hsla-regex@npm:1.0.0"
+  checksum: 2460f935b556795a7cadc17978bc4cd90f74aaba05505f7040e7809336c68e757dcdcc2121004a4d926a6f04295cf68a575a81c0fd2d4e7280dc201a98eb2859
   languageName: node
   linkType: hard
 
@@ -3213,6 +3241,20 @@ __metadata:
   version: 1.2.4
   resolution: "is-callable@npm:1.2.4"
   checksum: 57680330ce65115efc87e82e1b85238e1abaef5c385e98742449a57205e9693be7371f29b41439ded26d790f864e9bde82367371eac4d98edca82413c1489c0a
+  languageName: node
+  linkType: hard
+
+"is-color-stop@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "is-color-stop@npm:1.1.0"
+  dependencies:
+    css-color-names: ^0.0.4
+    hex-color-regex: ^1.1.0
+    hsl-regex: ^1.0.0
+    hsla-regex: ^1.0.0
+    rgb-regex: ^1.0.1
+    rgba-regex: ^1.0.0
+  checksum: 0e3d46b1e1669891fe38f019188c6edc8b6239ba21b391c2f25bd1887975f11fed0764771adb550e30c7726f737547953c9260b411c9813e573b8b9434e760c4
   languageName: node
   linkType: hard
 
@@ -5674,6 +5716,20 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"rgb-regex@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "rgb-regex@npm:1.0.1"
+  checksum: 7701e22ec451e55a919c88f61a8006c70d004cc06d09a3e4806b0ffaff2ac0138fbbb3896d0e21f716c745e4ad6ae62114bf0920a78c7381e994e57b73575baf
+  languageName: node
+  linkType: hard
+
+"rgba-regex@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "rgba-regex@npm:1.0.0"
+  checksum: 4ffb946276ee7d7259a518eae89a3c6cce99736449ebed2c88ab26a076543766c62194c7dd06b8e4f5375e91c6e9bd21ebfc3ddf4b143f3688f260cafd9d466b
+  languageName: node
+  linkType: hard
+
 "rimraf@npm:^3.0.0, rimraf@npm:^3.0.2":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
@@ -6272,9 +6328,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:2.2.9":
-  version: 2.2.9
-  resolution: "tailwindcss@npm:2.2.9"
+"tailwindcss@npm:2.2.15":
+  version: 2.2.15
+  resolution: "tailwindcss@npm:2.2.15"
   dependencies:
     arg: ^5.0.1
     bytes: ^3.0.0
@@ -6289,6 +6345,7 @@ resolve@^2.0.0-next.3:
     fs-extra: ^10.0.0
     glob-parent: ^6.0.1
     html-tags: ^3.1.0
+    is-color-stop: ^1.1.0
     is-glob: ^4.0.1
     lodash: ^4.17.21
     lodash.topath: ^4.5.2
@@ -6313,7 +6370,7 @@ resolve@^2.0.0-next.3:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 841c0fd86191d9098babbd284cd34c3bcfbe0abde4f121b32867138f058a6f961d27c367622829870e884624601b7ef075b0f406563547ac3a0a4c2033fdb6f4
+  checksum: 471dc81b678cc9b887890e062d6a1fe43436703d6837fb7a8ba6b870c694d4ea16ac26f6409cb8c4429fd6ddec3d1fc0f2af5b3fdd0f1f916be4e704d4875ff8
   languageName: node
   linkType: hard
 
