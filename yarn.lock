@@ -1921,7 +1921,7 @@ __metadata:
     eslint-plugin-react: 7.25.3
     gray-matter: 4.0.3
     next: 11.1.2
-    postcss: 8.3.6
+    postcss: 8.3.8
     postcss-preset-env: 6.7.0
     prettier: 2.4.1
     prismjs: 1.25.0
@@ -4077,6 +4077,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanocolors@npm:^0.2.2":
+  version: 0.2.3
+  resolution: "nanocolors@npm:0.2.3"
+  checksum: 03ad28db9327c64778f43233de4c1488ebd7195212fd0c458d958a9eb31901dfba16b011c64235e268193faef470cfbd7fc17a3e795a8f8be1dbd9e41ad06b5d
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.1.22":
   version: 3.1.22
   resolution: "nanoid@npm:3.1.22"
@@ -4092,6 +4099,15 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: e6dea1da5a593ffdc8cf2676d1d02f0626f07a54a5947a7a1f5ff1fd07901b2f53044c285e98b87eb367f016fde285fd8785d54a2dceeab9c3721f4e618f8326
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.1.25":
+  version: 3.1.25
+  resolution: "nanoid@npm:3.1.25"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: caab76af9a899969f87fb2105e15ef192f9e7bbf4230c2dea5a87b752c94bfd1c13a3877c388fd464826a7752fb49db5a4ff39a44458a32b740e6a1ff072e55e
   languageName: node
   linkType: hard
 
@@ -5164,14 +5180,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.6":
-  version: 8.3.6
-  resolution: "postcss@npm:8.3.6"
+"postcss@npm:8.3.8":
+  version: 8.3.8
+  resolution: "postcss@npm:8.3.8"
   dependencies:
-    colorette: ^1.2.2
-    nanoid: ^3.1.23
+    nanocolors: ^0.2.2
+    nanoid: ^3.1.25
     source-map-js: ^0.6.2
-  checksum: 515c26472861ce0f3b0a7945b9ac4732756d2aab6b12950137f72c7c6d90967136ba56e878815edcbf132c5643005dad1e9bbcb14139a948802af10245a8f6e3
+  checksum: bea4f2f367c803739ca89c6773aa80ecad6480171db7e1ebb211fabe7eaf7ff68b3b4d007e41f84d561344a588d62d1b50b3e46e1f5c368712100df553fc09ca
   languageName: node
   linkType: hard
 
