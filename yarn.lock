@@ -1930,7 +1930,7 @@ __metadata:
     remark: 13.0.0
     remark-html: 13.0.2
     remark-prism: 1.3.6
-    tailwindcss: 2.2.15
+    tailwindcss: 2.2.16
     typescript: 4.1.5
   languageName: unknown
   linkType: soft
@@ -6338,9 +6338,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:2.2.15":
-  version: 2.2.15
-  resolution: "tailwindcss@npm:2.2.15"
+"tailwindcss@npm:2.2.16":
+  version: 2.2.16
+  resolution: "tailwindcss@npm:2.2.16"
   dependencies:
     arg: ^5.0.1
     bytes: ^3.0.0
@@ -6380,7 +6380,7 @@ resolve@^2.0.0-next.3:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 471dc81b678cc9b887890e062d6a1fe43436703d6837fb7a8ba6b870c694d4ea16ac26f6409cb8c4429fd6ddec3d1fc0f2af5b3fdd0f1f916be4e704d4875ff8
+  checksum: 19042923367fa11bacf45329f6b6bd11e7d1ee7c11ec638213a9c485960fe3f3beafa11f0e91761315b812f3217372aed6f9c40ed18581e3766a6672d01a85c5
   languageName: node
   linkType: hard
 
