@@ -23,7 +23,7 @@
     "@babel/runtime": "7.15.4",
     "@tailwindcss/typography": "0.4.1",
     "@types/node": "14.17.17",
-    "@types/react": "17.0.22",
+    "@types/react": "17.0.27",
     "@typescript-eslint/eslint-plugin": "4.32.0",
     "@typescript-eslint/parser": "4.32.0",
     "eslint": "7.32.0",
