@@ -44,7 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.32.0"],
             ["@typescript-eslint/parser", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.32.0"],
             ["autoprefixer", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.3.6"],
-            ["date-fns", "npm:2.24.0"],
+            ["date-fns", "npm:2.25.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.0.0"],
@@ -2102,10 +2102,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["date-fns", [
-        ["npm:2.24.0", {
-          "packageLocation": "./.yarn/cache/date-fns-npm-2.24.0-2fbbc81936-9f1944e92b.zip/node_modules/date-fns/",
+        ["npm:2.25.0", {
+          "packageLocation": "./.yarn/cache/date-fns-npm-2.25.0-fe211b387d-492907de08.zip/node_modules/date-fns/",
           "packageDependencies": [
-            ["date-fns", "npm:2.24.0"]
+            ["date-fns", "npm:2.25.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2342,7 +2342,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.32.0"],
             ["@typescript-eslint/parser", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.32.0"],
             ["autoprefixer", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:10.3.6"],
-            ["date-fns", "npm:2.24.0"],
+            ["date-fns", "npm:2.25.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.0.0"],
