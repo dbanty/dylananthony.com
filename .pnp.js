@@ -51,7 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:7.26.1"],
             ["gray-matter", "npm:4.0.3"],
             ["next", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:11.1.2"],
-            ["postcss", "npm:8.3.8"],
+            ["postcss", "npm:8.4.5"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.4.1"],
             ["prismjs", "npm:1.25.0"],
@@ -1100,7 +1100,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fraction.js", "npm:4.1.1"],
             ["normalize-range", "npm:0.1.2"],
             ["picocolors", "npm:0.2.1"],
-            ["postcss", "npm:8.3.8"],
+            ["postcss", "npm:8.4.5"],
             ["postcss-value-parser", "npm:4.1.0"]
           ],
           "packagePeers": [
@@ -2349,7 +2349,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:7.26.1"],
             ["gray-matter", "npm:4.0.3"],
             ["next", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:11.1.2"],
-            ["postcss", "npm:8.3.8"],
+            ["postcss", "npm:8.4.5"],
             ["postcss-preset-env", "npm:6.7.0"],
             ["prettier", "npm:2.4.1"],
             ["prismjs", "npm:1.25.0"],
@@ -4812,15 +4812,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["nanocolors", [
-        ["npm:0.2.3", {
-          "packageLocation": "./.yarn/cache/nanocolors-npm-0.2.3-c72a1dc340-03ad28db93.zip/node_modules/nanocolors/",
-          "packageDependencies": [
-            ["nanocolors", "npm:0.2.3"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["nanoid", [
         ["npm:3.1.22", {
           "packageLocation": "./.yarn/cache/nanoid-npm-3.1.22-e0ab44a9c0-6a38c79981.zip/node_modules/nanoid/",
@@ -4836,10 +4827,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.1.25", {
-          "packageLocation": "./.yarn/cache/nanoid-npm-3.1.25-c8f62ce160-caab76af9a.zip/node_modules/nanoid/",
+        ["npm:3.1.30", {
+          "packageLocation": "./.yarn/cache/nanoid-npm-3.1.30-58cf6fe7ec-440f685e98.zip/node_modules/nanoid/",
           "packageDependencies": [
-            ["nanoid", "npm:3.1.25"]
+            ["nanoid", "npm:3.1.30"]
           ],
           "linkType": "HARD",
         }]
@@ -5521,6 +5512,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["picocolors", "npm:0.2.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/picocolors-npm-1.0.0-d81e0b1927-6616d34dd0.zip/node_modules/picocolors/",
+          "packageDependencies": [
+            ["picocolors", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["picomatch", [
@@ -5599,13 +5597,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.3.8", {
-          "packageLocation": "./.yarn/cache/postcss-npm-8.3.8-adce56afd5-bea4f2f367.zip/node_modules/postcss/",
+        ["npm:8.4.5", {
+          "packageLocation": "./.yarn/cache/postcss-npm-8.4.5-675038f8bb-9fc52b650c.zip/node_modules/postcss/",
           "packageDependencies": [
-            ["postcss", "npm:8.3.8"],
-            ["nanocolors", "npm:0.2.3"],
-            ["nanoid", "npm:3.1.25"],
-            ["source-map-js", "npm:0.6.2"]
+            ["postcss", "npm:8.4.5"],
+            ["nanoid", "npm:3.1.30"],
+            ["picocolors", "npm:1.0.0"],
+            ["source-map-js", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5886,7 +5884,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-nested", "virtual:65e575031f63d32d3fe6cf159e746e98ea70bcb4e5110dd945e3286fa3c7b2f94a8781607339811934853ba853a3ab3379763044f3af810c57697cc676f830a6#npm:5.0.6"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.3.8"],
+            ["postcss", "npm:8.4.5"],
             ["postcss-selector-parser", "npm:6.0.6"]
           ],
           "packagePeers": [
@@ -6965,10 +6963,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["source-map-js", [
-        ["npm:0.6.2", {
-          "packageLocation": "./.yarn/cache/source-map-js-npm-0.6.2-af388ea7f1-8e2f992cfb.zip/node_modules/source-map-js/",
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/source-map-js-npm-1.0.1-c86a8e0dcb-8096794b7d.zip/node_modules/source-map-js/",
           "packageDependencies": [
-            ["source-map-js", "npm:0.6.2"]
+            ["source-map-js", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -7402,7 +7400,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-emoji", "npm:1.11.0"],
             ["normalize-path", "npm:3.0.0"],
             ["object-hash", "npm:2.2.0"],
-            ["postcss", "npm:8.3.8"],
+            ["postcss", "npm:8.4.5"],
             ["postcss-js", "npm:3.0.3"],
             ["postcss-load-config", "virtual:65e575031f63d32d3fe6cf159e746e98ea70bcb4e5110dd945e3286fa3c7b2f94a8781607339811934853ba853a3ab3379763044f3af810c57697cc676f830a6#npm:3.1.0"],
             ["postcss-nested", "virtual:65e575031f63d32d3fe6cf159e746e98ea70bcb4e5110dd945e3286fa3c7b2f94a8781607339811934853ba853a3ab3379763044f3af810c57697cc676f830a6#npm:5.0.6"],
