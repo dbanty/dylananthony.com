@@ -337,10 +337,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.17.21":
-  version: 14.17.21
-  resolution: "@types/node@npm:14.17.21"
-  checksum: 5cc0e83e4ec75a0a7fb1a9299037dfe7ff7e4f45746de364d2027b3af36fbd470e0ca4d831b0fa129aa2b70e60ad1471a5ff4949c80b7029b1ea8873122a4aa5
+"@types/node@npm:16.11.17":
+  version: 16.11.17
+  resolution: "@types/node@npm:16.11.17"
+  checksum: 6ef926a8e9124e466373ab63aae52e4c57a5c2344624d1b10a3ddfa435f3afb6eb18395ea8d406d2e6d978519a7382e39427a8391d1f05aa897305d377c7f0a3
   languageName: node
   linkType: hard
 
@@ -1895,7 +1895,7 @@ __metadata:
   dependencies:
     "@babel/runtime": 7.15.4
     "@tailwindcss/typography": 0.4.1
-    "@types/node": 14.17.21
+    "@types/node": 16.11.17
     "@types/react": 17.0.27
     "@typescript-eslint/eslint-plugin": 4.32.0
     "@typescript-eslint/parser": 4.32.0
