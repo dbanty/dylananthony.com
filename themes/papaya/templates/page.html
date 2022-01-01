@@ -49,7 +49,7 @@
             {% set container_width = 16 * 42 %}
             {% set resized_featured_image = resize_image(path=image_path, width=container_width, op="fit_width") %}
         {% endif %}
-    <img src="{{ resized_featured_image.url }}" class="{% if page.extra.featured_image_extended %}extended-img{% endif %}" alt="{% if page.extra.featured_image_alt %}{{ page.extra.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"/>
+    <img src="{{ resized_featured_image.static_path | replace(from="static", to="") }}" class="{% if page.extra.featured_image_extended %}extended-img{% endif %}" alt="{% if page.extra.featured_image_alt %}{{ page.extra.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"/>
     {% endif %}
     {#
         Currently there's no way to get the page content without the summary included;
