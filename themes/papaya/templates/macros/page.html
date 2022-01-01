@@ -62,11 +62,7 @@
 <!-- project listing macros -->
 {% macro project_listing(page) %}
 <article class="post-list">
-{#    {% if page.extra.featured_image %}
-    <a href="{{ page.permalink }}"><img src="{{ page.permalink }}/{{ page.extra.featured_image }}" alt="{% if page.extra.featured_image_alt %}{{ page.extra.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"/></a>
-    {% endif %}
-#}
-    <a href="{{ page.permalink }}">
+    <a href="{{ page.path }}">
         <header>
             <h3>
                 {{ page.title }}
