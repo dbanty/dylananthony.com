@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@babel/runtime", "npm:7.15.4"],
-            ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.1"],
+            ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.5.0"],
             ["@types/node", "npm:14.17.21"],
             ["@types/react", "npm:17.0.27"],
             ["@typescript-eslint/eslint-plugin", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.32.0"],
@@ -436,17 +436,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@tailwindcss/typography", [
-        ["npm:0.4.1", {
-          "packageLocation": "./.yarn/cache/@tailwindcss-typography-npm-0.4.1-8884aa253b-d26815b8f5.zip/node_modules/@tailwindcss/typography/",
+        ["npm:0.5.0", {
+          "packageLocation": "./.yarn/cache/@tailwindcss-typography-npm-0.5.0-9af71863de-2e690db219.zip/node_modules/@tailwindcss/typography/",
           "packageDependencies": [
-            ["@tailwindcss/typography", "npm:0.4.1"]
+            ["@tailwindcss/typography", "npm:0.5.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.1", {
-          "packageLocation": "./.yarn/$$virtual/@tailwindcss-typography-virtual-e86b8c9aa6/0/cache/@tailwindcss-typography-npm-0.4.1-8884aa253b-d26815b8f5.zip/node_modules/@tailwindcss/typography/",
+        ["virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.5.0", {
+          "packageLocation": "./.yarn/$$virtual/@tailwindcss-typography-virtual-7a54ac2798/0/cache/@tailwindcss-typography-npm-0.5.0-9af71863de-2e690db219.zip/node_modules/@tailwindcss/typography/",
           "packageDependencies": [
-            ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.1"],
+            ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.5.0"],
             ["@types/tailwindcss", null],
             ["lodash.castarray", "npm:4.4.0"],
             ["lodash.isplainobject", "npm:4.0.6"],
@@ -2336,7 +2336,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["dylan-anthony-com", "workspace:."],
             ["@babel/runtime", "npm:7.15.4"],
-            ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.4.1"],
+            ["@tailwindcss/typography", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:0.5.0"],
             ["@types/node", "npm:14.17.21"],
             ["@types/react", "npm:17.0.27"],
             ["@typescript-eslint/eslint-plugin", "virtual:7bf31bd5fd61f64d881bbb881f0ace2572ed8f1ed8d56f26ae5416c57680417ca141afccf3b17e028e160afec030cfa51820c1e5f77bdaa3111598d83871521b#npm:4.32.0"],
