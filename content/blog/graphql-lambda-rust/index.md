@@ -1,6 +1,7 @@
 +++
 title = "Running GraphQL on Lambda with Rust"
 date = "2021-04-20"
+aliases = ["/posts/graphql-lambda-rust"]
 
 [extra]
 featured_image = "cover.png"

@@ -1,6 +1,7 @@
 +++
 title = "An intro to this blog using... this blog"
 date = "2020-12-27"
+aliases = ["/posts/intro"]
 
 [extra]
 excerpt = "If you want to have your own website to host blogs on, Next.js on Vercel seems like a great choice."

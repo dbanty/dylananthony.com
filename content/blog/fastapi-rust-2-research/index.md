@@ -1,6 +1,7 @@
 +++
 title = "Replacing FastAPI with Rust: Part 2 - Research"
 date = "2021-01-01"
+aliases = ["/posts/fastapi-rust-2-research"]
 
 [extra]
 excerpt = "Explore a few of the existing options in the Rust ecosystem to see how close we can get to our FastAPI replacement"

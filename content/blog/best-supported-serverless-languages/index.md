@@ -2,6 +2,7 @@
 title = "Best Supported Serverless Languages"
 excerpt = "I took a tally of the supported languages on the serverless platforms that I've heard of."
 date = "2021-04-28"
+aliases = ["/posts/best-supported-serverless-languages"]
 
 [extra]
 featured_image = "cover.png"

@@ -1,6 +1,7 @@
 +++
 title = "Replacing FastAPI with Rust: Part 3 - Trying Actix"
 date = "2021-01-12"
+aliases = ["/posts/fastapi-rust-3-trying-actix"]
 
 [extra]
 excerpt = "Development was time consuming, troubleshooting was frustrating, and the end result was fragile and ugly."

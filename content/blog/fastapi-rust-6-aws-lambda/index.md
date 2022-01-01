@@ -1,6 +1,7 @@
 +++
 title = "Replacing FastAPI with Rust: Part 6 - AWS Lambda"
 date = "2021-03-03"
+aliases = ["/posts/fastapi-rust-6-aws-lambda"]
 
 [extra]
 excerpt = "In this post, we'll take a look at two different methods to deploy our Rocket application to AWS Lambda: the SAM CLI and AWS CDK."

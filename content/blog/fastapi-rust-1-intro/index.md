@@ -1,6 +1,7 @@
 +++
 title = "Replacing FastAPI with Rust: Part 1 - Intro"
 date = "2020-12-29"
+aliases = ["/posts/fastapi-rust-1-intro"]
 
 [extra]
 excerpt = "I'll either come away with the new best way to produce APIs, or even more evidence of how amazing FastAPI is."

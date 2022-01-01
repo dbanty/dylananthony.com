@@ -1,6 +1,7 @@
 +++
 title = "Replacing FastAPI with Rust: Part 5 - Rocket 0.5"
 date = "2021-02-20"
+aliases = ["/posts/fastapi-rust-5-rocket-0.5"]
 
 [extra]
 excerpt = "I walk through my experience updating rocket_lamb to support the latest development version of Rocket"

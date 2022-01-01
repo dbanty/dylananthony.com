@@ -1,6 +1,7 @@
 +++
 title = "Replacing FastAPI with Rust: Part 4 - A Solution"
 date = "2021-01-20"
+aliases = ["/posts/fastapi-rust-4-a-solution"]
 
 [extra]
 featured_image = "cover.png"
