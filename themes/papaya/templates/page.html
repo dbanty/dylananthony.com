@@ -43,13 +43,18 @@
         {% set image_path = page.components | join(sep="/") %}
         {% set image_path = image_path ~ "/" ~ page.extra.featured_image %}
         {% if page.extra.featured_image_extended %}
-            {% set resized_featured_image = resize_image(path=image_path, width=config.extra.images.max_width, op="fit_width") %}
+            {% set container_width = config.extra.images.max_width%}
         {% else %}
-            {# container_width = (pixel size, px) * (.container's max-width) #}
             {% set container_width = 16 * 42 %}
-            {% set resized_featured_image = resize_image(path=image_path, width=container_width, op="fit_width") %}
         {% endif %}
-    <img src="{{ resized_featured_image.static_path | replace(from="static", to="") }}" class="{% if page.extra.featured_image_extended %}extended-img{% endif %}" alt="{% if page.extra.featured_image_alt %}{{ page.extra.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"/>
+        {% set resized_featured_image = resize_image(path=image_path, width=container_width, op="fit_width") %}
+    <img
+            src="{{ resized_featured_image.static_path | replace(from="static", to="") }}"
+            class="{% if page.extra.featured_image_extended %}extended-img{% endif %}"
+            alt="{% if page.extra.featured_image_alt %}{{ page.extra.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
+            width="{{ container_width }}"
+            height="{{ container_width / 2 }}"
+    />
     {% endif %}
     {#
         Currently there's no way to get the page content without the summary included;

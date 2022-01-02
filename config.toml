@@ -21,11 +21,11 @@ highlight_code = true
 [extra]
 env = "ZOLA_ENV"
 menu_items = [
-    { name = "projects", url = "$LANG_BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
     { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
+    { name = "projects", url = "$LANG_BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
     # tag is not a zola section, it's just a link.
     { name = "tags", url = "$LANG_BASE_URL/tags" },
-    { name = "about", url = "https://github.com/dbanty", show_recent = false },
+#    { name = "about", url = "https://github.com/dbanty", show_recent = false },
 ]
 
 [extra.images]
