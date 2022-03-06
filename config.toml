@@ -15,6 +15,9 @@ build_search_index = false
 
 ignored_content = ["*.acorn"]
 
+# RSS
+generate_feed = true
+
 [markdown]
 highlight_code = true
 
