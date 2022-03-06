@@ -30,7 +30,7 @@ The old adage says, "write what you know," and I sure have. I had the goal in my
 
 To make matters worse, although some of the solutions came close, none of them would be ready in time to use for the project I had in mind. As a result, my motivation to write about them quickly decreased. So the content wasn't technically changing, but its relevance to me was.
 
-However, this wasn't the case for the whole of my eight-month hiatus. I worked on a side project that needed a new web server, so I decided to try hosting it on Microsoft Azure. The experience ended up being pretty terrible, but I never brought myself to finish any of the blog drafts about it. Recently, a new OpenAPI web server framework for Rust has appeared—Poem. It's an incredible new entry that seems to satisfy most of my needs and could be a real contender for the "FastAPI of Rust" crown—but still no blog post.
+However, this wasn't the case for the whole of my eight—month hiatus. I worked on a side project that needed a new web server, so I decided to try hosting it on Microsoft Azure. The experience ended up being pretty terrible, but I never brought myself to finish any of the blog drafts about it. Recently, a new OpenAPI web server framework for Rust has appeared—Poem. It's an incredible new entry that seems to satisfy most of my needs and could be a real contender for the "FastAPI of Rust" crown—but still no blog post.
 
 What gives? Clearly, even though the content was an issue early on, it's not the only thing that's put a pause on my writing.
 
