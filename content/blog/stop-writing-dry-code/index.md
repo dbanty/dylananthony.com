@@ -220,7 +220,7 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [github one time]: https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty
 [patreon]: https://www.patreon.com/dbanty
 [ko-fi]: https://ko-fi.com/dbanty
-[discussion]: https://github.com/dbanty/dylananthony.com/discussions/194
+[discussion]: https://github.com/dbanty/dylananthony.com/discussions/199
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [twitter]: https://twitter.com/TBDylan
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
