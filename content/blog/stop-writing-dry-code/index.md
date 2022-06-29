@@ -19,7 +19,7 @@ If you take nothing else away from this post, take this: DRY should **never** be
 
 ## MOIST
 
-Code is a bit like cake. A dry cake is brittle and likely crumble when you touch it. Likewise, DRY code—code that has no repetition—will resist extension and alteration. By combining two implementations into a single one, you bind them together, making it so you can't change one without changing both.
+Code is a bit like cake. A dry cake is brittle and likely to crumble when you touch it. Likewise, DRY code—code that has no repetition—will resist extension and alteration. By combining two implementations into a single one, you bind them together, making it so you can't change one without changing both.
 
 On the other hand, a wet cake will fall apart, not holding its structure. In software, WET usually means something to the effect of "write every time"—it's the opposite of DRY in that you constantly repeat yourself. If your code is WET, you can change one piece without breaking any others. However, two pieces of information that should be the same can easily fall out of sync.
 
