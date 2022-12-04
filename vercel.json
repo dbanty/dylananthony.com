@@ -1,8 +1,0 @@
-{
-  "build": {
-    "env": {
-      "ZOLA_VERSION": "0.14.0",
-      "ZOLA_ENV": "prod"
-    }
-  }
-}

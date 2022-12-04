@@ -7,6 +7,7 @@ aliases = ["/posts/fastapi-rust-5-rocket-0.5"]
 excerpt = "I walk through my experience updating rocket_lamb to support the latest development version of Rocket"
 featured_image = "cover.png"
 featured_image_alt = "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
+discussion = 26
 
 [taxonomies]
 tags = ["Rust", "FastAPI", "OpenAPI"]
@@ -201,19 +202,9 @@ The obvious problem I see with my new code is it will have significantly more ov
 
 That’s it! [My fork of rocket_lamb](https://github.com/dbanty/rocket-lamb/tree/rocket-0.5) now works with the development version of `rocket` and the latest `tokio`. I was even able to get [my rocket experiment](https://github.com/dbanty/rust-fastapi-experiments/tree/rocket-0.5) working with the latest `rocket` by combining my fork with [a fork of okapi which has been updated](https://github.com/dbanty/okapi/tree/async2). So what’s next? Well now that everything has been updated, in theory my endpoints can be async, which means I should finally be able to use [SQLx] with this project!
 
----
-
-_Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
-
-_This post is part of a series and the [next part] is already available!_
-
-_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
-
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/26
-[ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-4-a-solution
 [sqlx]: https://crates.io/crates/sqlx

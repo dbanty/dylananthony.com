@@ -6,6 +6,7 @@ date = "2022-04-05"
 featured_image = "cover.jpeg"
 featured_image_extended = true
 featured_image_alt = "A large vanilla cake with whipped vanilla buttercream icing, against a purple background, is cut open and sand is spilling forth creating a vast desert beneath. A lone cactus stands sentinel. The top right reads \"Stop Writing DRY Code.\""
+discussion = 199
 
 [taxonomies]
 tags = ["software engineering"]
@@ -207,21 +208,4 @@ Here's a set of questions I suggest you ask yourself next time you're wondering 
 
 Hopefully, all of my acronymic nonsense has provided you with enough alternatives to DRY that you never use it again. Remember, not repeating yourself is not a valuable outcome of refactoring. Instead, try keeping a goal in mind like improving correctness, benefitting the community, or making the code easier to read. Now go enjoy some cake; you've earned it.
 
----
-
-_Was this post super helpful to you? Tip me on [GitHub][github one time], [Patreon], or [Ko-Fi]._
-
-_Have a question or comment about this post? Leave it in the [discussion] thread on GitHub!_
-
-_Want to be notified of future posts? Watch releases in [the GitHub repo] or [follow me on Twitter][twitter]._
-
-_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
-
-[github one time]: https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty
-[patreon]: https://www.patreon.com/dbanty
-[ko-fi]: https://ko-fi.com/dbanty
-[discussion]: https://github.com/dbanty/dylananthony.com/discussions/199
-[the github repo]: https://github.com/dbanty/dylananthony.com
-[twitter]: https://twitter.com/TBDylan
-[ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [Renovate]: https://www.whitesourcesoftware.com/free-developer-tools/renovate/

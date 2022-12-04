@@ -7,6 +7,7 @@ aliases = ["/posts/fastapi-rust-2-research"]
 excerpt = "Explore a few of the existing options in the Rust ecosystem to see how close we can get to our FastAPI replacement"
 featured_image = "cover.png"
 featured_image_alt = "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
+discussion = 11
 
 [taxonomies]
 tags = ["Rust", "FastAPI", "OpenAPI"]
@@ -130,14 +131,11 @@ In the next blog post in this series, I'm going to take [actix-web] and [Papercl
 
 ---
 
-_Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
-
 _This post is part of a series and the [next part] is already available!_
 
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/11
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [previous post]: https://dylananthony.com/posts/fastapi-rust-1-intro
 [teaser comment]: https://dev.to/patarapolw/comment/19m15

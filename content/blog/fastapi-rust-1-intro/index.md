@@ -7,6 +7,7 @@ aliases = ["/posts/fastapi-rust-1-intro"]
 excerpt = "I'll either come away with the new best way to produce APIs, or even more evidence of how amazing FastAPI is."
 featured_image = "cover.png"
 featured_image_alt = "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
+discussion = 9
 
 [taxonomies]
 tags = ["Rust", "FastAPI", "OpenAPI"]
@@ -66,23 +67,12 @@ The end result of my investigation should be a method to produce an API which:
 
 So I'm going on an adventure to replace what I believe to be the best API framework that exists with something else. There will be research, documentation, writing of Rust code, and who knows what else! In the end, I'll either come away with the new best way to produce APIs, or even more evidence of how amazing [FastAPI] is. Sound like fun? Follow along with this series! Have some suggestions of where I should start? Please, _please_ let me know.
 
----
-
-_Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
-
-_This post is part of a series and the [next part] is already available!_
-
-_Want to be notified of future blog posts? Watch releases in [the GitHub repo]._
-
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/9
 [openapi-python-client]: https://github.com/triaxtec/openapi-python-client
 [swagger ui]: https://swagger.io/tools/swagger-ui/
 [pydantic]: https://pydantic-docs.helpmanual.io
 [fastapi]: https://fastapi.tiangolo.com
 [mangum]: https://mangum.io
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
-[the github repo]: https://github.com/dbanty/dylananthony.com
-[next part]: https://dylananthony.com/posts/fastapi-rust-2-research
