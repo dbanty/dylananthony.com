@@ -7,6 +7,7 @@ aliases = ["/posts/best-supported-serverless-languages"]
 [extra]
 featured_image = "cover.png"
 featured_image_alt = "The Ferris the Crab, along with the logos for TypeScript, .NET, and Go, sit above the text 'Serverless Languages'."
+discussion = 71
 
 [taxonomies]
 tags = ["serverless"]
@@ -120,22 +121,7 @@ Here is the list of all the supported languages with the platforms that support 
 3. Supported by compiling to JavaScript, some language features / libraries may not work.
 4. Supported by compiling to WebAssembly, your mileage may vary.
 
----
-
-_Was this post super helpful to you? [Tip me on GitHub][github one time]._
-
-_Have a question or comment about this post? Leave it in the [discussion] thread on GitHub!_
-
-_Want to be notified of future posts? Watch releases in [the GitHub repo] or [follow me on Twitter][twitter]._
-
-_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
-
 [community typescript logo]: https://github.com/remojansen/logo.ts
 [go logo]: https://blog.golang.org/go-brand
 [.net logo]: https://github.com/dotnet/brand
 [ferris the crab]: https://www.rustacean.net
-[github one time]: https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty
-[ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
-[the github repo]: https://github.com/dbanty/dylananthony.com
-[twitter]: https://twitter.com/TBDylan
-[discussion]: https://github.com/dbanty/dylananthony.com/discussions/71

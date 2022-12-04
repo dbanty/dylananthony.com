@@ -82,6 +82,23 @@
     {% block page_contents %}
     <div class="content">
         {{ page_contents | safe }}
+        {% if page.components is containing("blog") %}
+            <hr>
+        <p><i> Was this post super helpful to you? Tip me on
+            <a href="https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty">GitHub</a>,
+            <a href="https://www.patreon.com/dbanty">Patreon</a>,
+            or <a href="https://ko-fi.com/dbanty">Ko-Fi</a>.
+        </i></p>
+        <p><i>
+            Have a question or comment about this post? Leave it in the <a href="https://github.com/dbanty/dylananthony.com/discussions/{{ page.extra.discussion }}">discussion</a> thread on GitHub!
+        </i></p>
+        <p><i>
+            Want to be notified of future posts? Watch releases in <a rel="author" href="https://github.com/dbanty/dylananthony.com">the GitHub repo</a> or <a rel="author" href="https://tech.lgbt/@dbanty">follow me on Mastodon</a>
+        </i></p>
+        <p><i>
+            Have an idea or request for a future blog topic? Drop it in the GitHub discussions under <a href="https://github.com/dbanty/dylananthony.com/discussions/categories/ideas">ideas</a>.
+        </i></p>
+        {% endif %}
     </div>
     {% endblock page_contents %}
 </article>

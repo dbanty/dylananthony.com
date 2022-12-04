@@ -7,6 +7,7 @@ aliases = ["/posts/fastapi-rust-3-trying-actix"]
 excerpt = "Development was time consuming, troubleshooting was frustrating, and the end result was fragile and ugly."
 featured_image = "cover.png"
 featured_image_alt = "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
+discussion = 18
 
 [taxonomies]
 tags = ["Rust", "FastAPI", "OpenAPI"]
@@ -114,20 +115,10 @@ Updating the score, this solution only meets 3/8 "MUST" requirements for my Fast
 
 I'm going to dive in and try [rweb]. My biggest near-term concern was the lack of documentation, but no amount of documentation actually helped me with [actix-web] so... why not? Hopefully it will go much better, and I won't have to write my own lambda handler code _or_ OpenAPI 3 structures. Plus now I get to enjoy the (subjectively) nicer syntax of rweb!
 
----
-
-_Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
-
-_This post is part of a series and the [next part] is already available!_
-
-_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
 
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/18
-[ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
-[the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-2-research
 [teaser comment]: https://dev.to/patarapolw/comment/19m15
 [rweb]: https://github.com/kdy1/rweb

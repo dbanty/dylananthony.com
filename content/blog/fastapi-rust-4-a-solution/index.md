@@ -7,6 +7,7 @@ aliases = ["/posts/fastapi-rust-4-a-solution"]
 featured_image = "cover.png"
 featured_image_alt = "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
 excerpt = "I've finally decided on a framework to use."
+discussion = 22
 
 [taxonomies]
 tags = ["Rust", "FastAPI", "OpenAPI"]
@@ -37,7 +38,7 @@ All of this basically confirmed my fears about rweb. The maintenance and stabili
 
 ## [DropShot]
 
-I received a DM on [Twitter] from @ayper recommending I take a look at this project. It's certainly very interesting, though also very young. It seems like this project's goals may align with my own though it would take some work to get there. Specifically, right now there is no way to make offline direct requests as I need for a serverless environment. It seems like even their test utilities (which is where you usually see offline invocation) use a local webserver. I'll definitely be keeping my eyes on this in the future though to see where it goes.
+I received a DM on Twitter from @ayper recommending I take a look at this project. It's certainly very interesting, though also very young. It seems like this project's goals may align with my own though it would take some work to get there. Specifically, right now there is no way to make offline direct requests as I need for a serverless environment. It seems like even their test utilities (which is where you usually see offline invocation) use a local webserver. I'll definitely be keeping my eyes on this in the future though to see where it goes.
 
 ## [Rocket]
 
@@ -120,18 +121,10 @@ I'm not completely sure what the next step for me will be. I could try actually 
 
 By the way, if you want to check out the Rocket code I ended up with, it's available in the [experiments repo] alongside the actix code from the [previous post].
 
----
-
-_Have a question or comment about this post? Leave it in the [discussions] thread on GitHub!_
-
-_This post is part of a series and the [next part] is already available!_
-
-_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
 
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi
-[discussions]: https://github.com/dbanty/dylananthony.com/discussions/22
 [ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
 [the github repo]: https://github.com/dbanty/dylananthony.com
 [previous post]: https://dylananthony.com/posts/fastapi-rust-3-trying-actix
@@ -146,5 +139,4 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [rocket comment]: https://dev.to/follpvosten/comment/1ae8c
 [rocket_lamb]: https://github.com/GREsau/rocket-lamb
 [okapi]: https://github.com/GREsau/okapi
-[twitter]: https://twitter.com/TBDylan
 [next part]: https://dylananthony.com/posts/fastapi-rust-5-rocket-0.5

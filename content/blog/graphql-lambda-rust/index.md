@@ -7,6 +7,7 @@ aliases = ["/posts/graphql-lambda-rust"]
 featured_image = "cover.png"
 featured_image_alt = "The Rust mascot 'Ferris the Crab' sits beneath the logos for GraphQL and AWS Lambda. Text beneath the images states 'GraphQL on Lambda with Rust'"
 excerpt = "I've been pleasantly surprised so far at how easy it's been to write a GraphQL API using Rust."
+discussion = 56
 
 [taxonomies]
 tags = ["Rust", "GraphQL", "serverless"]
@@ -48,16 +49,6 @@ The API code is fairly simple, for the most part you can just follow [the docs][
 
 Building a GraphQL API in Rust using AWS Lambda to host it is _way easier_ than trying to build the equivalent with OpenAPI. The main problem is the lack of an end-to-end guide covering everything you need to know. The `async-graphql` docs are great, but terse (as are the `SQLx` docs), so more are needed to make this setup more accessible. There are of course some major differences between GraphQL and OpenAPI (upvote [this idea][graphql vs openapi] if you want a full comparison), so you'd have to be sold on GraphQL already to use this solution. All of that said, this is definitely my favorite solution for making APIs with Rust that I've tried so far.
 
----
-
-_Was this post super helpful to you? [Tip me on GitHub][github one time]._
-
-_Have a question or comment about this post? Leave it in the [discussion] thread on GitHub!_
-
-_Want to be notified of future posts? Watch releases in [the GitHub repo] or [follow me on Twitter][twitter]._
-
-_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
-
 [ferris the crab]: https://www.rustacean.net
 [the graphql logo]: https://github.com/graphql/artwork
 [the aws lambda logo]: https://aws.amazon.com/architecture/icons/
@@ -73,8 +64,3 @@ _Have an idea or request for a future blog topic? Drop it in the GitHub discussi
 [examples repo]: https://github.com/dbanty/rust-lambda-graphql-example
 [actix post]: https://dylananthony.com/posts/fastapi-rust-3-trying-actix
 [graphql vs openapi]: https://github.com/dbanty/dylananthony.com/discussions/55
-[github one time]: https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty
-[ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
-[the github repo]: https://github.com/dbanty/dylananthony.com
-[twitter]: https://twitter.com/TBDylan
-[discussion]: https://github.com/dbanty/dylananthony.com/discussions/56

@@ -1,3 +1,5 @@
+@import "variables";
+
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?ena7jh');
@@ -12,7 +14,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icomoon';
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,15 +27,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-envelop:before {
-  content: "\e945";
+.icon-mastodon {
+  &:before {
+    content: $icon-mastodon;     
+    color: #3088d4;
+  }
 }
-.icon-twitter:before {
-  content: "\ea96";
+.icon-envelop {
+  &:before {
+    content: $icon-envelop; 
+  }
 }
-.icon-rss:before {
-  content: "\ea9b";
+.icon-rss {
+  &:before {
+    content: $icon-rss; 
+  }
 }
-.icon-github:before {
-  content: "\eab0";
+.icon-github {
+  &:before {
+    content: $icon-github; 
+  }
 }
+

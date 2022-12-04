@@ -7,6 +7,7 @@ aliases = ["/posts/intro"]
 excerpt = "If you want to have your own website to host blogs on, Next.js on Vercel seems like a great choice."
 featured_image = "cover.png"
 featured_image_alt = "A diagram showing the flow of Markdown in Next.js to GitHub Actions vis git push where Prettier is run, and finally to Vercel via autodeploy."
+discussion = 6
 +++
 
 ## Why?
@@ -99,4 +100,4 @@ posts on [Dev.to] and/or [Medium], but will always post **all** content on my we
 [blog starter]: https://github.com/vercel/next.js/tree/canary/examples/blog-starter
 [eslint]: https://eslint.org
 [medium]: https://medium.com/@dbanty
-[repo]: https://github.com/dbanty/dylananthony.com/discussions/6
+[repo]: https://github.com/dbanty/dylananthony.com

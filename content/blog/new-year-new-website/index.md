@@ -5,6 +5,7 @@ date = "2022-01-01"
 [extra]
 featured_image = "cover.png"
 featured_image_alt = "A frame shows Drake puts his hand up to block the text 'Writing a blog website that looks nice but uses a ton of JavaScript' in the ugly Comic Sans font. Drake doesn't like that. Another frame shows Drake pointing and smiling at 'Writing a blog website using a static generator' written in nice Helvetica Neue font. Drake likes this option."
+discussion = 194
 
 [taxonomies]
 tags = ["web", "writing", "burnout"]
@@ -57,19 +58,3 @@ Zola is now the only dependency I need. It takes my Markdown content and convert
 # Conclusion
 
 Many reasons can (and did) cause burnout, and many little changes can help relieve it. Will my combination of changes get me back to posting again regularly? Only time will tell. One thing is for sure though, taking the time to "debug" my own burnout sure did make me feel better about it. I hope to talk to you all again soon.
-
----
-
-_Was this post super helpful to you? [Tip me on GitHub][github one time]._
-
-_Have a question or comment about this post? Leave it in the [discussion] thread on GitHub!_
-
-_Want to be notified of future posts? Watch releases in [the GitHub repo] or [follow me on Twitter][twitter]._
-
-_Have an idea or request for a future blog topic? Drop it in the GitHub discussions under [ideas]._
-
-[github one time]: https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty
-[ideas]: https://github.com/dbanty/dylananthony.com/discussions/categories/ideas
-[the github repo]: https://github.com/dbanty/dylananthony.com
-[twitter]: https://twitter.com/TBDylan
-[discussion]: https://github.com/dbanty/dylananthony.com/discussions/194
