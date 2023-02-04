@@ -1,3 +1,4 @@
 [[redirects]]
 from = "/"
 to = "/blog"
+force = true
