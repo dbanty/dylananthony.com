@@ -1,16 +1,16 @@
-{% import "macros/page.html" as page_macros %}
 {% extends "index.html" %}
+{% import "macros/page.html" as page_macros %}
 
 {% block title %}Tag: #{{ term.name }} - {{ config.title }}{% endblock title%}
 
 {% block content %}
 <h1>Tag: #{{ term.name }}</h1>
 <div class="article-info">
-    <a href="../">To all tags</a>
+    <a href="/blog">To all tags</a>
 </div>
 
 {% for page in term.pages %}
-{{ page_macros::page_listing(page=page) }}
+{{ page_macros::page_listing(page=page, preview=true) }}
 {% endfor %}
 
 {% endblock content %}

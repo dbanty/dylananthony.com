@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "macros/page.html" as page_macros %}
+
+{% block title %}Projects - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="main" tabindex="-1">
+    {% set project_categories = load_data(path="content/projects/categories." ~ lang ~ ".json", required=false) %}
+    {% if not project_categories %}
+        {% set project_categories = load_data(path="content/projects/categories.json") %}
+    {% endif %}
+
+    {% for page in section.pages %}
+        {{ page_macros::project_listing(page=page) }}
+    {% endfor %}
+
+</main>
+{% endblock content %}

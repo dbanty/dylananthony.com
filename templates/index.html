@@ -1,5 +1,5 @@
-{% import "macros/page.html" as page_macros %}
 {% extends "base.html" %}
+{% import "macros/page.html" as page_macros %}
 
 {% block content %}
 <main id="main" class="index" tabindex="-1">
@@ -18,7 +18,7 @@
             {% set subsec_link_path = subsec.name ~ "/" %}
             {% set subsec_section = get_section(path=subsec_path) %}
             {% for page in subsec_section.pages | slice(end=subsec.recent_items) %}
-                {{ page_macros::page_listing(page=page) }}
+                {{ page_macros::page_listing(page=page, preview=true) }}
             {% endfor %}
             <p class="read-more"><a href={{ subsec_link_path }}>{{ subsec.more_trans_key }} ≫</a></p>
         </section>

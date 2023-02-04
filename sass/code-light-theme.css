@@ -1,0 +1,33 @@
+:root {
+    --teal: #0d9488;
+    --blue: #0369a1;
+}
+
+.z-code {
+    color: #111111;
+    background-color: #f8fafc;
+}
+
+.z-comment {
+    color: #334155;
+}
+
+.z-constant.z-numeric, .z-constant.z-language, .z-support.z-constant, .z-constant.z-character, .z-variable.z-parameter, .z-punctuation.z-section.z-embedded, .z-keyword.z-other.z-unit, .z-punctuation.z-quasi.z-element.z-begin.z-js, .z-punctuation.z-quasi.z-element.z-end.z-js {
+    color: var(--blue);
+}
+
+.z-string, .z-entity.z-other.z-inherited-class, .z-markup.z-heading, .z-constant.z-other.z-symbol {
+    color: var(--blue);
+}
+
+.z-keyword, .z-constant.z-other.z-color, .z-storage {
+    color: #a21caf;
+}
+
+.z-entity.z-name.z-function, .z-entity.z-name.z-method, .z-meta.z-function-call, .z-support.z-function, .z-keyword.z-other.z-special-method, .z-meta.z-block-level, .z-accessor {
+    color: var(--teal);
+}
+
+.z-macro {
+    color: #be123c;
+}

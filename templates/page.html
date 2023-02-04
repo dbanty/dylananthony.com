@@ -1,5 +1,5 @@
-{% import "macros/page.html" as page_macros %}
 {% extends "base.html" %}
+{% import "macros/page.html" as page_macros %}
 
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
 
@@ -38,49 +38,14 @@
 
 {% block content %}
 
-<article class="post">
-    {% if page.extra.featured_image %}
-        {% set image_path = page.components | join(sep="/") %}
-        {% set image_path = image_path ~ "/" ~ page.extra.featured_image %}
-        {% if page.extra.featured_image_extended %}
-            {% set container_width = config.extra.images.max_width%}
-        {% else %}
-            {% set container_width = 16 * 42 %}
-        {% endif %}
-        {% set resized_featured_image = resize_image(path=image_path, width=container_width, op="fit_width") %}
-    <img
-            src="{{ resized_featured_image.static_path | replace(from="static", to="") }}"
-            class="{% if page.extra.featured_image_extended %}extended-img{% endif %}"
-            alt="{% if page.extra.featured_image_alt %}{{ page.extra.featured_image_alt }}{% else %}{{ page.title }}{% endif %}"
-            width="{{ container_width }}"
-            height="{{ container_width / 2 }}"
-    />
-    {% endif %}
-    {#
-        Currently there's no way to get the page content without the summary included;
-        below is a bit of a hack to separate out the two so that the summary can be
-        placed into a h2 below the page title.
-    #}
-    {% if page.summary %}
-        {% set page_contents = page.content | replace(from=page.summary, to="") %}
-        <header>
-            <h1>{{ page.title }}</h1>
-            <h2 class="post-summary">{{ page.summary | striptags | safe }}</h2>
-        </header>
-        {% if page.components is containing("projects") %}
-        {{ page_macros::project_info(page=page) }}
-        {% else %}
-        {{ page_macros::page_info(page=page) }}
-        {% endif %}
-    {% else %}
-        {% set page_contents = page.content %}
-        <header>
-            <h1>{{ page.title }}</h1>
-        </header>
-        {{ page_macros::page_info(page=page) }}
-    {% endif %}
+<article class="prose prose-slate dark:prose-invert max-w-none">
+    {% set page_contents = page.content %}
+    <header>
+        <h1 class="text-4xl text-center">{{ page.title }}</h1>
+    </header>
+    {{ page_macros::page_info(page=page, preview=false) }}
     {% block page_contents %}
-    <div class="content">
+    <div>
         {{ page_contents | safe }}
         {% if page.components is containing("blog") %}
             <hr>
