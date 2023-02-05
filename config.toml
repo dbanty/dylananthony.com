@@ -2,17 +2,15 @@ base_url = "https://dylananthony.com"
 title = "Dylan Anthony"
 description = "Producing quality software with minimal frustration."
 
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 minify_html = true
-taxonomies = [ # Required by the theme
+taxonomies = [
     { name = "categories" },
     { name = "tags" },
 ]
 
-# Whether to build a search index to be used later on by a JavaScript library
+# Enable to use with a JavaScript library
 build_search_index = false
-
 ignored_content = ["*.acorn"]
 
 # RSS
@@ -23,12 +21,6 @@ highlight_code = true
 highlight_theme = "css"
 [extra]
 env = "ZOLA_ENV"
-menu_items = [
-    { name = "blog", url = "/blog/", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
-    { name = "projects", url = "/projects/", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
-    { name = "tags", url = "/tags/" },
-#    { name = "about", url = "https://github.com/dbanty", show_recent = false },
-]
 
 [extra.images]
 # Width defined in pixels
