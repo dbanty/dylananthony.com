@@ -38,10 +38,10 @@
 
 {% block content %}
 
-<article class="prose prose-slate dark:prose-invert max-w-none">
+<article class="prose prose-zinc dark:prose-invert max-w-none">
     {% set page_contents = page.content %}
     <header>
-        <h1 class="text-4xl text-center">{{ page.title }}</h1>
+        <h1 class="text-4xl font-light text-center">{{ page.title }}</h1>
     </header>
     {{ page_macros::page_info(page=page, preview=false) }}
     {% block page_contents %}

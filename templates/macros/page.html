@@ -15,6 +15,7 @@
             <img
                     src="{{ resized_featured_image.static_path | replace(from="static", to="") }}"
                     alt="{{ page.extra.featured_image_alt }}"
+                    width="{{ width }}" height="{{ height }}"
             />
         {% endif %}
         {% if page.date %}
@@ -55,7 +56,8 @@
 {% endmacro page_tags %}
 
 {% macro page_listing(page, preview) %}
-    <article class="md:rounded-md p-4 shadow-md cursor-pointer dark:bg-slate-700"
+    <article class="md:rounded-md p-4 shadow-md cursor-pointer
+            bg-white dark:bg-zinc-700"
              onclick="location.href='{{ page.path }}'">
         <a href="{{ page.path }}">
             <header>
@@ -93,7 +95,7 @@
 
 <!-- project listing macros -->
 {% macro project_listing(page) %}
-    <article class="rounded-md p-4 shadow-md cursor-pointer dark:bg-slate-700"
+    <article class="rounded-md p-4 shadow-md cursor-pointer dark:bg-zinc-700"
              onclick="location.href='{{ page.path }}'">
         <a href="{{ page.path }}">
             <header>
