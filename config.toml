@@ -33,12 +33,3 @@ first_name = "Dylan"
 last_name = "Anthony"
 gender = "non-binary"
 username = "dbanty"
-
-# Footer social links; full options listed in macros/social.html
-[extra.social]
-email = "contact@dylananthony.com"
-github = "dbanty"
-
-# CDN links
-[extra.cdn]
-font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
