@@ -11,7 +11,7 @@
                 {% set width=1200 %}
                 {% set height=800 %}
             {% endif %}
-            {% set resized_featured_image = resize_image(path=image_path, width=width, height=height, op="fill") %}
+            {% set resized_featured_image = resize_image(path=image_path, width=width, height=height, op="fill", format="webp") %}
             <img
                     src="{{ resized_featured_image.static_path | replace(from="static", to="") }}"
                     alt="{{ page.extra.featured_image_alt }}"
@@ -41,9 +41,10 @@
             <ul class="flex flex-auto place-content-evenly">
                 {% for tag in list %}
                     {# Little clickable Tag pills #}
-                    <li class="bg-gray-200 dark:bg-gray-500 text-gray-800 dark:text-gray-200
-                                hover:bg-gray-400  hover:text-gray-800 py-1 px-2
-                                rounded-xl text-sm font-mono underline shadow-md"><a
+                    <li class="bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100
+                                hover:bg-zinc-300  hover:text-zinc-900  dark:hover:bg-zinc-500 dark:hover:text-zinc-50
+                                py-1 px-2 rounded-xl text-sm font-mono underline shadow-md
+                                border border-1 border-dotted border-zinc-300 dark:border-zinc-400"><a
                             href="{{ get_taxonomy_url(kind=kind, name=tag) | safe }}"
 
                     >
@@ -56,7 +57,7 @@
 {% endmacro page_tags %}
 
 {% macro page_listing(page, preview) %}
-    <article class="md:rounded-md p-4 shadow-md cursor-pointer
+    <article class="rounded-md p-4 shadow-md cursor-pointer
             bg-white dark:bg-zinc-700"
              onclick="location.href='{{ page.path }}'">
         <a href="{{ page.path }}">
