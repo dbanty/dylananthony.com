@@ -85,12 +85,12 @@
 {% macro page_pagination(paginator) %}
     <nav class="font-mono mt-6 flex flex-row">
         {% if paginator.previous %}
-            <a class="p-2 bg-zinc-50 rounded-lg"
+            <a class="p-2 bg-zinc-50 dark:bg-zinc-700 rounded-lg"
                href="{{ paginator.previous }}">See newer posts 🦄</a>
         {% endif %}
         <div class="flex grow"></div>
         {% if paginator.next %}
-            <a class="p-2 bg-zinc-50 rounded-lg"
+            <a class="p-2 bg-zinc-50 dark:bg-zinc-700 rounded-lg"
                href="{{ paginator.next }}">See older posts 📜</a>
         {% endif %}
     </nav>
