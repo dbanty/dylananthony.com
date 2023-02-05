@@ -43,7 +43,11 @@
     <header>
         <h1 class="text-4xl font-light text-center">{{ page.title }}</h1>
     </header>
-    {{ page_macros::page_info(page=page, preview=false) }}
+    {% if page.components is containing("blog") %}
+        {{ page_macros::page_info(page=page, preview=false) }}
+    {% else %}
+        {{ page_macros::project_info(page=page, preview=false) }}
+    {% endif %}
     {% block page_contents %}
     <div>
         {{ page_contents | safe }}

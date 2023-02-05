@@ -36,7 +36,7 @@
         {% endif %}
         {% if list %}
             {# divider for tags section #}
-            <div class="border-t-2 border-gray-600 my-2"></div>
+            <div class="border-t-2 border-zinc-400 dark:border-zinc-500 my-2"></div>
             {# Tags section #}
             <ul class="flex flex-auto place-content-evenly">
                 {% for tag in list %}
@@ -100,13 +100,13 @@
              onclick="location.href='{{ page.path }}'">
         <a href="{{ page.path }}">
             <header>
-                <h3 class="text-xl font-mono text-center">
+                <h3 class="text-xl font-mono text-center mb-2">
                     {{ page.title }}
                 </h3>
             </header>
 
             {% if page.summary %}
-                <div class="content post-summary prose dark:prose-invert">
+                <div class="content post-summary text-center">
                     {{ page.summary | markdown | safe }}
                 </div>
             {% endif %}
