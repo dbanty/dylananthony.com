@@ -1,4 +1,3 @@
-@import "./icons.scss";
 @import url("code-dark-theme.css") (prefers-color-scheme: dark);
 @import url("code-light-theme.css") (prefers-color-scheme: light);
 
