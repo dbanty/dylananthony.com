@@ -26,7 +26,6 @@
 {% endmacro page_info %}
 
 {% macro page_tags(page) %}
-    <div>
         {% if page.taxonomies.categories %}
             {% set list = page.taxonomies.categories %}
             {% set kind="categories" %}
@@ -35,6 +34,7 @@
             {% set kind="tags" %}
         {% endif %}
         {% if list %}
+            <div>
             {# divider for tags section #}
             <div class="border-t-2 border-zinc-400 dark:border-zinc-500 my-2"></div>
             {# Tags section #}
@@ -80,18 +80,17 @@
 {% endmacro page_listing %}
 
 {% macro page_pagination(paginator) %}
-    <div class="pagination">
-        <div class="left pagination-item {% if not paginator.previous %}disabled{% endif %}">
-            {% if paginator.previous %}
-                <a href="{{ paginator.previous }}">To newer posts</a>
-            {% endif %}
-        </div>
-        <div class="right pagination-item {% if not paginator.next %}disabled{% endif %}">
-            {% if paginator.next %}
-                <a href="{{ paginator.next }}">To older posts</a>
-            {% endif %}
-        </div>
-    </div>
+    <nav class="font-mono my-6 flex flex-row">
+        {% if paginator.previous %}
+            <a class="p-2 bg-zinc-50 rounded-lg"
+               href="{{ paginator.previous }}">See newer posts 🦄</a>
+        {% endif %}
+        <div class="flex grow"></div>
+        {% if paginator.next %}
+            <a class="p-2 bg-zinc-50 rounded-lg"
+               href="{{ paginator.next }}">See older posts 📜</a>
+        {% endif %}
+    </nav>
 {% endmacro page_pagination %}
 
 <!-- project listing macros -->
