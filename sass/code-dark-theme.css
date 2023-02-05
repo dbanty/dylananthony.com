@@ -20,12 +20,12 @@
     color: #99f6e4;
 }
 
-.z-macro {
+.z-macro, .z-annotation {
     color: #fb7185;
 }
 
-.z-path {
-    color: #f0abfc;
+.z-path, .z-name {
+    color: #f0abfc;  /* fuchsia-300 */
 }
 
 pre.z-code {

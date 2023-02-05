@@ -1,5 +1,5 @@
 .z-code {
-    color: #111111;
+    color: #27272a;  /* zinc-800 */
     background-color: #fafafa;  /* zinc-50 */
 }
 
@@ -12,15 +12,20 @@
 }
 
 .z-keyword, .z-constant.z-other.z-color, .z-storage {
-    color: #a21caf;
+    color:
+            #6d28d9;  /* violet-700 */
 }
 
 .z-entity.z-name.z-function, .z-entity.z-name.z-method, .z-meta.z-function-call, .z-support.z-function, .z-keyword.z-other.z-special-method, .z-meta.z-block-level, .z-accessor {
     color: #0f766e;
 }
 
-.z-macro {
+.z-macro, .z-annotation {
     color: #be123c;
+}
+
+.z-path, .z-name {
+    color: #c026d3; /* fuchsia-600 */
 }
 
 pre.z-code {
