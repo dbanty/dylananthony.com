@@ -25,24 +25,39 @@
     </div>
 {% endmacro page_info %}
 
+{% macro tag_color(name) %}
+    {%- if name == "Rust" -%}
+        orange
+    {%- elif name == "GraphQL" -%}
+        fuchsia
+    {%- elif name == "FastAPI" -%}
+        teal
+    {%- elif name == "serverless" -%}
+        indigo
+    {%- else -%}
+        zinc
+    {%- endif -%}
+{% endmacro tag_color %}
+
 {% macro page_tags(page) %}
-        {% if page.taxonomies.categories %}
-            {% set list = page.taxonomies.categories %}
-            {% set kind="categories" %}
-        {% elif page.taxonomies.tags %}
-            {% set list = page.taxonomies.tags %}
-            {% set kind="tags" %}
-        {% endif %}
-        {% if list %}
-            <div>
+{#    {% if page.taxonomies.categories %}#}
+{#        {% set list = page.taxonomies.categories %}#}
+{#        {% set kind="categories" %}#}
+    {% if page.taxonomies.tags %}
+        {% set list = page.taxonomies.tags %}
+        {% set kind="tags" %}
+    {% endif %}
+    {% if list %}
+        <div>
             {# divider for tags section #}
             <div class="border-t-2 border-zinc-400 dark:border-zinc-500 my-2"></div>
             {# Tags section #}
             <ul class="flex flex-auto place-content-evenly">
                 {% for tag in list %}
                     {# Little clickable Tag pills #}
-                    <li class="bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100
-                                hover:bg-zinc-300  hover:text-zinc-900  dark:hover:bg-zinc-500 dark:hover:text-zinc-50
+                    {% set color = self::tag_color(name=tag) %}
+                    <li class="bg-{{ color }}-200 dark:bg-{{ color }}-700 hover:bg-{{ color }}-300 dark:hover:bg-{{ color }}-600
+                                text-zinc-800 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-50
                                 py-1 px-2 rounded-xl text-sm font-mono underline shadow-md
                                 border border-1 border-dotted border-zinc-300 dark:border-zinc-400"><a
                             href="{{ get_taxonomy_url(kind=kind, name=tag) | safe }}"
@@ -52,8 +67,8 @@
                     </a></li>
                 {% endfor %}
             </ul>
-            </div>
-        {% endif %}
+        </div>
+    {% endif %}
 {% endmacro page_tags %}
 
 {% macro card_style() %}
