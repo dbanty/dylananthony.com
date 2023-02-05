@@ -56,9 +56,12 @@
         {% endif %}
 {% endmacro page_tags %}
 
+{% macro card_style() %}
+    rounded-md p-4 shadow-md cursor-pointer bg-white dark:bg-zinc-700
+{% endmacro card_style %}
+
 {% macro page_listing(page, preview) %}
-    <article class="rounded-md p-4 shadow-md cursor-pointer
-            bg-white dark:bg-zinc-700"
+    <article class="{{ self::card_style() }}"
              onclick="location.href='{{ page.path }}'">
         <a href="{{ page.path }}">
             <header>
@@ -95,7 +98,7 @@
 
 <!-- project listing macros -->
 {% macro project_listing(page) %}
-    <article class="rounded-md p-4 shadow-md cursor-pointer dark:bg-zinc-700"
+    <article class="{{ self::card_style() }}"
              onclick="location.href='{{ page.path }}'">
         <a href="{{ page.path }}">
             <header>
