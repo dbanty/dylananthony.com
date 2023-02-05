@@ -1,16 +1,15 @@
-{% extends "base.html" %}
+{% extends "blog.html" %}
 {% import "macros/page.html" as page_macros %}
 
 {% block title %}Tag: #{{ term.name }} - {{ config.title }}{% endblock title%}
 
-{% block content %}
-<h1>Tag: #{{ term.name }}</h1>
-<div class="article-info">
-    <a href="/blog">To all tags</a>
-</div>
-
+{% block header %}
+<h1 class="text-center text-3xl mb-3 font-mono">
+    <span class="font-bold">#</span>{{ term.name }}
+</h1>
+{% endblock header %}
+{% block list %}
 {% for page in term.pages %}
-{{ page_macros::page_listing(page=page, preview=true) }}
+    {{ page_macros::page_listing(page=page, preview=true) }}
 {% endfor %}
-
-{% endblock content %}
+{% endblock list %}

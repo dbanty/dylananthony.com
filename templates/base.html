@@ -26,8 +26,8 @@
     {% endblock extra_head %}
 </head>
 <body class="bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-200">
-<div class="container mx-auto px-2 md:px-20 pt-5">
-    {% block header %}
+<div class="container mx-auto px-2 md:px-20 pt-5 mb-6">
+    {% block nav %}
     {% set base_url = get_url(path="", lang=lang) %}
     <header>
         <nav class="flex flex-row text-center justify-evenly mb-10 py-4
@@ -41,7 +41,8 @@
             {% endblock nav_bar %}
         </nav>
     </header>
-    {% endblock header %}
+    {% endblock nav %}
+{% block header %} {% endblock header %}
     {% block content %}
     {% endblock content %}
     <footer>
