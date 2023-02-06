@@ -42,7 +42,12 @@
     {% set page_contents = page.content %}
     <header class="flex flex-row">
         <div class="grow"></div>
-        <h1 class="text-4xl font-thin text-center bg-indigo-50 rounded-lg drop-shadow-2xl p-4 uppercase mb-6">{{ page.title }}</h1>
+        <h1 class="
+            text-4xl font-extralight text-center uppercase
+            p-4 mb-6 rounded-lg
+            bg-indigo-50 drop-shadow-2xl
+            dark:bg-zinc-800 dark:drop-shadow-none dark:font-light
+        " >{{ page.title }}</h1>
         <div class="grow"></div>
     </header>
     {% if page.components is containing("blog") %}
