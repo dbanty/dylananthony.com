@@ -2,7 +2,7 @@
 title = "openapi-python-client"
 
 [taxonomies]
-categories = ["code generators"]
+categories = ["code-generators", "python"]
 
 [extra]
 repo_path = "openapi-generators/openapi-python-client"

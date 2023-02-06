@@ -9,7 +9,7 @@ featured_image_alt = "A large vanilla cake with whipped vanilla buttercream icin
 discussion = 199
 
 [taxonomies]
-tags = ["software engineering"]
+tags = ["software-engineering"]
 +++
 
 > Cover photo created by [Jazlyn Borkowski](https://www.instagram.com/jazlynborkowski/)

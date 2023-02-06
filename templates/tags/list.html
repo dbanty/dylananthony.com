@@ -1,16 +1,16 @@
+{% extends "base.html" %}
 {% import "macros/page.html" as page_macros %}
-{% extends "index.html" %}
 
-{% block title %}Categories - {{ config.title }}{% endblock title %}
+{% block title %}Tags - {{ config.title }}{% endblock title%}
 
 {% block content %}
-<h1>Categories</h1>
+<h1>Tags</h1>
 
 <ul class="terms">
     {% for term in terms %}
     <li>
         <a href="{{ term.permalink }}">
-        {{ term.name }}
+        #{{ term.name }}
         </a>
         ({{ term.pages | length }})
     </li>

@@ -1,18 +1,16 @@
 base_url = "https://dylananthony.com"
 title = "Dylan Anthony"
-description = "A blog about producing quality software with minimal frustration."
+description = "Producing quality software with minimal frustration."
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-theme = "papaya"
-taxonomies = [ # Required by the theme
+compile_sass = false
+minify_html = true
+taxonomies = [
     { name = "categories" },
     { name = "tags" },
 ]
 
-# Whether to build a search index to be used later on by a JavaScript library
+# Enable to use with a JavaScript library
 build_search_index = false
-
 ignored_content = ["*.acorn"]
 
 # RSS
@@ -20,16 +18,9 @@ generate_feed = true
 
 [markdown]
 highlight_code = true
-
+highlight_theme = "css"
 [extra]
 env = "ZOLA_ENV"
-menu_items = [
-    { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
-    { name = "projects", url = "$LANG_BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
-    # tag is not a zola section, it's just a link.
-    { name = "tags", url = "$LANG_BASE_URL/tags" },
-#    { name = "about", url = "https://github.com/dbanty", show_recent = false },
-]
 
 [extra.images]
 # Width defined in pixels
@@ -42,12 +33,3 @@ first_name = "Dylan"
 last_name = "Anthony"
 gender = "non-binary"
 username = "dbanty"
-
-# Footer social links; full options listed in macros/social.html
-[extra.social]
-email = "contact@dylananthony.com"
-github = "dbanty"
-
-# CDN links
-[extra.cdn]
-font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
