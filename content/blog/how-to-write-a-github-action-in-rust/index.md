@@ -142,7 +142,7 @@ jobs:
 
 Here we see that we're publishing to the `ghcr.io` registry with an image named the same as our repository—that enables us to push to GitHub Packages with no additional authentication, all of your artifacts live with your repository! We use the `cache-from` and `cache-to` inputs to enable Docker layer caching—crucial given how slow Rust-based images can be to build. We're also passing the input `context: .`, which means it should build from a file called `Dockerfile`—let's look at that next!
 
-```bash
+```dockerfile
 FROM rust:1.67 as build
 
 # create a new empty shell project
