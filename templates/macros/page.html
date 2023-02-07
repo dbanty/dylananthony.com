@@ -12,11 +12,13 @@
                 {% set height=800 %}
             {% endif %}
             {% set resized_featured_image = resize_image(path=image_path, width=width, height=height, op="fill", format="webp") %}
+            <div class="flex flex-row justify-center">
             <img
                     src="{{ resized_featured_image.static_path | replace(from="static", to="") }}"
                     alt="{{ page.extra.featured_image_alt }}"
                     width="{{ width }}" height="{{ height }}"
             />
+            </div>
         {% endif %}
         {% if page.date %}
             {% set reading_time = "◦ " ~ page.reading_time ~ " " ~ "min" %}
