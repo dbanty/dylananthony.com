@@ -4,7 +4,6 @@ date = "2022-04-05"
 
 [extra]
 featured_image = "cover.jpeg"
-featured_image_extended = true
 featured_image_alt = "A large vanilla cake with whipped vanilla buttercream icing, against a purple background, is cut open and sand is spilling forth creating a vast desert beneath. A lone cactus stands sentinel. The top right reads \"Stop Writing DRY Code.\""
 discussion = 199
 

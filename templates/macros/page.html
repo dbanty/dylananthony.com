@@ -6,7 +6,7 @@
             {% set image_path = image_path ~ "/" ~ page.extra.featured_image %}
             {% if preview %}
                 {% set width=800 %}
-                {% set height=500 %}
+                {% set height=533 %}
             {% else %}
                 {% set width=1200 %}
                 {% set height=800 %}
@@ -34,6 +34,8 @@
         teal
     {%- elif name == "serverless" -%}
         indigo
+    {%- elif name == "developer-experience" -%}
+        purple
     {%- else -%}
         zinc
     {%- endif -%}

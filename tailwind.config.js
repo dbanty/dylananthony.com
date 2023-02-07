@@ -26,6 +26,11 @@ module.exports = {
         "hover:bg-indigo-300",
         "dark:bg-indigo-700",
         "dark:hover:bg-indigo-600",
+        // Purple tags
+        "bg-purple-200",
+        "hover:bg-purple-300",
+        "dark:bg-purple-700",
+        "dark:hover:bg-purple-600",
     ],
     theme: {
         extend: {
