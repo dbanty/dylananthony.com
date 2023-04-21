@@ -8,7 +8,7 @@ featured_image_alt = "A happy Ferris (a cute orange crab) with their claws in th
 discussion = 204
 
 [taxonomies]
-tags = ["rust", "typescript"]
+tags = ["Rust", "TypeScript"]
 +++
 
 The most common description of Rust I hear is something like, "it's great for performance but too hard or cumbersome or annoying for most tasks." I don't think this description could be more wrong. Sure, it can be fast, but that's not the main reason to pick Rust. You should pick Rust because it's *easy* to build with. It empowers you to create incredible software while *enjoying* the experience.
