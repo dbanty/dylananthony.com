@@ -5,7 +5,7 @@ date = "2023-04-20"
 [extra]
 featured_image = "cover.webp"
 featured_image_alt = "A happy Ferris (a cute orange crab) with their claws in the air and a smile on their face. Above them is the title, 'Rust is not hard!' and below them is the subtitle, 'Part 1: GitHub Actions'"
-discussion = 204
+discussion = 207
 
 [taxonomies]
 tags = ["Rust", "TypeScript"]
