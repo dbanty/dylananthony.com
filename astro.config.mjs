@@ -7,4 +7,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://dylananthony.com',
 	integrations: [mdx(), sitemap()],
+	redirects: {
+		"/": "/blog"
+	}
 });
