@@ -6,7 +6,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Body from "../../layouts/Body.astro";
 
 const posts = (await getCollection('blog')).sort(
-    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
@@ -18,15 +18,20 @@ const posts = (await getCollection('blog')).sort(
 <Body>
 <main>
     <section>
-        <ul>
+        <ul class="grid lg:grid-cols-2 justify-evenly gap-4">
             {
                 posts.map((post) => (
-                        <li>
+                        <li class="rounded-md p-4 shadow-md cursor-pointer bg-white dark:bg-zinc-700">
                             <a href={`/blog/${post.slug}/`}>
-                                <img width={720} height={360} src={post.data.heroImage} alt=""/>
-                                <h4 class="title">{post.data.title}</h4>
-                                <p class="date">
-                                    <FormattedDate date={post.data.pubDate}/>
+                                <header>
+                                    <h3 class="text-xl font-bold text-center">
+                                        {post.data.title}
+                                    </h3>
+                                </header>
+
+                                <img width={800} height={533} src={post.data.image} alt=""/>
+                                <p class="text-center font-light">
+                                    <FormattedDate date={post.data.date}/>
                                 </p>
                             </a>
                         </li>

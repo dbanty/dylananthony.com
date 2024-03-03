@@ -1,45 +1,65 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type {CollectionEntry} from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Body from "./Body.astro";
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage }: Props = Astro.props;
+const {title, description, date, updatedDate, image, imageAlt, discussion}: Props = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+<head>
+    <BaseHead title={title} description={description}/>
+</head>
 
-	<Body>
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						{pubDate && (
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						)}
-						<h1>{title}</h1>
-						<hr />
-					</div>
-					<slot />
-				</div>
-			</article>
-		</main>
-	</Body>
+<Body>
+<main>
+    <article>
+        <header class="flex flex-row">
+            <div class="grow"></div>
+            <h1 class="
+            text-4xl font-extralight text-center uppercase
+            p-4 mb-6 rounded-lg
+            bg-indigo-50
+            dark:bg-zinc-800 dark:font-light
+        ">{title}</h1>
+            <div class="grow"></div>
+        </header>
+        <div class="flex flex-row justify-center">
+            <img width={1200} height={800} src={"/" + image} alt={imageAlt}/>
+        </div>
+        <div class="prose prose-zinc dark:prose-invert max-w-none">
+            <div class="text-center font-light">
+                <FormattedDate date={date}/>
+                {
+                    updatedDate && (
+                                <div class="last-updated-on">
+                                    Last updated on
+                                    <FormattedDate date={updatedDate}/>
+                                </div>
+                    )
+                }
+            </div>
+            <slot/>
+            <hr/>
+            <p><i> Was this post super helpful to you? Tip me on
+                <a href="https://github.com/sponsors/dbanty?frequency=one-time&sponsor=dbanty">GitHub</a>,
+                <a href="https://www.patreon.com/dbanty">Patreon</a>,
+                or <a href="https://ko-fi.com/dbanty">Ko-Fi</a>.
+            </i></p>
+            <p><i>
+                Have a question or comment about this post? Leave it in the <a href=`https://github.com/dbanty/dylananthony.com/discussions/${discussion}`>discussion</a> thread on GitHub!
+            </i></p>
+            <p><i>
+                Want to be notified of future posts? Watch releases in <a rel="author" href="https://github.com/dbanty/dylananthony.com">the GitHub repo</a> or <a rel="author" href="https://tech.lgbt/@dbanty">follow me on Mastodon</a>
+            </i></p>
+            <p><i>
+                Have an idea or request for a future blog topic? Drop it in the GitHub discussions under <a href="https://github.com/dbanty/dylananthony.com/discussions/categories/ideas">ideas</a>.
+            </i></p>
+        </div>
+    </article>
+</main>
+</Body>
 </html>
