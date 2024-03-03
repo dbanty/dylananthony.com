@@ -1,10 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Body from "../layouts/Body.astro";
+import {SITE_DESCRIPTION} from "../consts";
 ---
 <html lang="en">
 <head>
-    <BaseHead title="About me"/>
+    <BaseHead title="About me" description={SITE_DESCRIPTION}/>
 </head>
 <Body>
 <h3>What I Do</h3>
