@@ -1,7 +1,7 @@
 ---
 title: "Rust is not hard! Part 1: GitHub Actions"
 date: "2023-04-20"
-image: "rust-is-not-hard-part-1-github-actions.webp"
+image: "./rust-is-not-hard-part-1-github-actions.webp"
 imageAlt: "A happy Ferris (a cute orange crab) with their claws in the air and a smile on their face. Above them is the title, 'Rust is not hard!' and below them is the subtitle, 'Part 1: GitHub Actions'"
 discussion: 207
 tags: ["Rust", "TypeScript"]

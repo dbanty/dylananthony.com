@@ -1,7 +1,7 @@
 ---
 title: "Replacing FastAPI with Rust: Part 1 - Intro"
 date: "2020-12-29"
-image: "fastapi-rust-1-intro.png"
+image: "./fastapi-rust-1-intro.png"
 imageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
 discussion: 9
 tags: ["Rust", "FastAPI", "OpenAPI"]

@@ -3,6 +3,7 @@ import type {CollectionEntry} from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Body from "./Body.astro";
+import {Image} from "astro:assets";
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -28,7 +29,7 @@ const {title, description, date, updatedDate, image, imageAlt, discussion}: Prop
             <div class="grow"></div>
         </header>
         <div class="flex flex-row justify-center">
-            <img width={1200} height={800} src={"/" + image} alt={imageAlt}/>
+            <Image width={1200} height={800} src={image} alt={imageAlt}/>
         </div>
         <div class="prose prose-zinc dark:prose-invert max-w-none">
             <div class="text-center font-light">
@@ -50,13 +51,17 @@ const {title, description, date, updatedDate, image, imageAlt, discussion}: Prop
                 or <a href="https://ko-fi.com/dbanty">Ko-Fi</a>.
             </i></p>
             <p><i>
-                Have a question or comment about this post? Leave it in the <a href=`https://github.com/dbanty/dylananthony.com/discussions/${discussion}`>discussion</a> thread on GitHub!
+                Have a question or comment about this post? Leave it in the
+                <a href=`https://github.com/dbanty/dylananthony.com/discussions/${discussion}`>discussion</a> thread on GitHub!
             </i></p>
             <p><i>
-                Want to be notified of future posts? Watch releases in <a rel="author" href="https://github.com/dbanty/dylananthony.com">the GitHub repo</a> or <a rel="author" href="https://tech.lgbt/@dbanty">follow me on Mastodon</a>
+                Want to be notified of future posts? Watch releases in
+                <a rel="author" href="https://github.com/dbanty/dylananthony.com">the GitHub repo</a> or
+                <a rel="author" href="https://tech.lgbt/@dbanty">follow me on Mastodon</a>
             </i></p>
             <p><i>
-                Have an idea or request for a future blog topic? Drop it in the GitHub discussions under <a href="https://github.com/dbanty/dylananthony.com/discussions/categories/ideas">ideas</a>.
+                Have an idea or request for a future blog topic? Drop it in the GitHub discussions under
+                <a href="https://github.com/dbanty/dylananthony.com/discussions/categories/ideas">ideas</a>.
             </i></p>
         </div>
     </article>

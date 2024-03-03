@@ -1,7 +1,7 @@
 ---
 title: "An intro to this blog using... this blog"
 date: "2020-12-27"
-image: "intro.png"
+image: "./intro.png"
 imageAlt: "A diagram showing the flow of Markdown in Next.js to GitHub Actions vis git push where Prettier is run, and finally to Vercel via autodeploy."
 discussion: 6
 tags: []

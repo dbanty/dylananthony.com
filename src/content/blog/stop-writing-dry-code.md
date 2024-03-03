@@ -1,7 +1,7 @@
 ---
 title: "Stop Writing DRY Code"
 date: "2022-04-05"
-image: "stop-writing-dry-code.jpeg"
+image: "./stop-writing-dry-code.jpeg"
 imageAlt: "A large vanilla cake with whipped vanilla buttercream icing, against a purple background, is cut open and sand is spilling forth creating a vast desert beneath. A lone cactus stands sentinel. The top right reads \"Stop Writing DRY Code.\""
 discussion: 199
 tags: ["software-engineering"]

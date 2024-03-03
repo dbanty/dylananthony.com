@@ -1,7 +1,7 @@
 ---
 title: "How to Write a GitHub Action in Rust"
 date: "2023-02-06"
-image: "how-to-write-a-github-action-in-rust.webp"
+image: "./how-to-write-a-github-action-in-rust.webp"
 imageAlt: "The GitHub Octocat logo (a cat with octopus tentacles), followed by a plus symbol, followed by Ferris, the Rust mascot (a happy orange crab)."
 discussion: 204
 tags: ["Rust", "developer-experience"]

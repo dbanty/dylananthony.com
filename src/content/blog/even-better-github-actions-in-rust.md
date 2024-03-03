@@ -1,7 +1,7 @@
 ---
 title: "Even better GitHub Actions in Rust"
 date: "2023-06-24"
-image: "even-better-github-actions-in-rust.webp"
+image: "./even-better-github-actions-in-rust.webp"
 imageAlt: "The GitHub Octocat logo (a cat with octopus tentacles), followed by a plus symbol, followed by Ferris, the Rust mascot (a happy orange crab)."
 discussion: 208
 tags: ["Rust", "developer-experience"]

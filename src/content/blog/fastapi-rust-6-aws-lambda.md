@@ -1,7 +1,7 @@
 ---
 title: "Replacing FastAPI with Rust: Part 6 - AWS Lambda"
 date: "2021-03-03"
-image: "fastapi-rust-6-aws-lambda.png"
+image: "./fastapi-rust-6-aws-lambda.png"
 imageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
 discussion: 29
 tags: ["Rust", "FastAPI", "OpenAPI", "serverless"]

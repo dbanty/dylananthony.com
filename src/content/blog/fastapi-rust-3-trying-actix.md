@@ -1,7 +1,7 @@
 ---
 title: "Replacing FastAPI with Rust: Part 3 - Trying Actix"
 date: "2021-01-12"
-image: "fastapi-rust-3-trying-actix.png"
+image: "./fastapi-rust-3-trying-actix.png"
 imageAlt: "The Rust mascot 'Ferris the Crab' holds the logos for FastAPI and Rust and is smooshing them together."
 discussion: 18
 tags: ["Rust", "FastAPI", "OpenAPI"]

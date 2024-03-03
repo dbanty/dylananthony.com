@@ -1,7 +1,7 @@
 ---
 title: "Running GraphQL on Lambda with Rust"
 date: "2021-04-20"
-image: "graphql-lambda-rust.png"
+image: "./graphql-lambda-rust.png"
 imageAlt: "The Rust mascot 'Ferris the Crab' sits beneath the logos for GraphQL and AWS Lambda. Text beneath the images states 'GraphQL on Lambda with Rust'"
 discussion: 56
 tags: ["Rust", "GraphQL", "serverless"]

@@ -1,7 +1,7 @@
 ---
 title: "Best Supported Serverless Languages"
 date: "2021-04-28"
-image: "best-supported-serverless-languages.png"
+image: "./best-supported-serverless-languages.png"
 imageAlt: "The Ferris the Crab, along with the logos for TypeScript, .NET, and Go, sit above the text 'Serverless Languages'."
 discussion: 71
 tags: ["serverless"]
