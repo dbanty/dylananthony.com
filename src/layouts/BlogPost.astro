@@ -1,9 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Body from "./Body.astro";
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -13,49 +12,9 @@ const { title, description, pubDate, updatedDate, heroImage }: Props = Astro.pro
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
-	<body>
-		<Header />
+	<Body>
 		<main>
 			<article>
 				<div class="hero-image">
@@ -82,6 +41,5 @@ const { title, description, pubDate, updatedDate, heroImage }: Props = Astro.pro
 				</div>
 			</article>
 		</main>
-		<Footer />
-	</body>
+	</Body>
 </html>

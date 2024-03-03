@@ -9,5 +9,7 @@ This repo serves a few purposes:
 5. Find an error on the website? You can open an issue or pull request to get that corrected.
 
 ## What tech does this repo use?
+
 <!-- TODO: Write a new intro blog post?? -->
+
 I'm glad you asked! [There's a blog post](https://dylananthony.com/posts/and-now-astro) which talks about it.

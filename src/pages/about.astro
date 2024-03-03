@@ -1,63 +1,65 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Body from "../layouts/Body.astro";
 ---
+<html lang="en">
+<head>
+    <BaseHead title="About me"/>
+</head>
+<Body>
+<h3>What I Do</h3>
 
-<Layout
-        title="About Me"
-        description="What I do"
->
-    <h3>What I Do</h3>
+<p>
+    I spend most of my time improving the GraphQL developer experience in
+    <a href="https://doc.rust-lang.org/stable/book/foreword.html">Rust</a>.
+    I also maintain a couple open source projects such as
+    <a href="https://github.com/openapi-generators/openapi-python-client">openapi-python-client</a>
+    and <a href="https://github.com/knope-dev/knope">Knope</a>.
+</p>
 
-    <p>
-        I spend most of my time improving the GraphQL developer experience in
-        <a href="https://doc.rust-lang.org/stable/book/foreword.html">Rust</a>.
-        I also maintain a couple open source projects such as
-        <a href="https://github.com/openapi-generators/openapi-python-client">openapi-python-client</a>
-        and <a href="https://github.com/knope-dev/knope">Knope</a>.
-    </p>
+<p>
+    My main languages are
+    <a href="https://doc.rust-lang.org/stable/book/foreword.html">Rust</a> 🦀 and Python 🐍 but I dabble in just about everything.
+</p>
 
-    <p>
-        My main languages are
-        <a href="https://doc.rust-lang.org/stable/book/foreword.html">Rust</a> 🦀 and Python 🐍 but I dabble in just about everything.
-    </p>
+<h3>What I Like</h3>
 
-    <h3>What I Like</h3>
+<p>🥰 I'm big on improving developer productivity and experience, which are the themes of my open source work.</p>
 
-    <p>🥰 I'm big on improving developer productivity and experience, which are the themes of my open source work.</p>
+<p>
+    🧐 Quality is core to everything I do. I want little more than for all the software in the world to be better,
+    faster, and less frustrating to users. That's why I like using Rust wherever feasible and type annotations
+    (with mypy) in all my Python. Quality also includes things like:
+</p>
 
-    <p>
-        🧐 Quality is core to everything I do. I want little more than for all the software in the world to be better,
-        faster, and less frustrating to users. That's why I like using Rust wherever feasible and type annotations
-        (with mypy) in all my Python. Quality also includes things like:
-    </p>
+<ul>
+    <li>Security 🔒</li>
+    <li>Testing 🧪</li>
+    <li>Monitoring 🪵</li>
+    <li>Documentation 📜</li>
+</ul>
 
-    <ul>
-        <li>Security 🔒</li>
-        <li>Testing 🧪</li>
-        <li>Monitoring 🪵</li>
-        <li>Documentation 📜</li>
-    </ul>
+<p>
+    🤓 Learning! I'm always looking to learn new things, and love getting feedback and recommendations!
+</p>
 
-    <p>
-        🤓 Learning! I'm always looking to learn new things, and love getting feedback and recommendations!
-    </p>
+<p>
+    💜 The most important thing to me is being kind. I will look for any opportunity to foster a more welcoming
+    community and eliminate hostile environments. The only thing intolerable is intolerance itself.
+</p>
 
-    <p>
-        💜 The most important thing to me is being kind. I will look for any opportunity to foster a more welcoming
-        community and eliminate hostile environments. The only thing intolerable is intolerance itself.
-    </p>
+<h3>How to Contact Me</h3>
 
-    <h3>How to Contact Me</h3>
-
-    <p>
+<p>
     💌 contact at dylananthony.com (it's a Proton Mail address, so it's encrypted from other Proton Mail addresses)
-    </p>
+</p>
 
-    <p>
+<p>
     🐘 <a href="https://tech.lgbt/@dbanty">@dbanty@tech.lgbt</a>
-    </p>
+</p>
 
-    <p>
+<p>
     ☿ They/Them pronouns if you're talking about me, or just "Dylan" is fine.
-    </p>
-</Layout>
+</p>
+</Body>
+</html>
