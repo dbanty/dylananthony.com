@@ -109,7 +109,6 @@ Updating the score, this solution only meets 3/8 "MUST" requirements for my Fast
 
 I'm going to dive in and try [rweb]. My biggest near-term concern was the lack of documentation, but no amount of documentation actually helped me with [actix-web] so... why not? Hopefully it will go much better, and I won't have to write my own lambda handler code _or_ OpenAPI 3 structures. Plus now I get to enjoy the (subjectively) nicer syntax of rweb!
 
-
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi

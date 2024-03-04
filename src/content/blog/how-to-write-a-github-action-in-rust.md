@@ -13,7 +13,7 @@ Creating reusable GitHub Actions is an easy way to automate away everyday tasks 
 
 Rather than walk through all of the manual steps like I had to, you can use [`cargo-generate`](https://crates.io/crates/cargo-generate) to get started quickly. From the command line, run `cargo-binstall cargo-generate` followed by `cargo generate dbanty/rust-github-action-template`, then follow the prompts to fill in the boilerplate values.
 
-> Not familiar with [`cargo-binstall`](https://crates.io/crates/cargo-binstall) ? You can use it in place of `cargo install` to install supported binaries rather than compiling them from source! You should make *your* next Rust binary cargo binstallable!
+> Not familiar with [`cargo-binstall`](https://crates.io/crates/cargo-binstall) ? You can use it in place of `cargo install` to install supported binaries rather than compiling them from source! You should make _your_ next Rust binary cargo binstallable!
 
 Finally, you'll get a fully-functioning GitHub Action implemented in Rust, ready for customization! You can see an example of the output in my [Sample Rust Action](https://github.com/dbanty/sample-rust-action) repo, which is also a GitHub template (in case you want to skip the `cargo-generate` step).
 
@@ -21,19 +21,19 @@ Finally, you'll get a fully-functioning GitHub Action implemented in Rust, ready
 
 There's a "TODO" section in the generated `README.md` that gives you a high-level set of next steps—so feel free to dive right in if you're a hands-on learner! For completeness, I'll walk through each of the steps here.
 
-First, you'll want to update the `README` to describe what your action does and how to use it. I find it easier to describe the user experience I *want* to create before I try to create it, a sort of "documentation-driven development". As an example, you can check out the docs for my [GraphQL Check Action](https://github.com/dbanty/graphql-check-action).
+First, you'll want to update the `README` to describe what your action does and how to use it. I find it easier to describe the user experience I _want_ to create before I try to create it, a sort of "documentation-driven development". As an example, you can check out the docs for my [GraphQL Check Action](https://github.com/dbanty/graphql-check-action).
 
 Now that you've designed your action, you need to define your inputs and outputs in `action.yml`. Each input needs to be defined in two places:
 
 ```yaml
 inputs:
   error:
-    description: 'The error message to display, if any'
+    description: "The error message to display, if any"
     required: false
-    default: ''
+    default: ""
 runs:
-  using: 'docker'
-  image: 'ghcr.io/<your_username>/<your_repo_name>:v1'
+  using: "docker"
+  image: "ghcr.io/<your_username>/<your_repo_name>:v1"
   args:
     - ${{ inputs.error }}
 ```
@@ -45,7 +45,7 @@ The `outputs` section lets you tell users what they can receive when the action 
 ```yaml
 outputs:
   error:
-    description: 'The description of any error that occurred'
+    description: "The description of any error that occurred"
 ```
 
 With inputs and outputs defined in `action.yml`, you need to consume the inputs and output the outputs! The generated code comes with an example of each:
@@ -95,8 +95,8 @@ This works just fine on the `v1` branch, but if we look back at our action defin
 
 ```yaml
 runs:
-  using: 'docker'
-  image: 'ghcr.io/<your_username>/<your_repo_name>:v1'
+  using: "docker"
+  image: "ghcr.io/<your_username>/<your_repo_name>:v1"
   args:
     - ${{ inputs.error }}
 ```
@@ -107,7 +107,7 @@ The action uses the `v1` tag of a Docker image built from this repo. That `v1` t
 
 Now that you know how to implement and test your actions, you're ready to go! But if you're still curious about how everything works, stick around for a deeper dive.
 
-First, we use the [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action) method—one of three ways to create GitHub Actions. This enables us to build whatever kind of binary we want, using whatever dependencies we want, without needing JavaScript or complex, dynamic install scripts. There are some limitations, though. Notably, these actions can *only run on runners with a Linux operating system*, making them less flexible or portable than JavaScript actions. Second, some capabilities may not be possible from your actions (like setting environment variables).
+First, we use the [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action) method—one of three ways to create GitHub Actions. This enables us to build whatever kind of binary we want, using whatever dependencies we want, without needing JavaScript or complex, dynamic install scripts. There are some limitations, though. Notably, these actions can _only run on runners with a Linux operating system_, making them less flexible or portable than JavaScript actions. Second, some capabilities may not be possible from your actions (like setting environment variables).
 
 Another limitation of Docker actions is the one I mentioned in the testing section above. You either need to publish a Docker image and pin your action to a specific tag or rebuild the Docker image every time that action runs. Rust can take a long time to compile, especially when waiting for Cargo to download dependencies—so building the image every time makes for a poor experience for the action's consumers. However, pinning to a tag makes it harder to test multiple branches, a tradeoff we have to accept for now.
 
@@ -180,10 +180,9 @@ Going through this line by line, we:
 
 4. The next couple of steps (starting with `COPY ./src ./src` and going through `RUN cargo build --release`) will build our finished binary
 
-5. Now, we switch over to a smaller base image. You *can* make this even smaller by switching to `gcr.io/distroless/static` but it makes building harder (you have to use some musl toolchain stuff), and I found that it doesn't make the action any faster.
+5. Now, we switch over to a smaller base image. You _can_ make this even smaller by switching to `gcr.io/distroless/static` but it makes building harder (you have to use some musl toolchain stuff), and I found that it doesn't make the action any faster.
 
 6. We pop our binary over into the fresh `cc` image, and set up the entry point (note that `CMD` doesn't work here; you have to use `ENTRYPOINT`). That's the whole image!
-
 
 Once we've built and published the image, we immediately test it to catch any last-minute problems. Let's look back at the `.github/workflows/integration_tests.yml` file from earlier:
 
@@ -222,7 +221,7 @@ jobs:
         run: echo "Succeeded unexpectedly" && exit 1
 ```
 
-The `workflow_run` section tells this action to run after we publish to Docker—this ensures we're testing the version we *just* published and not an earlier variant. Then, the workflow comes with two tests as examples—you'll want to replace these with ones that exercise the actual inputs and outputs. The second job, `test_error`, is much more interesting—this is how you can test *failure* conditions (and why we set the error output). It's just as important to test expected failures as expected successes, maybe even more important!
+The `workflow_run` section tells this action to run after we publish to Docker—this ensures we're testing the version we _just_ published and not an earlier variant. Then, the workflow comes with two tests as examples—you'll want to replace these with ones that exercise the actual inputs and outputs. The second job, `test_error`, is much more interesting—this is how you can test _failure_ conditions (and why we set the error output). It's just as important to test expected failures as expected successes, maybe even more important!
 
 ## Conclusion
 

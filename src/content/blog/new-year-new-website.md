@@ -23,7 +23,7 @@ The answer is, of course, yes to all of the above, so let's dig in one by one.
 
 # The Content
 
-The old adage says, "write what you know," and I sure have. I had the goal in my day job to develop the best web APIs possible, which meant using the best tooling available. I wanted to write an OpenAPI server in Rust and host it on serverless technologies, so I explored all the options I could find in that space for a while. However, I pretty quickly ran out of options, with none of them entirely fulfilling my needs. 
+The old adage says, "write what you know," and I sure have. I had the goal in my day job to develop the best web APIs possible, which meant using the best tooling available. I wanted to write an OpenAPI server in Rust and host it on serverless technologies, so I explored all the options I could find in that space for a while. However, I pretty quickly ran out of options, with none of them entirely fulfilling my needs.
 
 To make matters worse, although some of the solutions came close, none of them would be ready in time to use for the project I had in mind. As a result, my motivation to write about them quickly decreased. So the content wasn't technically changing, but its relevance to me was.
 

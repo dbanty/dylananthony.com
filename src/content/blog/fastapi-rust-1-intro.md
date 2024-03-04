@@ -50,8 +50,8 @@ The end result of my investigation should be a method to produce an API which:
 
 1. MUST be written in Rust.
 2. MUST automatically produce an OpenAPI v3 document from the Rust code and comments.
-    1. The developer may need to know some OpenAPI concepts for properly documenting things, but should not have to write JSON or YAML to achieve it.
-    2. The document MUST be hosted on an endpoint of the API so it's accessible from the internet.
+   1. The developer may need to know some OpenAPI concepts for properly documenting things, but should not have to write JSON or YAML to achieve it.
+   2. The document MUST be hosted on an endpoint of the API so it's accessible from the internet.
 3. MUST be _easily_ deployable on AWS Lambda using some infrastructure as code tool (SAM, Serverless, etc.).
 4. MUST perform at least as fast as an equivalent FastAPI application for common CRUD tasks.
 5. MUST interact with a relational database (MySQL or Postgres).

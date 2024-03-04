@@ -115,7 +115,6 @@ I'm not completely sure what the next step for me will be. I could try actually 
 
 By the way, if you want to check out the Rocket code I ended up with, it's available in the [experiments repo] alongside the actix code from the [previous post].
 
-
 [ferris the crab]: https://www.rustacean.net
 [the rust logo]: https://www.rust-lang.org/policies/media-guide
 [the fastapi logo]: https://github.com/tiangolo/fastapi

@@ -10,6 +10,4 @@ This repo serves a few purposes:
 
 ## What tech does this repo use?
 
-<!-- TODO: Write a new intro blog post?? -->
-
-I'm glad you asked! [There's a blog post](https://dylananthony.com/posts/and-now-astro) which talks about it.
+[Astro](https://astro.build), [there's a blog post](https://dylananthony.com/posts/and-now-astro) explaining why I chose it.
