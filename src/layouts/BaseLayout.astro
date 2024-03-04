@@ -1,0 +1,18 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Body from "./Body.astro";
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <Body>
+    <main>
+      <slot />
+    </main>
+  </Body>
+</html>

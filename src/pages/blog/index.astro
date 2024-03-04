@@ -1,50 +1,14 @@
 ---
-import { Image } from "astro:assets";
-import BaseHead from "../../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { type CollectionEntry, getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
-import Body from "../../layouts/Body.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostGrid from "../../components/PostGrid.astro";
 
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <Body>
-    <main>
-      <section>
-        <ul class="grid lg:grid-cols-2 justify-evenly gap-4">
-          {
-            posts.map((post) => (
-              <li class="rounded-md p-4 shadow-md cursor-pointer bg-white dark:bg-zinc-700">
-                <a href={`/blog/${post.slug}/`}>
-                  <header>
-                    <h3 class="text-xl font-bold text-center">
-                      {post.data.title}
-                    </h3>
-                  </header>
-
-                  <Image
-                    width={800}
-                    height={533}
-                    src={post.data.image}
-                    alt={post.data.imageAlt}
-                  />
-                  <p class="text-center font-light">
-                    <FormattedDate date={post.data.date} />
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-  </Body>
-</html>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <PostGrid posts={posts} />
+</BaseLayout>

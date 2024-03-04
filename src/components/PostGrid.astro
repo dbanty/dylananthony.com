@@ -1,0 +1,103 @@
+---
+// noinspection ES6UnusedImports
+import { Image } from "astro:assets";
+import FormattedDate from "./FormattedDate.astro";
+import { type CollectionEntry } from "astro:content";
+
+type Props = { posts: CollectionEntry<"blog">[] };
+const { posts }: Props = Astro.props;
+
+const classList = (tag: string): string[] => {
+  const color = colorForTag(tag);
+  return [
+    `bg-${color}-200`,
+    `dark:bg-${color}-700`,
+    `hover:bg-${color}-300`,
+    `dark:hover:bg-${color}-600`,
+    "text-zinc-800",
+    "dark:text-zinc-100",
+    "hover:text-zinc-900",
+    "dark:hover:text-zinc-50",
+    "py-1",
+    "px-2",
+    "rounded-xl",
+    "text-sm",
+    "font-mono",
+    "underline",
+    "shadow-md",
+    "border",
+    "border-1",
+    "border-dotted",
+    "border-zinc-300",
+    "dark:border-zinc-400",
+  ];
+};
+
+const colorForTag = (tag: string): string => {
+  switch (tag) {
+    case "Rust":
+      return "orange";
+    case "GraphQL":
+      return "fuchsia";
+    case "FastAPI":
+      return "teal";
+    case "serverless":
+      return "indigo";
+    case "developer-experience":
+      return "purple";
+    case "TypeScript":
+      return "blue";
+    default:
+      return "zinc";
+  }
+};
+---
+
+<section>
+  <ul class="grid lg:grid-cols-2 justify-evenly gap-4">
+    {
+      posts.map((post) => (
+        <li
+          class="rounded-md p-4 shadow-md cursor-pointer bg-white dark:bg-zinc-700 flex flex-col"
+          onclick={`window.location.href = '/blog/${post.slug}/';`}
+        >
+          <header>
+            <a
+              href={`/blog/${post.slug}/`}
+              class="text-xl font-bold text-center flex flex-grow justify-center"
+            >
+              {post.data.title}
+            </a>
+          </header>
+
+          <Image
+            width={800}
+            height={533}
+            src={post.data.image}
+            alt={post.data.imageAlt}
+            loading={posts.indexOf(post) < 4 ? "eager" : "lazy"}
+          />
+          <div class="flex-grow" />
+          <p class="text-center font-light">
+            <FormattedDate date={post.data.date} />
+          </p>
+          {post.data.tags.length > 0 && (
+            <>
+              <div class="border-t-2 border-zinc-400 dark:border-zinc-500 my-2" />
+              <ul class="flex flex-initial place-content-evenly">
+                {post.data.tags.map((tag) => (
+                  <li>
+                    <a href={`/tags/${tag}`} class:list={classList(tag)}>
+                      <span class="font-semibold">#</span>
+                      {tag}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</section>

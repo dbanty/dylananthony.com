@@ -1,21 +1,11 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import FormattedDate from "../components/FormattedDate.astro";
-import Body from "./Body.astro";
+import BaseLayout from "./BaseLayout.astro";
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} />
-  </head>
-
-  <Body>
-    <main>
-      <div class="prose prose-zinc dark:prose-invert max-w-none">
-        <slot />
-      </div>
-    </main>
-  </Body>
-</html>
+<BaseLayout title={title} description={description}>
+  <div class="prose prose-zinc dark:prose-invert max-w-none">
+    <slot />
+  </div>
+</BaseLayout>
