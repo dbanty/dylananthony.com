@@ -4,7 +4,7 @@ date: "2022-01-01"
 image: "./new-year-new-website.png"
 imageAlt: "A frame shows Drake puts his hand up to block the text 'Writing a blog website that looks nice but uses a ton of JavaScript' in the ugly Comic Sans font. Drake doesn't like that. Another frame shows Drake pointing and smiling at 'Writing a blog website using a static generator' written in nice Helvetica Neue font. Drake likes this option."
 discussion: 194
-tags: []
+tags: ["web", "writing"]
 ---
 
 > Cover image created by adding text to [this image](https://i.redd.it/4wmp5smh0ld41.jpg).
