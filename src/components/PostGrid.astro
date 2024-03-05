@@ -47,6 +47,14 @@ const colorForTag = (tag: string): string => {
       return "purple";
     case "TypeScript":
       return "blue";
+    case "web":
+      return "green";
+    case "writing":
+      return "rose";
+    case "software-engineering":
+      return "amber";
+    case "OpenAPI":
+      return "red";
     default:
       return "zinc";
   }
@@ -88,8 +96,7 @@ const colorForTag = (tag: string): string => {
                 {post.data.tags.map((tag) => (
                   <li>
                     <a href={`/tags/${tag}`} class:list={classList(tag)}>
-                      <span class="font-semibold">#</span>
-                      {tag}
+                      <span class="font-medium">#{tag}</span>
                     </a>
                   </li>
                 ))}

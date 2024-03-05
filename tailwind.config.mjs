@@ -41,5 +41,25 @@ export default {
     "hover:bg-blue-300",
     "dark:bg-blue-700",
     "dark:hover:bg-blue-600",
+    // Green tags
+    "bg-green-200",
+    "hover:bg-green-300",
+    "dark:bg-green-700",
+    "dark:hover:bg-green-600",
+    // Rose
+    "bg-rose-200",
+    "hover:bg-rose-300",
+    "dark:bg-rose-700",
+    "dark:hover:bg-rose-600",
+    // Amber
+    "bg-amber-200",
+    "hover:bg-amber-300",
+    "dark:bg-amber-700",
+    "dark:hover:bg-amber-600",
+    // Red
+    "bg-red-200",
+    "hover:bg-red-300",
+    "dark:bg-red-700",
+    "dark:hover:bg-red-600",
   ],
 };
