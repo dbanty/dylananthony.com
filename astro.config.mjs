@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://next.dylananthony.com", // TODO: Point at primary domain
+  site: "https://dylananthony.com",
   integrations: [mdx(), sitemap(), tailwind({ applyBaseStyles: false })],
   redirects: {
     "/": "/blog",
