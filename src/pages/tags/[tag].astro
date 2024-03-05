@@ -1,0 +1,30 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE_DESCRIPTION } from "../../consts";
+import PostGrid from "../../components/PostGrid.astro";
+
+export async function getStaticPaths() {
+  const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+  return [
+    { params: { tag: "serverless" }, props: { posts } },
+    { params: { tag: "Rust" }, props: { posts } },
+    { params: { tag: "developer-experience" }, props: { posts } },
+    { params: { tag: "FastAPI" }, props: { posts } },
+    { params: { tag: "OpenAPI" }, props: { posts } },
+    { params: { tag: "GraphQL" }, props: { posts } },
+    { params: { tag: "TypeScript" }, props: { posts } },
+    { params: { tag: "software-engineering" }, props: { posts } },
+  ];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post) => post.data.tags?.includes(tag));
+---
+
+<BaseLayout title={tag} description={SITE_DESCRIPTION}>
+  <PostGrid posts={filteredPosts} />
+</BaseLayout>
