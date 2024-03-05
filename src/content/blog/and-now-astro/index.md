@@ -68,7 +68,7 @@ The Astro site is still 73% smaller than the Zola site! If we look a little clos
 image is smaller. I'll be honest, I don't know what Astro is doing to make this possible, but to my eyes there's no noticeable
 difference in quality, and that's incredible!
 
-## But what about clean energy?
+## What about clean energy?
 
 My website is hosted on a combination of Netlify and Cloudflare, and both have strong commitments to sustainability.
 However, all the clean energy that is produced will be used, so even though _my_ energy is coming from a sustainable source,
@@ -85,13 +85,13 @@ to reduce the energy consumption (by reducing data transfer).
 ## How hard was it?
 
 Like I said, I'm not a frontend developer, so changing up my website was very intimidating. Luckily, Astro makes
-things extremely easy.
+things relatively easy.
 The Astro CLI gave me a blog template that worked great as a starting point. Next, I copied over my Markdown files and images.
 The only changes I had to make were to the frontmatter.
 For styling, my old site was using Tailwind, and there's an Astro plugin for that
 (much easier than it was to add Tailwind to Zola). Really, the hardest part was figuring out how to translate the
-jinja-like templates of the old site into Astro components. To be honest, the toughest part of that was understanding
-the templates of the old site, since I find Astro's TypeScript syntax much easier to work with.
+jinja-like templates of the old site into Astro components. To be honest, the toughest part of _that_ was understanding
+the templates of the old site, since I found Astro's syntax much easier to work with.
 
 All-in-all, it took me a couple of afternoons to fully translate my site to Astro, and I'm extremely happy with the result.
 There are some minor style differences, but making it look identical wasn't the goal, I just wanted to preserve the
