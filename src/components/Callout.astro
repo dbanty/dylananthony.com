@@ -1,43 +1,46 @@
 ---
 enum Type {
-    "security" = "security",
-    "money" = "money",
-    "idea" = "idea",
+  "security" = "security",
+  "money" = "money",
+  "idea" = "idea",
 }
 interface Props {
-    type: Type,
-    children: any,
+  type: Type;
+  children: any;
 }
 const props: Props = Astro.props;
 
 const color = () => {
-    switch (props.type) {
-        case Type.security:
-            return ["dark:bg-pink-900", "bg-pink-200"];
-        case Type.money:
-            return ["dark:bg-green-900", "bg-green-200"];
-        case Type.idea:
-            return ["dark:bg-blue-900", "bg-blue-200"];
-        default:
-            throw new Error(`Invalid Callout type: ${props.type}`);
-    }
-}
+  switch (props.type) {
+    case Type.security:
+      return ["dark:bg-pink-900", "bg-pink-200"];
+    case Type.money:
+      return ["dark:bg-green-900", "bg-green-200"];
+    case Type.idea:
+      return ["dark:bg-blue-900", "bg-blue-200"];
+    default:
+      throw new Error(`Invalid Callout type: ${props.type}`);
+  }
+};
 
 const title = () => {
-    switch (props.type) {
-        case Type.security:
-            return "Security tip 🚨";
-        case Type.money:
-            return "Disclosure 💰"
-        case Type.idea:
-            return "Content idea 💡"
-        default:
-            throw new Error(`Invalid Callout type: ${props.type}`);
-    }
-}
+  switch (props.type) {
+    case Type.security:
+      return "Security tip 🚨";
+    case Type.money:
+      return "Disclosure 💰";
+    case Type.idea:
+      return "Content idea 💡";
+    default:
+      throw new Error(`Invalid Callout type: ${props.type}`);
+  }
+};
 ---
 
-<aside class="w-full pl-5 py-0.5 border border-dashed border-zinc-500 dark:border-zinc-300" class:list={color()}>
-    <h4>{title()}</h4>
-<slot/>
+<aside
+  class="w-full pl-5 py-0.5 border border-dashed border-zinc-500 dark:border-zinc-300"
+  class:list={color()}
+>
+  <h4>{title()}</h4>
+  <slot />
 </aside>

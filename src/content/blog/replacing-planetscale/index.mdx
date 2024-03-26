@@ -1,14 +1,14 @@
 ---
 title: "Replacing Planetscale"
 image: ./cover.png
-imageAlt: "The Planetscale logo fading away. A group of logos: GitHub Actions, MySQL, Atlas, and Railway. Between them, the text \"Replacing Planetscale\"."
+imageAlt: 'The Planetscale logo fading away. A group of logos: GitHub Actions, MySQL, Atlas, and Railway. Between them, the text "Replacing Planetscale".'
 date: "2024-03-26"
 description: "Planetscale is removing their free tier. Here's how I'm replacing them with Railway, MySQL, and Atlas."
 discussion: 213
 tags: ["MySQL", "developer-experience"]
 ---
 
-import Callout from '../../../components/Callout.astro'
+import Callout from "../../../components/Callout.astro";
 
 Now that Planetscale is ditching their free tier, I need a new database for the [free GitHub app](https://github.com/marketplace/knope-bot)
 that I maintain.
@@ -63,6 +63,7 @@ If I go over, I have some credits to sustain the app for a while until it gets s
 
     Also, as of writing, they have the best developer experience of any cloud provider. So I'd recommend them even
     without the referral links.
+
 </Callout>
 
 ### Database technology
@@ -89,17 +90,18 @@ For me, most of the data is a cache of GitHub data, so I didn't need everything,
 
 1. Added a connection to the new database
 2. Changed all queries to read from the new database first.
-If data was missing, it read from the old database and
-wrote the missing data back to the new one
+   If data was missing, it read from the old database and
+   wrote the missing data back to the new one
 3. Let it run for a few days to capture the majority of the data
 
 Once I was satisfied that the remaining gaps were small enough, I removed the connection to the old database, and I was done!
 Well... almost.
 
 <Callout type="idea">
-    How did I make sure I didn't forget any queries? The app is written in Rust, which means I can use "compiler-driven
-    development" to make sure that even the most major refactors don't break anything. If you'd like to see a whole
-    post about this strategy, let me know!
+  How did I make sure I didn't forget any queries? The app is written in Rust,
+  which means I can use "compiler-driven development" to make sure that even the
+  most major refactors don't break anything. If you'd like to see a whole post
+  about this strategy, let me know!
 </Callout>
 
 ### Backups
@@ -208,7 +210,7 @@ on:
     branches:
       - main
     paths:
-      - '.sqlx/schema.hcl'
+      - ".sqlx/schema.hcl"
   workflow_dispatch:
 jobs:
   update-prod-database-schema:
@@ -233,6 +235,7 @@ main to deploy to production, the database gets updated too!
     2. [Deploy a your own GitHub Actions runner](https://railway.app/template/cd7y1G?referralCode=xsbY2R) in each Railway environment.
     Private networking does not work cross-environment, so you'll need a runner that has access to each database which
     Atlas will be talking to. That runner cannot sleep either.
+
 </Callout>
 
 This workflow relies on having one test database per PR, which works for me because I'm only working on one major feature
@@ -242,7 +245,8 @@ If you're working on a team, you'll want to check out
 or use a local workflow for updating the schema.
 
 <Callout type="idea">
-    Let me know if you'd like a full guide on setting up a database schema workflow for teams.
+  Let me know if you'd like a full guide on setting up a database schema
+  workflow for teams.
 </Callout>
 
 ## Wrap-up
@@ -257,6 +261,6 @@ auto-deploys were much easier to set up, and I can see the schema diff right nex
 If there's any part of this solution you'd like me to dive deeper into, let me know! I'd also love to hear about _your_
 database setup and how it's working for you (particularly migrations).
 
-[Knope]:  https://github.com/knope-dev/knope
-[Railway]:  https://railway.app?referralCode=xsbY2R
-[Atlas]:  https://atlasgo.io/getting-started/
+[Knope]: https://github.com/knope-dev/knope
+[Railway]: https://railway.app?referralCode=xsbY2R
+[Atlas]: https://atlasgo.io/getting-started/
