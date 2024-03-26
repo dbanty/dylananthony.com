@@ -55,8 +55,10 @@ const colorForTag = (tag: string): string => {
       return "amber";
     case "OpenAPI":
       return "red";
+    case "MySQL":
+      return "cyan";
     default:
-      return "zinc";
+      throw new Error(`Unknown tag: ${tag}`);
   }
 };
 ---

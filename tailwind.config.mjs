@@ -61,5 +61,10 @@ export default {
     "hover:bg-red-300",
     "dark:bg-red-700",
     "dark:hover:bg-red-600",
+    //Cyan
+    "bg-cyan-200",
+    "hover:bg-cyan-300",
+    "dark:bg-cyan-700",
+    "dark:hover:bg-cyan-600",
   ],
 };
