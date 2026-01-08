@@ -26,7 +26,6 @@ const classList = (tag: string): string[] => {
     "underline",
     "shadow-md",
     "border",
-    "border-1",
     "border-dotted",
     "border-zinc-300",
     "dark:border-zinc-400",
@@ -74,7 +73,7 @@ const colorForTag = (tag: string): string => {
           <header>
             <a
               href={`/blog/${post.slug}/`}
-              class="text-xl font-bold text-center flex flex-grow justify-center"
+              class="text-xl font-bold text-center flex grow justify-center"
             >
               {post.data.title}
             </a>
@@ -87,7 +86,7 @@ const colorForTag = (tag: string): string => {
             alt={post.data.imageAlt}
             loading={posts.indexOf(post) < 4 ? "eager" : "lazy"}
           />
-          <div class="flex-grow" />
+          <div class="grow" />
           <p class="text-center font-light">
             <FormattedDate date={post.data.date} />
           </p>
